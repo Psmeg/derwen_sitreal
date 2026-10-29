@@ -20,6 +20,7 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 import Base from '../../layouts/PlainBase.astro';
 import MainLayout from '../../layouts/MainLayout.astro';
+import SiterealRichText from '../../components/sitereal/RichText.astro';
 import SiterealImage from '../../components/sitereal/Image.astro';
 import '../../styles/generated/framework.css';
 import '../../styles/generated/global.css';
@@ -36,6 +37,7 @@ import '../../styles/generated/templates/tpl-muwmgdfe-1.css';
       <div builder-data-element="container">
         <h1 class="team-entry__title" builder-data-element="heading">{entry.title}</h1>
         <SiterealImage src={entry.headshot} sizing={{ widths: [480, 768, 1200, 1600, 2000] }} resolution={entry?.headshot_resolution} remoteSrcset={entry?.headshot_srcset || undefined} remoteWidth={entry?.headshot_width || undefined} remoteHeight={entry?.headshot_height || undefined} class="team-entry__image" builder-data-element="image" sizes="100vw" alt={entry?.headshot_alt ?? ''} style={entry?.headshot_focus ? `object-position: ${entry?.headshot_focus}` : undefined} />
+        <div class="team-entry__content" builder-data-element="rich-text"><SiterealRichText html={entry.bio} /></div>
       </div>
     </section>
   </MainLayout>

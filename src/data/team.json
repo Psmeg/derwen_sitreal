@@ -9,6 +9,7 @@
     "headshot_focus": "50% 16%",
     "headshot_resolution": "auto",
     "department": "Management",
+    "bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>",
     "url": "/team/paul-charlton",
     "created_text": "October 29, 2026"
   },
@@ -22,6 +23,7 @@
     "headshot_focus": "41% 19%",
     "headshot_resolution": "auto",
     "department": "Finance",
+    "bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>",
     "url": "/team/jeffrey-d",
     "created_text": "October 29, 2026"
   }

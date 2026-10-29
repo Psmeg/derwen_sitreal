@@ -3,18 +3,77 @@
 /* Global */
 .team-archive__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(18rem, 100%), 1fr));
-  gap: var(--content-spacing);
+  inline-size: 100%;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--grid-gap);
+  margin-block-start: var(--section-space-s);
+  @media (max-width: 48rem) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  @media (max-width: 30rem) { grid-template-columns: 1fr; }
 }
 
 .team-archive__card {
   display: flex;
   flex-direction: column;
-  gap: var(--space-xs, 0.75rem);
+  align-items: flex-start;
+  gap: var(--space-xs);
+  &:hover .team-archive__image { scale: 1.02; }
+  &:focus-within .team-archive__image { outline: var(--focus-width) var(--focus-style) var(--focus-color); outline-offset: var(--focus-offset); }
 }
 
 .team-archive__image {
-  aspect-ratio: 4 / 3;
+  display: block;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
+  object-position: center 30%;
   inline-size: 100%;
+  background: var(--primary-100);
+  border-radius: var(--image-radius);
+  mix-blend-mode: multiply;
+  transition: scale var(--motion-duration) var(--motion-ease);
+}
+
+.team-archive {
+  padding-block: var(--section-space-xl);
+  padding-inline: var(--site-padding);
+  background: var(--surface);
+}
+
+.team-archive__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-inline-size: var(--content-width);
+  margin-inline: auto;
+  gap: var(--content-spacing);
+}
+
+.team-archive__eyebrow {
+  color: var(--accent);
+  font-size: var(--text-s);
+}
+
+.team-archive__heading {
+  max-inline-size: var(--content-width-inset);
+  color: var(--heading-color);
+}
+
+.team-archive__intro {
+  max-inline-size: 60ch;
+  color: var(--text-color);
+}
+
+.team-archive__title {
+  font-size: var(--h4);
+}
+
+.team-archive__link {
+  color: var(--heading-color);
+  text-decoration: none;
+  &:hover { color: var(--link-color-hover); }
+  &:focus-visible { outline: var(--focus-width) var(--focus-style) var(--focus-color); outline-offset: var(--focus-offset); }
+}
+
+.team-archive__department {
+  color: var(--text-color);
+  font-size: var(--text-m);
 }

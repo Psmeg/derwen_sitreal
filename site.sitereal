@@ -850,6 +850,12 @@
               "Sales",
               "Management"
             ]
+          },
+          {
+            "id": "f-wrgts8c",
+            "name": "Bio",
+            "key": "bio",
+            "type": "richtext"
           }
         ],
         "items": [
@@ -862,7 +868,8 @@
               "slug": "paul-charlton",
               "f-04hfpnw": "/uploads/profile-pic.png",
               "f-04hfpnw:focus": "50% 16%",
-              "f-raf7zgk": "Management"
+              "f-raf7zgk": "Management",
+              "f-wrgts8c": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>"
             }
           },
           {
@@ -874,7 +881,8 @@
               "slug": "jeffrey-d",
               "f-04hfpnw": "/uploads/PHOTO-2026-01-19-13-01-18.jpg",
               "f-04hfpnw:focus": "41% 19%",
-              "f-raf7zgk": "Finance"
+              "f-raf7zgk": "Finance",
+              "f-wrgts8c": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>"
             }
           }
         ],
@@ -3292,15 +3300,40 @@
               },
               "children": [
                 {
+                  "tag": "p",
+                  "classes": [
+                    "team-archive__eyebrow"
+                  ],
+                  "text": "OUR TEAM",
+                  "attrs": {
+                    "builder-data-element": "text"
+                  },
+                  "name": "eyebrow",
+                  "id": "p-mvtsx6ss-5276"
+                },
+                {
                   "id": "h2-mvtf7dpf-6",
                   "tag": "h1",
                   "attrs": {
                     "builder-data-element": "heading"
                   },
-                  "text": "Team",
+                  "text": "Meet the people behind Derwen.",
                   "classes": [
                     "team-archive__heading"
-                  ]
+                  ],
+                  "name": "Team archive title"
+                },
+                {
+                  "tag": "p",
+                  "classes": [
+                    "team-archive__intro"
+                  ],
+                  "text": "A considered garden comes together through good ideas, skilled hands and a shared respect for the landscape. Meet the people who bring that work to life.",
+                  "attrs": {
+                    "builder-data-element": "text"
+                  },
+                  "name": "intro",
+                  "id": "p-mvtsx6ss-5277"
                 },
                 {
                   "id": "div-mvtf7dpf-5",
@@ -3329,10 +3362,15 @@
                               "attrs": {
                                 "builder-data-element": "image",
                                 "src": "{team_member.headshot}",
-                                "alt": "",
+                                "alt": "{team_member.headshot_alt}",
                                 "data-image-widths": "auto",
-                                "sizes": "100vw"
-                              }
+                                "sizes": "(min-width: 900px) 33vw, (min-width: 600px) 50vw, 100vw",
+                                "loading": "lazy",
+                                "decoding": "async"
+                              },
+                              "classes": [
+                                "team-archive__image"
+                              ]
                             },
                             {
                               "id": "h2-mvtf7dpf-2",
@@ -3349,19 +3387,34 @@
                                   "tag": "a",
                                   "attrs": {
                                     "builder-data-element": "link",
-                                    "href": "{item.url}"
+                                    "href": "{team_member.url}"
                                   },
                                   "text": "{team_member.title}",
                                   "classes": [
-                                    "team-archive__link"
+                                    "team-archive__link",
+                                    "clickable-link"
                                   ]
                                 }
                               ]
+                            },
+                            {
+                              "tag": "p",
+                              "classes": [
+                                "team-archive__department"
+                              ],
+                              "text": "{team_member.department}",
+                              "attrs": {
+                                "builder-data-element": "text"
+                              },
+                              "name": "department",
+                              "id": "p-mvtsx6ss-5278"
                             }
                           ],
                           "classes": [
-                            "team-archive__card"
-                          ]
+                            "team-archive__card",
+                            "clickable-parent"
+                          ],
+                          "name": "Team member card"
                         }
                       ],
                       "loop": {
@@ -3378,12 +3431,17 @@
                     "team-archive__grid"
                   ]
                 }
-              ]
+              ],
+              "classes": [
+                "team-archive__container"
+              ],
+              "name": "Team archive container"
             }
           ],
           "classes": [
             "team-archive"
-          ]
+          ],
+          "name": "Team archive"
         }
       ],
       "stylesheets": [
@@ -3393,15 +3451,47 @@
           "rules": [
             {
               "selector": ".team-archive__grid",
-              "css": "display: grid;\ngrid-template-columns: repeat(auto-fill, minmax(min(18rem, 100%), 1fr));\ngap: var(--content-spacing);"
+              "css": "display: grid;\ninline-size: 100%;\ngrid-template-columns: repeat(3, minmax(0, 1fr));\ngap: var(--grid-gap);\nmargin-block-start: var(--section-space-s);\n@media (max-width: 48rem) { grid-template-columns: repeat(2, minmax(0, 1fr)); }\n@media (max-width: 30rem) { grid-template-columns: 1fr; }"
             },
             {
               "selector": ".team-archive__card",
-              "css": "display: flex;\nflex-direction: column;\ngap: var(--space-m);"
+              "css": "display: flex;\nflex-direction: column;\nalign-items: flex-start;\ngap: var(--space-xs);\n&:hover .team-archive__image { scale: 1.02; }\n&:focus-within .team-archive__image { outline: var(--focus-width) var(--focus-style) var(--focus-color); outline-offset: var(--focus-offset); }"
             },
             {
               "selector": ".team-archive__image",
-              "css": "aspect-ratio: 4 / 3;\nobject-fit: cover;\ninline-size: 100%;"
+              "css": "display: block;\naspect-ratio: 1 / 1;\nobject-fit: cover;\nobject-position: center 30%;\ninline-size: 100%;\nbackground: var(--primary-100);\nborder-radius: var(--image-radius);\nmix-blend-mode: multiply;\ntransition: scale var(--motion-duration) var(--motion-ease);"
+            },
+            {
+              "selector": ".team-archive",
+              "css": "padding-block: var(--section-space-xl);\npadding-inline: var(--site-padding);\nbackground: var(--surface);"
+            },
+            {
+              "selector": ".team-archive__container",
+              "css": "display: flex;\nflex-direction: column;\nalign-items: flex-start;\nmax-inline-size: var(--content-width);\nmargin-inline: auto;\ngap: var(--content-spacing);"
+            },
+            {
+              "selector": ".team-archive__eyebrow",
+              "css": "color: var(--accent);\nfont-size: var(--text-s);"
+            },
+            {
+              "selector": ".team-archive__heading",
+              "css": "max-inline-size: var(--content-width-inset);\ncolor: var(--heading-color);"
+            },
+            {
+              "selector": ".team-archive__intro",
+              "css": "max-inline-size: 60ch;\ncolor: var(--text-color);"
+            },
+            {
+              "selector": ".team-archive__title",
+              "css": "font-size: var(--h4);"
+            },
+            {
+              "selector": ".team-archive__link",
+              "css": "color: var(--heading-color);\ntext-decoration: none;\n&:hover { color: var(--link-color-hover); }\n&:focus-visible { outline: var(--focus-width) var(--focus-style) var(--focus-color); outline-offset: var(--focus-offset); }"
+            },
+            {
+              "selector": ".team-archive__department",
+              "css": "color: var(--text-color);\nfont-size: var(--text-m);"
             }
           ]
         }
@@ -3426,15 +3516,40 @@
               },
               "children": [
                 {
+                  "tag": "p",
+                  "classes": [
+                    "team-archive__eyebrow"
+                  ],
+                  "text": "OUR PEOPLE",
+                  "attrs": {
+                    "builder-data-element": "text"
+                  },
+                  "name": "eyebrow",
+                  "id": "p-mvtsrfsz-5273"
+                },
+                {
                   "id": "h2-mvtqytes-7",
                   "tag": "h1",
                   "attrs": {
                     "builder-data-element": "heading"
                   },
-                  "text": "Team",
+                  "text": "Meet the people behind Derwen.",
                   "classes": [
                     "team-archive__heading"
-                  ]
+                  ],
+                  "name": "Team archive title"
+                },
+                {
+                  "tag": "p",
+                  "classes": [
+                    "team-archive__intro"
+                  ],
+                  "text": "A considered garden comes together through good ideas, skilled hands and a shared respect for the landscape. Meet the people who bring that work to life.",
+                  "attrs": {
+                    "builder-data-element": "text"
+                  },
+                  "name": "intro",
+                  "id": "p-mvtsrfsz-5274"
                 },
                 {
                   "id": "div-mvtqytes-6",
@@ -3463,9 +3578,11 @@
                               "attrs": {
                                 "builder-data-element": "image",
                                 "src": "{item.headshot}",
-                                "alt": "",
+                                "alt": "{item.headshot_alt}",
                                 "data-image-widths": "auto",
-                                "sizes": "(min-width: 900px) 33vw, 100vw"
+                                "sizes": "(min-width: 900px) 33vw, (min-width: 600px) 50vw, 100vw",
+                                "loading": "lazy",
+                                "decoding": "async"
                               },
                               "classes": [
                                 "team-archive__image"
@@ -3490,15 +3607,30 @@
                                   },
                                   "text": "{item.title}",
                                   "classes": [
-                                    "team-archive__link"
+                                    "team-archive__link",
+                                    "clickable-link"
                                   ]
                                 }
                               ]
+                            },
+                            {
+                              "tag": "p",
+                              "classes": [
+                                "team-archive__department"
+                              ],
+                              "text": "{item.department}",
+                              "attrs": {
+                                "builder-data-element": "text"
+                              },
+                              "name": "department",
+                              "id": "p-mvtsrfsz-5275"
                             }
                           ],
                           "classes": [
-                            "team-archive__card"
-                          ]
+                            "team-archive__card",
+                            "clickable-parent"
+                          ],
+                          "name": "Team member card"
                         }
                       ],
                       "loop": {
@@ -3515,7 +3647,11 @@
                     "team-archive__grid"
                   ]
                 }
-              ]
+              ],
+              "classes": [
+                "team-archive__container"
+              ],
+              "name": "Team archive container"
             }
           ],
           "classes": [
@@ -3530,15 +3666,47 @@
           "rules": [
             {
               "selector": ".team-archive__grid",
-              "css": "display: grid;\ngrid-template-columns: repeat(auto-fill, minmax(min(18rem, 100%), 1fr));\ngap: var(--content-spacing);"
+              "css": "display: grid;\ninline-size: 100%;\ngrid-template-columns: repeat(3, minmax(0, 1fr));\ngap: var(--grid-gap);\nmargin-block-start: var(--section-space-s);\n@media (max-width: 48rem) { grid-template-columns: repeat(2, minmax(0, 1fr)); }\n@media (max-width: 30rem) { grid-template-columns: 1fr; }"
             },
             {
               "selector": ".team-archive__card",
-              "css": "display: flex;\nflex-direction: column;\ngap: var(--space-xs, 0.75rem);"
+              "css": "display: flex;\nflex-direction: column;\nalign-items: flex-start;\ngap: var(--space-xs);\n&:hover .team-archive__image { scale: 1.02; }\n&:focus-within .team-archive__image { outline: var(--focus-width) var(--focus-style) var(--focus-color); outline-offset: var(--focus-offset); }"
             },
             {
               "selector": ".team-archive__image",
-              "css": "aspect-ratio: 4 / 3;\nobject-fit: cover;\ninline-size: 100%;"
+              "css": "display: block;\naspect-ratio: 1 / 1;\nobject-fit: cover;\nobject-position: center 30%;\ninline-size: 100%;\nbackground: var(--primary-100);\nborder-radius: var(--image-radius);\nmix-blend-mode: multiply;\ntransition: scale var(--motion-duration) var(--motion-ease);"
+            },
+            {
+              "selector": ".team-archive",
+              "css": "padding-block: var(--section-space-xl);\npadding-inline: var(--site-padding);\nbackground: var(--surface);"
+            },
+            {
+              "selector": ".team-archive__container",
+              "css": "display: flex;\nflex-direction: column;\nalign-items: flex-start;\nmax-inline-size: var(--content-width);\nmargin-inline: auto;\ngap: var(--content-spacing);"
+            },
+            {
+              "selector": ".team-archive__eyebrow",
+              "css": "color: var(--accent);\nfont-size: var(--text-s);"
+            },
+            {
+              "selector": ".team-archive__heading",
+              "css": "max-inline-size: var(--content-width-inset);\ncolor: var(--heading-color);"
+            },
+            {
+              "selector": ".team-archive__intro",
+              "css": "max-inline-size: 60ch;\ncolor: var(--text-color);"
+            },
+            {
+              "selector": ".team-archive__title",
+              "css": "font-size: var(--h4);"
+            },
+            {
+              "selector": ".team-archive__link",
+              "css": "color: var(--heading-color);\ntext-decoration: none;\n&:hover { color: var(--link-color-hover); }\n&:focus-visible { outline: var(--focus-width) var(--focus-style) var(--focus-color); outline-offset: var(--focus-offset); }"
+            },
+            {
+              "selector": ".team-archive__department",
+              "css": "color: var(--text-color);\nfont-size: var(--text-m);"
             }
           ]
         }
@@ -3552,21 +3720,21 @@
     "public/scripts/search.js": "05c613215741ca2b",
     "src/components/sitereal/Image.astro": "ae0fdd096a0df7bf",
     "src/components/sitereal/RichText.astro": "46ebcf88d868c151",
-    "src/data/team.json": "226bf7382bb9d2f8",
+    "src/data/team.json": "ed3581a5a2babddf",
     "src/layouts/MainLayout.astro": "a4bfccebc98a006f",
     "src/layouts/Template404Layout.astro": "ae088b9e70092dc2",
     "src/pages/index.astro": "e3832fededf8353e",
     "src/pages/search.astro": "158ccf6f37fbfbfd",
-    "src/pages/team-2.astro": "5ab0ff1c70dc0a39",
-    "src/pages/team.astro": "10dfa1623c15a05f",
-    "src/pages/team/[...teamEntry].astro": "b2d28d5a6885ba17",
+    "src/pages/team-2.astro": "fc61a01bcba37399",
+    "src/pages/team.astro": "851ef406a3667cd2",
+    "src/pages/team/[...teamEntry].astro": "865786f482eb00b0",
     "src/styles/generated/framework.css": "63b5d6533ec63748",
     "src/styles/generated/global.css": "72f1eae6011cb286",
     "src/styles/generated/pages/_entry-srczgw0t2j.css": "338a17ff5894f4d9",
     "src/styles/generated/pages/index.css": "4102b560f26008a4",
     "src/styles/generated/pages/search.css": "42d91936b902c139",
-    "src/styles/generated/pages/team-2.css": "ab8ebb0281af1f7b",
-    "src/styles/generated/pages/team.css": "c2a1c5612167d643",
+    "src/styles/generated/pages/team-2.css": "3c15a81a6c7c7ac2",
+    "src/styles/generated/pages/team.css": "ef7a309b95e69109",
     "src/styles/generated/templates/tpl-muwmgdfe-1.css": "46cede259777f20e"
   }
 }

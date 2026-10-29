@@ -786,15 +786,6 @@
             }
           },
           {
-            "id": "posts",
-            "status": "live",
-            "created": "2026-10-27T16:56:27.052Z",
-            "values": {
-              "title": "Garden Journal",
-              "route": "posts"
-            }
-          },
-          {
             "id": "search",
             "status": "live",
             "created": "2026-10-27T16:56:27.052Z",
@@ -811,30 +802,57 @@
               "title": "Team",
               "route": "team"
             }
-          },
-          {
-            "id": "services",
-            "status": "live",
-            "created": "2026-10-29T14:43:45.179Z",
-            "values": {
-              "title": "Services",
-              "route": "services"
-            }
-          },
-          {
-            "id": "services-2",
-            "status": "live",
-            "created": "2026-10-29T16:15:57.974Z",
-            "values": {
-              "title": "Services",
-              "route": "services-2"
-            }
           }
         ],
         "settings": {
           "public": false,
           "queryable": false,
           "archive": false
+        }
+      },
+      {
+        "id": "4lvda5xw",
+        "name": "Team",
+        "slug": "team",
+        "fields": [
+          {
+            "id": "title",
+            "name": "Title",
+            "type": "text",
+            "builtin": true
+          },
+          {
+            "id": "slug",
+            "name": "Slug",
+            "type": "text",
+            "builtin": true
+          },
+          {
+            "id": "f-04hfpnw",
+            "name": "Headshot",
+            "key": "headshot",
+            "type": "image"
+          },
+          {
+            "id": "f-raf7zgk",
+            "name": "Department",
+            "key": "department",
+            "type": "option",
+            "options": [
+              "Finance",
+              "Sales",
+              "Management"
+            ]
+          }
+        ],
+        "items": [],
+        "settings": {
+          "public": true,
+          "queryable": true,
+          "archive": true,
+          "routeStyle": "folder",
+          "storageAuto": true,
+          "archivePage": "team-2"
         }
       }
     ],
@@ -3044,299 +3062,6 @@
         }
       ]
     },
-    "posts": {
-      "route": "posts",
-      "title": "Garden Journal",
-      "seo": {
-        "description": "Ideas, observations and stories for a life lived outdoors."
-      },
-      "root": [
-        {
-          "tag": "section",
-          "name": "Garden Journal",
-          "classes": [
-            "garden-journal"
-          ],
-          "attrs": {
-            "builder-data-element": "section",
-            "aria-labelledby": "garden-journal-title"
-          },
-          "children": [
-            {
-              "tag": "div",
-              "name": "Journal Container",
-              "classes": [
-                "garden-journal__container"
-              ],
-              "attrs": {
-                "builder-data-element": "container"
-              },
-              "children": [
-                {
-                  "tag": "header",
-                  "name": "Journal Header",
-                  "classes": [
-                    "garden-journal__header"
-                  ],
-                  "attrs": {
-                    "builder-data-element": "header"
-                  },
-                  "children": [
-                    {
-                      "tag": "p",
-                      "name": "Eyebrow",
-                      "classes": [
-                        "garden-journal__eyebrow"
-                      ],
-                      "attrs": {
-                        "builder-data-element": "text"
-                      },
-                      "text": "From the garden",
-                      "id": "p-mvqvua2i-69"
-                    },
-                    {
-                      "tag": "h1",
-                      "name": "Page Title",
-                      "classes": [
-                        "garden-journal__title"
-                      ],
-                      "attrs": {
-                        "builder-data-element": "heading",
-                        "id": "garden-journal-title"
-                      },
-                      "text": "Garden journal",
-                      "id": "h1-mvqvua2i-70"
-                    },
-                    {
-                      "tag": "p",
-                      "name": "Introduction",
-                      "classes": [
-                        "garden-journal__intro"
-                      ],
-                      "attrs": {
-                        "builder-data-element": "text"
-                      },
-                      "text": "Ideas, observations and stories for a life lived outdoors.",
-                      "id": "p-mvqvua2i-71"
-                    }
-                  ],
-                  "id": "header-mvqvua2i-68"
-                },
-                {
-                  "tag": "div",
-                  "name": "Post Grid",
-                  "classes": [
-                    "garden-journal__grid"
-                  ],
-                  "attrs": {
-                    "builder-data-element": "div"
-                  },
-                  "loop": {
-                    "source": "custom",
-                    "custom": "posts",
-                    "itemName": "item"
-                  },
-                  "children": [
-                    {
-                      "tag": "article",
-                      "name": "Post Card",
-                      "classes": [
-                        "garden-journal__card"
-                      ],
-                      "attrs": {
-                        "builder-data-element": "article"
-                      },
-                      "children": [
-                        {
-                          "tag": "a",
-                          "name": "Post Link",
-                          "classes": [
-                            "garden-journal__link"
-                          ],
-                          "attrs": {
-                            "builder-data-element": "link",
-                            "href": "{item.url}"
-                          },
-                          "children": [
-                            {
-                              "tag": "img",
-                              "name": "Featured Image",
-                              "classes": [
-                                "garden-journal__image"
-                              ],
-                              "attrs": {
-                                "builder-data-element": "image",
-                                "src": "{item.featured_image}",
-                                "alt": "{item.title}",
-                                "loading": "lazy",
-                                "decoding": "async",
-                                "data-image-widths": "auto",
-                                "sizes": "(max-width: 40rem) 100vw, (max-width: 60rem) 50vw, 33vw"
-                              },
-                              "id": "img-mvqvua2i-75"
-                            },
-                            {
-                              "tag": "div",
-                              "name": "Card Content",
-                              "classes": [
-                                "garden-journal__body"
-                              ],
-                              "attrs": {
-                                "builder-data-element": "div"
-                              },
-                              "children": [
-                                {
-                                  "tag": "div",
-                                  "name": "Post Metadata",
-                                  "classes": [
-                                    "garden-journal__meta"
-                                  ],
-                                  "attrs": {
-                                    "builder-data-element": "div"
-                                  },
-                                  "children": [
-                                    {
-                                      "tag": "time",
-                                      "name": "Published Date",
-                                      "classes": [
-                                        "garden-journal__date"
-                                      ],
-                                      "attrs": {
-                                        "builder-data-element": "text",
-                                        "datetime": "{item.publishedAt}"
-                                      },
-                                      "text": "{item.publishedAt_text}",
-                                      "id": "time-mvqvua2i-78"
-                                    },
-                                    {
-                                      "tag": "span",
-                                      "name": "Author",
-                                      "classes": [
-                                        "garden-journal__author"
-                                      ],
-                                      "attrs": {
-                                        "builder-data-element": "text"
-                                      },
-                                      "text": "{item.author}",
-                                      "cond": {
-                                        "mode": "custom",
-                                        "expr": "item.author"
-                                      },
-                                      "id": "span-mvqvua2i-79"
-                                    }
-                                  ],
-                                  "id": "div-mvqvua2i-77"
-                                },
-                                {
-                                  "tag": "h2",
-                                  "name": "Post Title",
-                                  "classes": [
-                                    "garden-journal__post-title"
-                                  ],
-                                  "attrs": {
-                                    "builder-data-element": "heading"
-                                  },
-                                  "text": "{item.title}",
-                                  "id": "h2-mvqvua2i-80"
-                                },
-                                {
-                                  "tag": "p",
-                                  "name": "Post Excerpt",
-                                  "classes": [
-                                    "garden-journal__excerpt"
-                                  ],
-                                  "attrs": {
-                                    "builder-data-element": "text"
-                                  },
-                                  "text": "{item.excerpt}",
-                                  "id": "p-mvqvua2i-81"
-                                }
-                              ],
-                              "id": "div-mvqvua2i-76"
-                            }
-                          ],
-                          "id": "a-mvqvua2i-74"
-                        }
-                      ],
-                      "id": "article-mvqvua2i-73"
-                    }
-                  ],
-                  "id": "div-mvqvua2i-72"
-                }
-              ],
-              "id": "div-mvqvua2i-67"
-            }
-          ],
-          "id": "section-mvqvua2i-66"
-        }
-      ],
-      "stylesheets": [
-        {
-          "id": "global",
-          "name": "Garden Journal",
-          "rules": [
-            {
-              "selector": ".garden-journal",
-              "css": "padding-block: var(--section-space-l);\npadding-inline: var(--site-padding);\nbackground: var(--base-100);\ncolor: var(--neutral);"
-            },
-            {
-              "selector": ".garden-journal__container",
-              "css": "inline-size: min(100%, var(--content-width));\nmargin-inline: auto;\ndisplay: grid;\ngap: var(--section-space-s);"
-            },
-            {
-              "selector": ".garden-journal__header",
-              "css": "display: grid;\ngap: var(--space-s);\nmax-inline-size: var(--content-width-inset);"
-            },
-            {
-              "selector": ".garden-journal__eyebrow",
-              "css": "color: var(--primary);"
-            },
-            {
-              "selector": ".garden-journal__intro",
-              "css": "font-size: var(--text-l);\ncolor: var(--text-color);"
-            },
-            {
-              "selector": ".garden-journal__grid",
-              "css": "display: grid;\ngrid-template-columns: repeat(3, minmax(0, 1fr));\ngap: var(--grid-gap);\n@media (max-width: 60rem) { grid-template-columns: repeat(2, minmax(0, 1fr)); }\n@media (max-width: 40rem) { grid-template-columns: minmax(0, 1fr); }"
-            },
-            {
-              "selector": ".garden-journal__card",
-              "css": "min-inline-size: 0;"
-            },
-            {
-              "selector": ".garden-journal__link",
-              "css": "display: flex;\nblock-size: 100%;\nflex-direction: column;\noverflow: hidden;\nborder: var(--border-width) solid var(--border-light);\nborder-radius: var(--radius-s);\nbackground: var(--white);\nbox-shadow: var(--shadow-s);\ncolor: var(--text-color);\ntext-decoration: none;\ntransition: border-color var(--motion-duration) var(--motion-ease), box-shadow var(--motion-duration) var(--motion-ease);\n&:hover { border-color: var(--primary); box-shadow: var(--shadow-m); }\n&:focus-visible { outline: var(--focus-width) var(--focus-style) var(--focus-color); outline-offset: var(--focus-offset); }"
-            },
-            {
-              "selector": ".garden-journal__image",
-              "css": "display: block;\ninline-size: 100%;\naspect-ratio: 16 / 10;\nobject-fit: cover;\nborder-radius: var(--image-radius);"
-            },
-            {
-              "selector": ".garden-journal__body",
-              "css": "display: grid;\nflex: 1;\nalign-content: start;\ngap: var(--space-s);\npadding: var(--space-m);"
-            },
-            {
-              "selector": ".garden-journal__meta",
-              "css": "display: flex;\nflex-wrap: wrap;\ngap: var(--space-xs);\ncolor: var(--text-color);\nfont-size: var(--text-s);"
-            },
-            {
-              "selector": ".garden-journal__author",
-              "css": "&::before { content: \"By \"; }"
-            },
-            {
-              "selector": ".garden-journal__post-title",
-              "css": "font-size: var(--h4);\ncolor: var(--heading-color);"
-            },
-            {
-              "selector": ".garden-journal__excerpt",
-              "css": "color: var(--text-color);"
-            }
-          ]
-        }
-      ],
-      "frontmatterMode": "manual",
-      "frontmatter": "import Base from '../layouts/PlainBase.astro';\nimport MainLayout from '../layouts/MainLayout.astro';\nimport SiterealImage from '../components/sitereal/Image.astro';\nimport '../styles/generated/framework.css';\nimport '../styles/generated/global.css';\nimport '../styles/generated/templates/tpl-muwmgdfe-1.css';\nimport '../styles/generated/pages/posts.css';\nimport { emdashPosts } from '../data/sources/emdash-posts.js';\n\nconst posts = (await emdashPosts()).map((item: Record<string, any>) => {\n  const words = String(item.excerpt ?? '').trim().split(/\\s+/).filter(Boolean);\n  const excerpt = words.length > 35 ? words.slice(0, 35).join(' ') + '…' : words.join(' ');\n  return { ...item, excerpt };\n});"
-    },
     "search": {
       "route": "search",
       "title": "Search",
@@ -3514,250 +3239,6 @@
         }
       ]
     },
-    "services": {
-      "route": "services",
-      "title": "Services",
-      "root": [
-        {
-          "id": "section-mvtnkd5m-8",
-          "tag": "section",
-          "attrs": {
-            "builder-data-element": "section"
-          },
-          "children": [
-            {
-              "id": "div-mvtnkd5m-7",
-              "tag": "div",
-              "attrs": {
-                "builder-data-element": "container"
-              },
-              "children": [
-                {
-                  "id": "h2-mvtnkd5m-6",
-                  "tag": "h1",
-                  "attrs": {
-                    "builder-data-element": "heading"
-                  },
-                  "text": "Services",
-                  "classes": [
-                    "services-archive__heading"
-                  ]
-                },
-                {
-                  "id": "div-mvtnkd5m-5",
-                  "tag": "div",
-                  "attrs": {
-                    "builder-data-element": "div"
-                  },
-                  "children": [
-                    {
-                      "id": "loop-mvtnkd5m-4",
-                      "tag": "loop",
-                      "attrs": {
-                        "builder-data-element": "loop"
-                      },
-                      "children": [
-                        {
-                          "id": "div-mvtnkd5m-3",
-                          "tag": "article",
-                          "attrs": {
-                            "builder-data-element": "div"
-                          },
-                          "children": [
-                            {
-                              "id": "h2-mvtnkd5m-2",
-                              "tag": "h2",
-                              "attrs": {
-                                "builder-data-element": "heading"
-                              },
-                              "classes": [
-                                "services-archive__title"
-                              ],
-                              "children": [
-                                {
-                                  "id": "a-mvtnkd5m-1",
-                                  "tag": "a",
-                                  "attrs": {
-                                    "builder-data-element": "link",
-                                    "href": "{item.url}"
-                                  },
-                                  "text": "{item.title}",
-                                  "classes": [
-                                    "services-archive__link"
-                                  ]
-                                }
-                              ]
-                            }
-                          ],
-                          "classes": [
-                            "services-archive__card"
-                          ]
-                        }
-                      ],
-                      "loop": {
-                        "source": "collection",
-                        "collection": "bkxt0tcz",
-                        "itemName": "item",
-                        "sortBy": "created",
-                        "sortDir": "desc"
-                      }
-                    }
-                  ],
-                  "classes": [
-                    "services-archive__grid"
-                  ]
-                }
-              ]
-            }
-          ],
-          "classes": [
-            "services-archive"
-          ]
-        }
-      ],
-      "stylesheets": [
-        {
-          "id": "global",
-          "name": "Global",
-          "rules": [
-            {
-              "selector": ".services-archive__grid",
-              "css": "display: grid;\ngrid-template-columns: repeat(auto-fill, minmax(min(18rem, 100%), 1fr));\ngap: var(--content-spacing);"
-            },
-            {
-              "selector": ".services-archive__card",
-              "css": "display: flex;\nflex-direction: column;\ngap: var(--space-xs, 0.75rem);"
-            },
-            {
-              "selector": ".services-archive__image",
-              "css": "aspect-ratio: 4 / 3;\nobject-fit: cover;\ninline-size: 100%;"
-            }
-          ]
-        }
-      ]
-    },
-    "services-2": {
-      "route": "services-2",
-      "title": "Services",
-      "root": [
-        {
-          "id": "section-mvtnn2ld-16",
-          "tag": "section",
-          "attrs": {
-            "builder-data-element": "section"
-          },
-          "children": [
-            {
-              "id": "div-mvtnn2ld-15",
-              "tag": "div",
-              "attrs": {
-                "builder-data-element": "container"
-              },
-              "children": [
-                {
-                  "id": "h2-mvtnn2ld-14",
-                  "tag": "h1",
-                  "attrs": {
-                    "builder-data-element": "heading"
-                  },
-                  "text": "Services",
-                  "classes": [
-                    "services-archive__heading"
-                  ]
-                },
-                {
-                  "id": "div-mvtnn2ld-13",
-                  "tag": "div",
-                  "attrs": {
-                    "builder-data-element": "div"
-                  },
-                  "children": [
-                    {
-                      "id": "loop-mvtnn2ld-12",
-                      "tag": "loop",
-                      "attrs": {
-                        "builder-data-element": "loop"
-                      },
-                      "children": [
-                        {
-                          "id": "div-mvtnn2ld-11",
-                          "tag": "article",
-                          "attrs": {
-                            "builder-data-element": "div"
-                          },
-                          "children": [
-                            {
-                              "id": "h2-mvtnn2ld-10",
-                              "tag": "h2",
-                              "attrs": {
-                                "builder-data-element": "heading"
-                              },
-                              "classes": [
-                                "services-archive__title"
-                              ],
-                              "children": [
-                                {
-                                  "id": "a-mvtnn2ld-9",
-                                  "tag": "a",
-                                  "attrs": {
-                                    "builder-data-element": "link",
-                                    "href": "{item.url}"
-                                  },
-                                  "text": "{item.title}",
-                                  "classes": [
-                                    "services-archive__link"
-                                  ]
-                                }
-                              ]
-                            }
-                          ],
-                          "classes": [
-                            "services-archive__card"
-                          ]
-                        }
-                      ],
-                      "loop": {
-                        "source": "collection",
-                        "collection": "wr4q8ewa",
-                        "itemName": "item",
-                        "sortBy": "created",
-                        "sortDir": "desc"
-                      }
-                    }
-                  ],
-                  "classes": [
-                    "services-archive__grid"
-                  ]
-                }
-              ]
-            }
-          ],
-          "classes": [
-            "services-archive"
-          ]
-        }
-      ],
-      "stylesheets": [
-        {
-          "id": "global",
-          "name": "Global",
-          "rules": [
-            {
-              "selector": ".services-archive__grid",
-              "css": "display: grid;\ngrid-template-columns: repeat(auto-fill, minmax(min(18rem, 100%), 1fr));\ngap: var(--content-spacing);"
-            },
-            {
-              "selector": ".services-archive__card",
-              "css": "display: flex;\nflex-direction: column;\ngap: var(--space-xs, 0.75rem);"
-            },
-            {
-              "selector": ".services-archive__image",
-              "css": "aspect-ratio: 4 / 3;\nobject-fit: cover;\ninline-size: 100%;"
-            }
-          ]
-        }
-      ]
-    },
     "team": {
       "route": "team",
       "title": "Team",
@@ -3879,6 +3360,143 @@
           ]
         }
       ]
+    },
+    "team-2": {
+      "route": "team-2",
+      "title": "Team",
+      "root": [
+        {
+          "id": "section-mvtqytes-9",
+          "tag": "section",
+          "attrs": {
+            "builder-data-element": "section"
+          },
+          "children": [
+            {
+              "id": "div-mvtqytes-8",
+              "tag": "div",
+              "attrs": {
+                "builder-data-element": "container"
+              },
+              "children": [
+                {
+                  "id": "h2-mvtqytes-7",
+                  "tag": "h1",
+                  "attrs": {
+                    "builder-data-element": "heading"
+                  },
+                  "text": "Team",
+                  "classes": [
+                    "team-archive__heading"
+                  ]
+                },
+                {
+                  "id": "div-mvtqytes-6",
+                  "tag": "div",
+                  "attrs": {
+                    "builder-data-element": "div"
+                  },
+                  "children": [
+                    {
+                      "id": "loop-mvtqytes-5",
+                      "tag": "loop",
+                      "attrs": {
+                        "builder-data-element": "loop"
+                      },
+                      "children": [
+                        {
+                          "id": "div-mvtqytes-4",
+                          "tag": "article",
+                          "attrs": {
+                            "builder-data-element": "div"
+                          },
+                          "children": [
+                            {
+                              "id": "img-mvtqyter-1",
+                              "tag": "img",
+                              "attrs": {
+                                "builder-data-element": "image",
+                                "src": "{item.headshot}",
+                                "alt": "",
+                                "data-image-widths": "auto",
+                                "sizes": "(min-width: 900px) 33vw, 100vw"
+                              },
+                              "classes": [
+                                "team-archive__image"
+                              ]
+                            },
+                            {
+                              "id": "h2-mvtqytes-3",
+                              "tag": "h2",
+                              "attrs": {
+                                "builder-data-element": "heading"
+                              },
+                              "classes": [
+                                "team-archive__title"
+                              ],
+                              "children": [
+                                {
+                                  "id": "a-mvtqytes-2",
+                                  "tag": "a",
+                                  "attrs": {
+                                    "builder-data-element": "link",
+                                    "href": "{item.url}"
+                                  },
+                                  "text": "{item.title}",
+                                  "classes": [
+                                    "team-archive__link"
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "classes": [
+                            "team-archive__card"
+                          ]
+                        }
+                      ],
+                      "loop": {
+                        "source": "collection",
+                        "collection": "4lvda5xw",
+                        "collectionSlug": "team",
+                        "itemName": "item",
+                        "sortBy": "created",
+                        "sortDir": "desc"
+                      }
+                    }
+                  ],
+                  "classes": [
+                    "team-archive__grid"
+                  ]
+                }
+              ]
+            }
+          ],
+          "classes": [
+            "team-archive"
+          ]
+        }
+      ],
+      "stylesheets": [
+        {
+          "id": "global",
+          "name": "Global",
+          "rules": [
+            {
+              "selector": ".team-archive__grid",
+              "css": "display: grid;\ngrid-template-columns: repeat(auto-fill, minmax(min(18rem, 100%), 1fr));\ngap: var(--content-spacing);"
+            },
+            {
+              "selector": ".team-archive__card",
+              "css": "display: flex;\nflex-direction: column;\ngap: var(--space-xs, 0.75rem);"
+            },
+            {
+              "selector": ".team-archive__image",
+              "css": "aspect-ratio: 4 / 3;\nobject-fit: cover;\ninline-size: 100%;"
+            }
+          ]
+        }
+      ]
     }
   },
   "emitted": {
@@ -3888,22 +3506,20 @@
     "public/scripts/search.js": "05c613215741ca2b",
     "src/components/sitereal/Image.astro": "ae0fdd096a0df7bf",
     "src/components/sitereal/RichText.astro": "46ebcf88d868c151",
+    "src/data/team.json": "37517e5f3dc66819",
     "src/layouts/MainLayout.astro": "a4bfccebc98a006f",
     "src/layouts/Template404Layout.astro": "ae088b9e70092dc2",
     "src/pages/index.astro": "e3832fededf8353e",
-    "src/pages/posts.astro": "aace424f1ddc3045",
     "src/pages/search.astro": "158ccf6f37fbfbfd",
-    "src/pages/services-2.astro": "798ed088cc9928bb",
-    "src/pages/services.astro": "7341e0fb36d01b2c",
+    "src/pages/team-2.astro": "5ab0ff1c70dc0a39",
     "src/pages/team.astro": "503f128ddc614825",
+    "src/pages/team/[...teamEntry].astro": "b2d28d5a6885ba17",
     "src/styles/generated/framework.css": "63b5d6533ec63748",
     "src/styles/generated/global.css": "16034d60ca677fba",
     "src/styles/generated/pages/_entry-srczgw0t2j.css": "338a17ff5894f4d9",
     "src/styles/generated/pages/index.css": "4102b560f26008a4",
-    "src/styles/generated/pages/posts.css": "91a07bcee96e051b",
     "src/styles/generated/pages/search.css": "42d91936b902c139",
-    "src/styles/generated/pages/services-2.css": "fa72e64d32e0ba48",
-    "src/styles/generated/pages/services.css": "d38dc5ad57652e85",
+    "src/styles/generated/pages/team-2.css": "ab8ebb0281af1f7b",
     "src/styles/generated/pages/team.css": "816eb121aa10c11d",
     "src/styles/generated/templates/tpl-muwmgdfe-1.css": "46cede259777f20e"
   }

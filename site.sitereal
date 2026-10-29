@@ -1,6 +1,6 @@
 {
   "format": "sitereal",
-  "version": 4,
+  "version": 2,
   "site": {
     "name": "Derwen Landscape",
     "lang": "en",
@@ -865,188 +865,7 @@
     ],
     "taxonomies": []
   },
-  "sources": [
-    {
-      "id": "srczgw0t2j",
-      "name": "EmDash posts",
-      "slug": "emdash-posts",
-      "kind": "emdash",
-      "url": "https://emdash-c46x.xc1.app/",
-      "cmsType": "posts",
-      "auth": "bearer",
-      "secretVar": "EMDASH_TOKEN",
-      "offline": "cache",
-      "fields": [
-        {
-          "key": "title",
-          "type": "text"
-        },
-        {
-          "key": "featured_image",
-          "type": "image"
-        },
-        {
-          "key": "featured_image_alt",
-          "type": "text"
-        },
-        {
-          "key": "featured_image_width",
-          "type": "number"
-        },
-        {
-          "key": "featured_image_height",
-          "type": "number"
-        },
-        {
-          "key": "content",
-          "type": "html"
-        },
-        {
-          "key": "excerpt",
-          "type": "text"
-        },
-        {
-          "key": "id",
-          "type": "text"
-        },
-        {
-          "key": "slug",
-          "type": "text"
-        },
-        {
-          "key": "publishedAt",
-          "type": "date"
-        },
-        {
-          "key": "updatedAt",
-          "type": "date"
-        },
-        {
-          "key": "createdAt",
-          "type": "date"
-        },
-        {
-          "key": "author",
-          "type": "text"
-        },
-        {
-          "key": "author_slug",
-          "type": "text"
-        },
-        {
-          "key": "author_bio",
-          "type": "text"
-        },
-        {
-          "key": "authors",
-          "type": "list"
-        },
-        {
-          "key": "category",
-          "type": "list"
-        },
-        {
-          "key": "category_slugs",
-          "type": "list"
-        },
-        {
-          "key": "tag",
-          "type": "list"
-        },
-        {
-          "key": "tag_slugs",
-          "type": "list"
-        },
-        {
-          "key": "locale",
-          "type": "text"
-        },
-        {
-          "key": "seo",
-          "type": "object"
-        },
-        {
-          "key": "seo.title",
-          "type": "text"
-        },
-        {
-          "key": "seo.description",
-          "type": "text"
-        },
-        {
-          "key": "seo.image",
-          "type": "text"
-        },
-        {
-          "key": "seo.canonical",
-          "type": "text"
-        },
-        {
-          "key": "seo.noIndex",
-          "type": "boolean"
-        },
-        {
-          "key": "link",
-          "type": "url"
-        },
-        {
-          "key": "meta_title",
-          "type": "text"
-        },
-        {
-          "key": "meta_description",
-          "type": "text"
-        },
-        {
-          "key": "meta_image",
-          "type": "image"
-        },
-        {
-          "key": "url",
-          "type": "url"
-        },
-        {
-          "key": "publishedAt_text",
-          "type": "text"
-        },
-        {
-          "key": "updatedAt_text",
-          "type": "text"
-        },
-        {
-          "key": "createdAt_text",
-          "type": "text"
-        }
-      ],
-      "cmsSchema": {
-        "pattern": "/posts/{slug}",
-        "fields": {
-          "title": "string",
-          "featured_image": "image",
-          "content": "portableText",
-          "excerpt": "text"
-        },
-        "taxonomies": [
-          {
-            "name": "category",
-            "label": "Categories"
-          },
-          {
-            "name": "tag",
-            "label": "Tags"
-          }
-        ]
-      },
-      "entry": {
-        "on": true,
-        "at": "link"
-      },
-      "cmsTerms": [
-        "category",
-        "tag"
-      ]
-    }
-  ],
+  "sources": [],
   "media": {
     "collections": [
       {
@@ -1578,7 +1397,6 @@
                               "loop": {
                                 "source": "api",
                                 "api": "srczgw0t2j",
-                                "apiSlug": "emdash-posts",
                                 "itemName": "item",
                                 "limit": 3
                               },
@@ -4096,10 +3914,8 @@
     "public/scripts/search.js": "05c613215741ca2b",
     "src/components/sitereal/Image.astro": "ae0fdd096a0df7bf",
     "src/components/sitereal/RichText.astro": "46ebcf88d868c151",
-    "src/data/sources/emdash-posts.js": "2428bc8a374345d6",
     "src/layouts/MainLayout.astro": "a4bfccebc98a006f",
     "src/layouts/Template404Layout.astro": "ae088b9e70092dc2",
-    "src/pages/[...emdashPosts].astro": "87d235532c455a09",
     "src/pages/index.astro": "e3832fededf8353e",
     "src/pages/posts.astro": "aace424f1ddc3045",
     "src/pages/search.astro": "158ccf6f37fbfbfd",

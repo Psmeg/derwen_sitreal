@@ -858,6 +858,14 @@
             "type": "richtext"
           }
         ],
+        "settings": {
+          "public": true,
+          "queryable": true,
+          "archive": true,
+          "routeStyle": "folder",
+          "storageAuto": true,
+          "archivePage": "team-2"
+        },
         "items": [
           {
             "id": "y3h4x3v7",
@@ -884,16 +892,64 @@
               "f-raf7zgk": "Finance",
               "f-wrgts8c": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>"
             }
+          },
+          {
+            "id": "team-ashley-brooks",
+            "status": "live",
+            "created": "2026-10-29T17:10:00.000Z",
+            "values": {
+              "title": "Ashley Brooks",
+              "slug": "ashley-brooks",
+              "f-04hfpnw": "/uploads/pexels-team-774909.jpg",
+              "f-04hfpnw:alt": "Portrait of Ashley Brooks",
+              "f-04hfpnw:focus": "50% 20%",
+              "f-raf7zgk": "Sales",
+              "f-wrgts8c": "<p>Ashley helps clients shape practical garden plans and keeps each project moving from first conversation to finished space.</p>"
+            }
+          },
+          {
+            "id": "team-marcus-reed",
+            "status": "live",
+            "created": "2026-10-29T17:11:00.000Z",
+            "values": {
+              "title": "Marcus Reed",
+              "slug": "marcus-reed",
+              "f-04hfpnw": "/uploads/pexels-team-2379004.jpg",
+              "f-04hfpnw:alt": "Portrait of Marcus Reed",
+              "f-04hfpnw:focus": "50% 24%",
+              "f-raf7zgk": "Management",
+              "f-wrgts8c": "<p>Marcus oversees delivery across the studio, connecting thoughtful design with the careful planning every landscape deserves.</p>"
+            }
+          },
+          {
+            "id": "team-nina-patel",
+            "status": "live",
+            "created": "2026-10-29T17:12:00.000Z",
+            "values": {
+              "title": "Nina Patel",
+              "slug": "nina-patel",
+              "f-04hfpnw": "/uploads/pexels-team-3769021.jpg",
+              "f-04hfpnw:alt": "Portrait of Nina Patel",
+              "f-04hfpnw:focus": "50% 18%",
+              "f-raf7zgk": "Sales",
+              "f-wrgts8c": "<p>Nina brings a warm, considered approach to client relationships and helps turn early ideas into confident next steps.</p>"
+            }
+          },
+          {
+            "id": "team-olivia-hart",
+            "status": "live",
+            "created": "2026-10-29T17:13:00.000Z",
+            "values": {
+              "title": "Olivia Hart",
+              "slug": "olivia-hart",
+              "f-04hfpnw": "/uploads/pexels-team-5704720.jpg",
+              "f-04hfpnw:alt": "Portrait of Olivia Hart",
+              "f-04hfpnw:focus": "50% 24%",
+              "f-raf7zgk": "Finance",
+              "f-wrgts8c": "<p>Olivia keeps the numbers and details in good order, giving each garden project a steady foundation from planning through completion.</p>"
+            }
           }
-        ],
-        "settings": {
-          "public": true,
-          "queryable": true,
-          "archive": true,
-          "routeStyle": "folder",
-          "storageAuto": true,
-          "archivePage": "team-2"
-        }
+        ]
       }
     ],
     "taxonomies": []
@@ -3720,7 +3776,7 @@
     "public/scripts/search.js": "05c613215741ca2b",
     "src/components/sitereal/Image.astro": "ae0fdd096a0df7bf",
     "src/components/sitereal/RichText.astro": "46ebcf88d868c151",
-    "src/data/team.json": "60265b4cdec8895f",
+    "src/data/team.json": "249743531822fbba",
     "src/layouts/MainLayout.astro": "a4bfccebc98a006f",
     "src/layouts/Template404Layout.astro": "ae088b9e70092dc2",
     "src/pages/index.astro": "e3832fededf8353e",

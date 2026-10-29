@@ -26,5 +26,61 @@
     "bio": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>",
     "url": "/team/jeffrey-d",
     "created_text": "October 29, 2026"
+  },
+  {
+    "id": "team-ashley-brooks",
+    "created": "2026-10-29T17:10:00.000Z",
+    "title": "Ashley Brooks",
+    "slug": "ashley-brooks",
+    "headshot": "/uploads/pexels-team-774909.jpg",
+    "headshot_alt": "Portrait of Ashley Brooks",
+    "headshot_focus": "50% 20%",
+    "headshot_resolution": "auto",
+    "department": "Sales",
+    "bio": "<p>Ashley helps clients shape practical garden plans and keeps each project moving from first conversation to finished space.</p>",
+    "url": "/team/ashley-brooks",
+    "created_text": "October 29, 2026"
+  },
+  {
+    "id": "team-marcus-reed",
+    "created": "2026-10-29T17:11:00.000Z",
+    "title": "Marcus Reed",
+    "slug": "marcus-reed",
+    "headshot": "/uploads/pexels-team-2379004.jpg",
+    "headshot_alt": "Portrait of Marcus Reed",
+    "headshot_focus": "50% 24%",
+    "headshot_resolution": "auto",
+    "department": "Management",
+    "bio": "<p>Marcus oversees delivery across the studio, connecting thoughtful design with the careful planning every landscape deserves.</p>",
+    "url": "/team/marcus-reed",
+    "created_text": "October 29, 2026"
+  },
+  {
+    "id": "team-nina-patel",
+    "created": "2026-10-29T17:12:00.000Z",
+    "title": "Nina Patel",
+    "slug": "nina-patel",
+    "headshot": "/uploads/pexels-team-3769021.jpg",
+    "headshot_alt": "Portrait of Nina Patel",
+    "headshot_focus": "50% 18%",
+    "headshot_resolution": "auto",
+    "department": "Sales",
+    "bio": "<p>Nina brings a warm, considered approach to client relationships and helps turn early ideas into confident next steps.</p>",
+    "url": "/team/nina-patel",
+    "created_text": "October 29, 2026"
+  },
+  {
+    "id": "team-olivia-hart",
+    "created": "2026-10-29T17:13:00.000Z",
+    "title": "Olivia Hart",
+    "slug": "olivia-hart",
+    "headshot": "/uploads/pexels-team-5704720.jpg",
+    "headshot_alt": "Portrait of Olivia Hart",
+    "headshot_focus": "50% 24%",
+    "headshot_resolution": "auto",
+    "department": "Finance",
+    "bio": "<p>Olivia keeps the numbers and details in good order, giving each garden project a steady foundation from planning through completion.</p>",
+    "url": "/team/olivia-hart",
+    "created_text": "October 29, 2026"
   }
 ]

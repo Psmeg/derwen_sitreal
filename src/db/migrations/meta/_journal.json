@@ -29,6 +29,20 @@
       "when": 1793271026860,
       "tag": "0003_next_longshot",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1793284955616,
+      "tag": "0004_thankful_old_lace",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1793285124700,
+      "tag": "0005_furry_pride",
+      "breakpoints": true
     }
   ]
 }

@@ -1,0 +1,1 @@
+ALTER TABLE `services` ADD `service_description` text;

@@ -19,7 +19,9 @@
   padding-block: var(--section-space-xl);
   display: grid;
   align-items: center;
-  @media (max-width: 48rem) { padding-block: var(--section-space-l); }
+  @media (max-width: 48rem) {
+    padding-block: var(--section-space-l);
+  }
 }
 
 .hero__headline {

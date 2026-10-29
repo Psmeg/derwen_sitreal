@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "sitereal": {
+      "command": "/Applications/sitereal.app/Contents/MacOS/sitereal",
+      "args": [
+        "/Applications/sitereal.app/Contents/Resources/app.asar/dist/mcp.mjs"
+      ],
+      "env": {
+        "ELECTRON_RUN_AS_NODE": "1"
+      }
+    }
+  }
+}

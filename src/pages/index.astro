@@ -1,0 +1,147 @@
+---
+import Base from '../layouts/PlainBase.astro';
+import MainLayout from '../layouts/MainLayout.astro';
+import { Image } from 'astro:assets';
+import _img_04_project_planting_6xvh33 from '../../public/uploads/04-project-planting.jpg';
+import _img_06_team_working_t1plf from '../../public/uploads/06-team-working.jpg';
+import _img_garden_path_editorial_zyxla6 from '../../public/uploads/garden-path-editorial.png';
+import '../styles/generated/framework.css';
+import '../styles/generated/global.css';
+import '../styles/generated/templates/tpl-muwmgdfe-1.css';
+import '../styles/generated/pages/index.css';
+---
+<Base title="Home" description="Thoughtful garden design shaped around your home and the way you love to spend time outside." siteName="Derwen Landscape" lang="en">
+  <Fragment slot="head">
+    <link rel="icon" href="/favicon.svg?v=71b5bc0159" type="image/svg+xml" />
+    <meta property="og:locale" content="en" />
+    <meta name="author" content="Derwen Landscape" />
+    <script is:inline>(function(){var d=document.documentElement;if(!window.matchMedia||matchMedia('(prefers-reduced-motion: reduce)').matches)return;d.setAttribute('data-motion-armed','');var s=document.createElement('style');s.textContent='[data-motion-armed] [data-motion],[data-motion-armed] [data-motion-stagger] *{opacity:0}';document.head.appendChild(s);setTimeout(function(){d.removeAttribute('data-motion-armed')},2500)})();</script>
+  </Fragment>
+  <MainLayout>
+    <section class="hero" builder-data-element="section" id="home-hero" aria-labelledby="hero-title">
+      <div class="hero__content" builder-data-element="div">
+        <div class="hero__headline" builder-data-element="div" data-motion="fade" data-motion-trigger="load">
+          <p class="hero__eyebrow" builder-data-element="text">Landscape design for living</p>
+          <h1 class="hero__title" builder-data-element="heading" id="hero-title">CREATE A GARDEN<br>MADE FOR LIVING</h1>
+          <p class="hero__copy" builder-data-element="text">Thoughtful garden design, considered planting and careful landscaping for life outdoors.</p>
+          <div class="hero__actions" builder-data-element="div">
+            <a class="hero__action btn btn--white" builder-data-element="link" href="#garden-work">Explore our work</a>
+            <a class="hero__secondary btn btn--white btn--outline" builder-data-element="link" href="#garden-services">Our services</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero__visual" builder-data-element="div" id="hero-image">
+        <figure class="hero__figure" builder-data-element="figure">
+          <Image src={_img_garden_path_editorial_zyxla6} widths={[480, 768, 1200, 1600, 2000]} class="hero__image" builder-data-element="image" alt="Illustrative garden with a stone path through layered planting" fetchpriority="high" loading="eager" decoding="async" sizes="100vw" />
+        </figure>
+      </div>
+    </section>
+    <section class="garden-intro" builder-data-element="section" id="garden-services" aria-labelledby="garden-intro-title">
+      <div class="garden-intro__container" builder-data-element="div">
+        <header class="garden-intro__header" builder-data-element="header" data-motion="rise">
+          <p class="garden-intro__eyebrow" builder-data-element="text">OUR SERVICES</p>
+          <h2 builder-data-element="heading" id="garden-intro-title">WELCOME TO DERWEN LANDSCAPE</h2>
+          <p class="garden-intro__lead" builder-data-element="text">Thoughtful design, considered planting and careful finishing make the garden feel like a natural extension of home.</p>
+        </header>
+        <div class="service-showcase" builder-data-element="div" data-motion="rise" data-motion-stagger="200">
+          <article class="service-showcase__card" builder-data-element="article">
+            <Image src={_img_04_project_planting_6xvh33} widths={[480, 768, 1200, 1600, 2000]} class="service-showcase__image" builder-data-element="image" alt="" sizes="(max-width: 48rem) 100vw, 50vw" loading="lazy" decoding="async" />
+            <div class="service-showcase__content" builder-data-element="div">
+              <p class="service-showcase__label" builder-data-element="text">01 / DESIGN</p>
+              <h3 class="service-showcase__title" builder-data-element="heading">GARDEN DESIGN</h3>
+              <p class="service-showcase__copy" builder-data-element="text">Spaces shaped around your home and the way you live.</p>
+            </div>
+          </article>
+          <article class="service-showcase__card" builder-data-element="article">
+            <Image src={_img_garden_path_editorial_zyxla6} widths={[480, 768, 1200, 1600, 2000]} class="service-showcase__image" builder-data-element="image" alt="" sizes="(max-width: 40rem) 100vw, 33vw" loading="lazy" decoding="async" />
+            <div class="service-showcase__content" builder-data-element="div">
+              <p class="service-showcase__label" builder-data-element="text">02 / PLANTING</p>
+              <h3 class="service-showcase__title" builder-data-element="heading">PLANTING</h3>
+              <p class="service-showcase__copy" builder-data-element="text">Texture, colour and interest through the seasons.</p>
+            </div>
+          </article>
+          <article class="service-showcase__card" builder-data-element="article">
+            <Image src={_img_06_team_working_t1plf} widths={[480, 768, 1200, 1600, 2000]} class="service-showcase__image" builder-data-element="image" alt="" sizes="(max-width: 40rem) 100vw, 33vw" loading="lazy" decoding="async" />
+            <div class="service-showcase__content" builder-data-element="div">
+              <p class="service-showcase__label" builder-data-element="text">03 / CARE</p>
+              <h3 class="service-showcase__title" builder-data-element="heading">GARDEN CARE</h3>
+              <p class="service-showcase__copy" builder-data-element="text">Considered care to help your garden thrive.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="garden-approach" builder-data-element="section" id="garden-approach" aria-labelledby="garden-approach-title">
+      <div class="garden-approach__container" builder-data-element="container">
+        <header class="garden-approach__header" builder-data-element="header">
+          <p class="garden-approach__eyebrow" builder-data-element="text">HOW WE WORK</p>
+          <h2 class="garden-approach__title" builder-data-element="heading" id="garden-approach-title">A THOUGHTFUL PROCESS</h2>
+          <p class="garden-approach__intro" builder-data-element="text">From the first conversation to the final planting, every choice should feel considered and clear.</p>
+        </header>
+        <ol class="garden-approach__list" builder-data-element="list">
+          <li class="garden-approach__item" builder-data-element="li">
+            <span class="garden-approach__number" builder-data-element="span">01</span>
+            <h3 class="garden-approach__item-title" builder-data-element="heading">Planned around your home</h3>
+            <p class="garden-approach__copy" builder-data-element="text">We begin with your space, the light it gets and the way you want to spend time outside.</p>
+          </li>
+          <li class="garden-approach__item" builder-data-element="li">
+            <span class="garden-approach__number" builder-data-element="span">02</span>
+            <h3 class="garden-approach__item-title" builder-data-element="heading">Built with care</h3>
+            <p class="garden-approach__copy" builder-data-element="text">Thoughtful materials and skilled work bring the plan together with care at every stage.</p>
+          </li>
+          <li class="garden-approach__item" builder-data-element="li">
+            <span class="garden-approach__number" builder-data-element="span">03</span>
+            <h3 class="garden-approach__item-title" builder-data-element="heading">Made to grow</h3>
+            <p class="garden-approach__copy" builder-data-element="text">Planting is chosen to settle in, develop and bring a changing sense of life to the garden.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section class="garden-feature" builder-data-element="section" aria-labelledby="garden-feature-title">
+      <div class="garden-feature__container" builder-data-element="container">
+        <div class="garden-feature__visual" builder-data-element="div">
+          <Image src={_img_04_project_planting_6xvh33} widths={[480, 768, 1200, 1600, 2000]} class="garden-feature__image" builder-data-element="image" alt="A stone path through layered garden planting" sizes="(max-width: 48rem) 100vw, 50vw" loading="lazy" decoding="async" />
+          <Image src={_img_06_team_working_t1plf} widths={[480, 768, 1200, 1600, 2000]} class="garden-feature__detail" builder-data-element="image" alt="Gardeners tending a planting bed" sizes="(max-width: 48rem) 45vw, 22vw" loading="lazy" decoding="async" />
+        </div>
+        <div class="garden-feature__content" builder-data-element="div">
+          <p class="garden-feature__eyebrow" builder-data-element="text">THOUGHTFUL LANDSCAPES</p>
+          <h2 class="garden-feature__title" builder-data-element="heading" id="garden-feature-title">ELEVATE YOUR OUTDOOR SPACE</h2>
+          <p class="garden-feature__copy" builder-data-element="text">From the first ideas to the finishing touches, we bring design, planting and care together to create gardens that feel at home.</p>
+          <a class="garden-feature__action btn btn--primary" builder-data-element="link" href="#garden-work">Explore our work</a>
+        </div>
+      </div>
+    </section>
+    <section class="garden-work" builder-data-element="section" id="garden-work" aria-labelledby="garden-work-title">
+      <div class="garden-work__container" builder-data-element="container">
+        <header class="garden-work__header" builder-data-element="header">
+          <p class="garden-work__eyebrow" builder-data-element="text">Selected work</p>
+          <h2 class="garden-work__title" builder-data-element="heading" id="garden-work-title">DISCOVER OUR GARDEN WORK</h2>
+          <p class="garden-work__intro" builder-data-element="text">Careful planting, lasting materials and a clear route through the garden make outdoor spaces easier to enjoy.</p>
+        </header>
+        <article class="garden-work__feature" builder-data-element="article">
+          <figure class="garden-work__figure" builder-data-element="figure">
+            <Image src={_img_04_project_planting_6xvh33} widths={[480, 768, 1200, 1600, 2000]} class="garden-work__image" builder-data-element="image" alt="A stone garden path bordered by layered grasses, flowering plants and a contemporary home" sizes="100vw" loading="lazy" decoding="async" />
+          </figure>
+          <div class="garden-work__story" builder-data-element="div">
+            <p class="garden-work__story-eyebrow" builder-data-element="text">The details matter</p>
+            <h3 class="garden-work__story-title" builder-data-element="heading">Room to slow down.</h3>
+            <p class="garden-work__copy" builder-data-element="text">Soft grasses, layered planting and a clear stone path bring structure and a quieter rhythm to the space.</p>
+            <a class="garden-work__link" builder-data-element="link" href="/posts">Explore the garden journal</a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="garden-cta" builder-data-element="section" aria-labelledby="garden-cta-title">
+      <div class="garden-cta__container" builder-data-element="container">
+        <div class="garden-cta__content" builder-data-element="div">
+          <p class="garden-cta__eyebrow" builder-data-element="text">Planning a change?</p>
+          <h2 class="garden-cta__title" builder-data-element="heading" id="garden-cta-title">Let’s make more of your garden.</h2>
+          <p class="garden-cta__copy" builder-data-element="text">Find a little inspiration and practical advice in the garden journal.</p>
+        </div>
+        <a class="garden-cta__link btn btn--white" builder-data-element="link" href="/posts">Explore the garden journal</a>
+      </div>
+    </section>
+  </MainLayout>
+  <script is:inline src="/scripts/nav.js" defer></script>
+  <script is:inline src="/scripts/motion.js" defer></script>
+</Base>

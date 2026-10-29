@@ -1,0 +1,11 @@
+.site-header {
+  position: sticky;
+  inset-block-start: 0;
+  z-index: 10;
+  background-color: transparent;
+  transition: background-color 500ms ease;
+}
+
+.site-header.site-header--scrolled {
+  background-color: color-mix(in oklch, oklch(98% 0.009 105) 86%, transparent);
+}

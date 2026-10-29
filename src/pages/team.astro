@@ -1,0 +1,35 @@
+---
+import Base from '../layouts/PlainBase.astro';
+import MainLayout from '../layouts/MainLayout.astro';
+import '../styles/generated/framework.css';
+import '../styles/generated/global.css';
+import '../styles/generated/templates/tpl-muwmgdfe-1.css';
+import '../styles/generated/pages/team.css';
+import { teamRows } from "../db";
+let teamEntries: Record<string, any>[] = await teamRows();
+teamEntries = teamEntries.slice().sort((a, b) => -1 * ((x, y) => typeof x === 'number' && typeof y === 'number' ? x - y : ((x) => x instanceof Date ? x.toISOString() : String(x ?? ''))(x).localeCompare(((x) => x instanceof Date ? x.toISOString() : String(x ?? ''))(y)))((a.data?.created ?? a.created), (b.data?.created ?? b.created)));
+---
+<Base title="Team" siteName="Derwen Landscape" lang="en">
+  <Fragment slot="head">
+    <link rel="icon" href="/favicon.svg?v=71b5bc0159" type="image/svg+xml" />
+    <meta property="og:locale" content="en" />
+    <meta name="author" content="Derwen Landscape" />
+  </Fragment>
+  <MainLayout>
+    <section class="team-archive" builder-data-element="section">
+      <div builder-data-element="container">
+        <h1 class="team-archive__heading" builder-data-element="heading">Team</h1>
+        <div class="team-archive__grid" builder-data-element="div">
+          {teamEntries.map((item) => (
+            <article class="team-archive__card" builder-data-element="div">
+              <h2 class="team-archive__title" builder-data-element="heading">
+                <a class="team-archive__link" builder-data-element="link" href={item.url}>{item.title}</a>
+              </h2>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  </MainLayout>
+  <script is:inline src="/scripts/nav.js" defer></script>
+</Base>

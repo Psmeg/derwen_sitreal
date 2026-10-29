@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1793270911498,
+      "tag": "0000_complete_psylocke",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1793270955484,
+      "tag": "0001_real_mordo",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1793270968106,
+      "tag": "0002_typical_shocker",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1793271026860,
+      "tag": "0003_next_longshot",
+      "breakpoints": true
+    }
+  ]
+}

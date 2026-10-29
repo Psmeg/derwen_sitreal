@@ -1,0 +1,34 @@
+---
+import Base from '../layouts/PlainBase.astro';
+import MainLayout from '../layouts/MainLayout.astro';
+import '../styles/generated/framework.css';
+import '../styles/generated/global.css';
+import '../styles/generated/templates/tpl-muwmgdfe-1.css';
+import '../styles/generated/pages/search.css';
+---
+<Base title="Search" noindex siteName="Derwen Landscape" lang="en">
+  <Fragment slot="head">
+    <link rel="icon" href="/favicon.svg?v=71b5bc0159" type="image/svg+xml" />
+    <meta property="og:locale" content="en" />
+    <meta name="author" content="Derwen Landscape" />
+  </Fragment>
+  <MainLayout>
+    <section class="garden-search" builder-data-element="section">
+      <div class="garden-search__container" builder-data-element="container">
+        <h1 builder-data-element="heading">Search</h1>
+        <search class="garden-search__form" builder-data-element="search" data-search-style="icon" data-search-part="search">
+          <input class="garden-search__input" builder-data-element="form-input" type="search" data-search-part="input" name="q" placeholder="Search…" aria-label="Search" autocomplete="off" />
+          <div class="garden-search__results" builder-data-element="search-results" hidden="" data-search-part="results" data-search-display="page">
+            <a class="garden-search__hit" builder-data-element="search-hit" data-result-href="{result.url}" data-search-part="hit" hidden="">
+              <span class="garden-search__hit-title" builder-data-element="search-hit-title" data-search-part="hit-title">&#123;result.title&#125;</span>
+              <span class="garden-search__hit-type" builder-data-element="search-hit-type" data-search-part="hit-type">&#123;result.type&#125;</span>
+              <span class="garden-search__hit-excerpt" builder-data-element="search-hit-excerpt" data-search-part="hit-excerpt">&#123;result.excerpt&#125;</span>
+            </a>
+          </div>
+        </search>
+      </div>
+    </section>
+  </MainLayout>
+  <script is:inline src="/scripts/nav.js" defer></script>
+  <script is:inline src="/scripts/search.js" defer></script>
+</Base>

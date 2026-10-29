@@ -1,0 +1,78 @@
+---
+import Base from '../layouts/PlainBase.astro';
+import MainLayout from '../layouts/MainLayout.astro';
+import SiterealImage from '../components/sitereal/Image.astro';
+import '../styles/generated/framework.css';
+import '../styles/generated/global.css';
+import '../styles/generated/templates/tpl-muwmgdfe-1.css';
+import '../styles/generated/pages/posts.css';
+import { emdashPosts } from '../data/sources/emdash-posts.js';
+
+const posts = (await emdashPosts()).map((item: Record<string, any>) => {
+  const words = String(item.excerpt ?? '').trim().split(/\s+/).filter(Boolean);
+  const excerpt = words.length > 35 ? words.slice(0, 35).join(' ') + '…' : words.join(' ');
+  return { ...item, excerpt };
+});
+---
+<Base title="Garden Journal" description="Ideas, observations and stories for a life lived outdoors." siteName="Derwen Landscape" lang="en">
+  <Fragment slot="head">
+    <link rel="icon" href="/favicon.svg?v=71b5bc0159" type="image/svg+xml" />
+    <meta property="og:locale" content="en" />
+    <meta name="author" content="Derwen Landscape" />
+  </Fragment>
+  <header class="site-header" builder-data-element="div">
+    <div class="site-header__inner" builder-data-element="div">
+      <a class="site-header__brand" builder-data-element="link" href="/" aria-label="Derwen Landscape home">
+        <img class="site-header__logo" builder-data-element="image" src="/uploads/derwen-logo-source.webp" alt="" loading="eager" decoding="async" width="1774" height="887" />
+      </a>
+      <nav class="site-nav" builder-data-element="nav" aria-label="Main navigation">
+        <a class="site-nav__link" builder-data-element="link" href="/posts">Posts</a>
+        <a class="site-nav__link" builder-data-element="link" href="/#garden-services">Services</a>
+        <a class="site-nav__link btn btn--white" builder-data-element="link" href="/#garden-work">Our work</a>
+      </nav>
+    </div>
+  </header>
+  <main builder-data-element="site-content" id="main">
+    <section class="garden-journal" builder-data-element="section" aria-labelledby="garden-journal-title">
+      <div class="garden-journal__container" builder-data-element="container">
+        <header class="garden-journal__header" builder-data-element="header">
+          <p class="garden-journal__eyebrow" builder-data-element="text">From the garden</p>
+          <h1 class="garden-journal__title" builder-data-element="heading" id="garden-journal-title">Garden journal</h1>
+          <p class="garden-journal__intro" builder-data-element="text">Ideas, observations and stories for a life lived outdoors.</p>
+        </header>
+        <div class="garden-journal__grid" builder-data-element="div">
+          {((posts ?? []) as any[]).map((item) => (
+            <article class="garden-journal__card" builder-data-element="article">
+              <a class="garden-journal__link" builder-data-element="link" href={item.url}>
+                <SiterealImage src={item.featured_image} sizing={{ widths: [480, 768, 1200, 1600, 2000] }} resolution={item?.featured_image_resolution} remoteSrcset={item?.featured_image_srcset || undefined} remoteWidth={item?.featured_image_width || undefined} remoteHeight={item?.featured_image_height || undefined} class="garden-journal__image" builder-data-element="image" alt={item.title} loading="lazy" decoding="async" sizes="(max-width: 40rem) 100vw, (max-width: 60rem) 50vw, 33vw" style={item?.featured_image_focus ? `object-position: ${item?.featured_image_focus}` : undefined} />
+                <div class="garden-journal__body" builder-data-element="div">
+                  <div class="garden-journal__meta" builder-data-element="div">
+                    <time class="garden-journal__date" builder-data-element="text" datetime={item.publishedAt}>{item.publishedAt_text}</time>
+                    {(item.author) && (
+                      <span class="garden-journal__author" builder-data-element="text">{item.author}</span>
+                    )}
+                  </div>
+                  <h2 class="garden-journal__post-title" builder-data-element="heading">{item.title}</h2>
+                  <p class="garden-journal__excerpt" builder-data-element="text">{item.excerpt}</p>
+                </div>
+              </a>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" builder-data-element="footer">
+    <div class="site-footer__inner" builder-data-element="container">
+      <a class="site-footer__brand" builder-data-element="link" href="/" aria-label="Derwen Landscape home">
+        <img class="site-footer__logo" builder-data-element="image" src="/uploads/derwen-logo-source.webp" alt="" loading="lazy" decoding="async" width="1774" height="887" />
+      </a>
+      <p class="site-footer__note" builder-data-element="text">Thoughtful gardens, made for living.</p>
+      <nav class="site-footer__nav" builder-data-element="nav" aria-label="Footer navigation">
+        <a class="site-footer__link" builder-data-element="link" href="/">Home</a>
+        <a class="site-footer__link" builder-data-element="link" href="/posts">Garden journal</a>
+      </nav>
+    </div>
+  </footer>
+  <script is:inline src="/scripts/nav.js" defer></script>
+</Base>

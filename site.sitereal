@@ -1,0 +1,3854 @@
+{
+  "format": "sitereal",
+  "version": 4,
+  "site": {
+    "name": "Derwen Landscape",
+    "lang": "en",
+    "favicon": "/favicon.svg",
+    "search": {
+      "resultsPage": "search"
+    }
+  },
+  "addons": {
+    "database": true
+  },
+  "framework": {
+    "enabled": true,
+    "config": {
+      "modules": {},
+      "colors": {
+        "primary": {
+          "hex": "#374d3c",
+          "on": true
+        },
+        "secondary": {
+          "hex": "#22c55e",
+          "on": false
+        },
+        "tertiary": {
+          "hex": "#a855f7",
+          "on": false
+        },
+        "accent": {
+          "hex": "#728367",
+          "on": true
+        },
+        "base": {
+          "hex": "#263c2e",
+          "on": true
+        },
+        "neutral": {
+          "hex": "#30392f",
+          "on": true
+        },
+        "success": {
+          "hex": "#22c55e",
+          "on": false
+        },
+        "warning": {
+          "hex": "#f59e0b",
+          "on": false
+        },
+        "info": {
+          "hex": "#3b82f6",
+          "on": false
+        },
+        "danger": {
+          "hex": "#ef4444",
+          "on": false
+        },
+        "white": {
+          "hex": "#ffffff",
+          "on": true
+        },
+        "black": {
+          "hex": "#000000",
+          "on": true
+        }
+      },
+      "unifiedLightness": null,
+      "transparencyVars": true,
+      "shadeVars": true,
+      "shadeStops": {
+        "ultraLight": 95,
+        "light": 85,
+        "medium": 50,
+        "dark": 25,
+        "ultraDark": 10,
+        "hover": -8
+      },
+      "minVw": 375,
+      "maxVw": 1440,
+      "rootFontSize": 100,
+      "typeMinSize": 16,
+      "typeMinRatio": 1.2,
+      "typeMaxSize": 18,
+      "typeMaxRatio": 1.25,
+      "headingMinSize": 18,
+      "headingMinRatio": 1.25,
+      "headingMaxSize": 20,
+      "headingMaxRatio": 1.333,
+      "sizeOverrides": {},
+      "colorOverrides": {},
+      "headingFont": "'Barlow', sans-serif",
+      "textFont": "'Barlow', sans-serif",
+      "textSize": "var(--text-m)",
+      "textColor": "var(--neutral-400)",
+      "textWeight": 400,
+      "textLineHeight": "1.6",
+      "headingWeight": 700,
+      "headingLineHeight": "1.1",
+      "headingColor": "var(--neutral-500)",
+      "spaceMinSize": 16,
+      "spaceMinRatio": 1.5,
+      "spaceMaxSize": 24,
+      "spaceMaxRatio": 1.5,
+      "sectionMinSize": 56,
+      "sectionMinRatio": 1.5,
+      "sectionMaxSize": 104,
+      "sectionMaxRatio": 1.5,
+      "contentWidth": "80rem",
+      "containerSpacing": "var(--space-l)",
+      "contentSpacing": "var(--space-m)",
+      "layoutFluid": true,
+      "contentWidthMin": 640,
+      "contentWidthMax": 1366,
+      "borderWidth": "1px",
+      "borderLight": "var(--neutral-100)",
+      "borderDark": "var(--neutral-300)",
+      "elementStyles": {},
+      "buttons": {
+        "baseClass": "btn",
+        "tokens": {},
+        "variants": [
+          {
+            "id": "primary",
+            "label": "Primary",
+            "kind": "color",
+            "color": "primary",
+            "on": true,
+            "builtin": true
+          },
+          {
+            "id": "secondary",
+            "label": "Secondary",
+            "kind": "color",
+            "color": "secondary",
+            "on": true,
+            "builtin": true
+          },
+          {
+            "id": "tertiary",
+            "label": "Tertiary",
+            "kind": "color",
+            "color": "tertiary",
+            "on": true,
+            "builtin": true
+          },
+          {
+            "id": "accent",
+            "label": "Accent",
+            "kind": "color",
+            "color": "accent",
+            "on": true,
+            "builtin": true
+          },
+          {
+            "id": "base",
+            "label": "Base",
+            "kind": "color",
+            "color": "base",
+            "on": true,
+            "builtin": true
+          },
+          {
+            "id": "neutral",
+            "label": "Neutral",
+            "kind": "color",
+            "color": "neutral",
+            "on": true,
+            "builtin": true
+          },
+          {
+            "id": "success",
+            "label": "Success",
+            "kind": "color",
+            "color": "success",
+            "on": true,
+            "builtin": true
+          },
+          {
+            "id": "warning",
+            "label": "Warning",
+            "kind": "color",
+            "color": "warning",
+            "on": true,
+            "builtin": true
+          },
+          {
+            "id": "info",
+            "label": "Info",
+            "kind": "color",
+            "color": "info",
+            "on": true,
+            "builtin": true
+          },
+          {
+            "id": "danger",
+            "label": "Danger",
+            "kind": "color",
+            "color": "danger",
+            "on": true,
+            "builtin": true
+          },
+          {
+            "id": "white",
+            "label": "White",
+            "kind": "color",
+            "color": "white",
+            "on": true,
+            "builtin": true
+          },
+          {
+            "id": "black",
+            "label": "Black",
+            "kind": "color",
+            "color": "black",
+            "on": true,
+            "builtin": true
+          },
+          {
+            "id": "theme",
+            "label": "Theme",
+            "kind": "color",
+            "color": "primary",
+            "themed": true,
+            "on": true,
+            "builtin": true
+          },
+          {
+            "id": "outline",
+            "label": "Outline",
+            "kind": "style",
+            "on": true,
+            "builtin": true,
+            "tokens": {
+              "background": "transparent",
+              "text-color": "var(--btn-tone)",
+              "border-color": "var(--btn-tone)",
+              "background-hover": "var(--btn-tone)",
+              "text-color-hover": "var(--btn-tone-contrast)",
+              "border-color-hover": "var(--btn-tone)",
+              "shadow": "none"
+            }
+          },
+          {
+            "id": "soft",
+            "label": "Soft",
+            "kind": "style",
+            "on": true,
+            "builtin": true,
+            "tokens": {
+              "background": "var(--btn-tone-soft)",
+              "text-color": "var(--btn-tone)",
+              "border-color": "transparent",
+              "background-hover": "var(--btn-tone)",
+              "text-color-hover": "var(--btn-tone-contrast)",
+              "shadow": "none"
+            }
+          },
+          {
+            "id": "text",
+            "label": "Text",
+            "kind": "style",
+            "on": true,
+            "builtin": true,
+            "tokens": {
+              "background": "transparent",
+              "text-color": "var(--btn-tone)",
+              "border-color": "transparent",
+              "background-hover": "var(--btn-tone-soft)",
+              "text-color-hover": "var(--btn-tone-hover)",
+              "border-color-hover": "transparent",
+              "shadow": "none",
+              "padding-inline": "0.4em"
+            }
+          },
+          {
+            "id": "pill",
+            "label": "Pill",
+            "kind": "style",
+            "on": true,
+            "builtin": true,
+            "tokens": {
+              "border-radius": "999px"
+            }
+          },
+          {
+            "id": "block",
+            "label": "Full width",
+            "kind": "style",
+            "on": true,
+            "builtin": true,
+            "tokens": {
+              "width": "100%"
+            }
+          },
+          {
+            "id": "xs",
+            "label": "Extra small",
+            "kind": "size",
+            "on": true,
+            "builtin": true,
+            "tokens": {
+              "font-size": "var(--text-xs)",
+              "padding-block": "0.5em",
+              "padding-inline": "0.9em"
+            }
+          },
+          {
+            "id": "s",
+            "label": "Small",
+            "kind": "size",
+            "on": true,
+            "builtin": true,
+            "tokens": {
+              "font-size": "var(--text-s)",
+              "padding-block": "0.65em",
+              "padding-inline": "1.1em"
+            }
+          },
+          {
+            "id": "l",
+            "label": "Large",
+            "kind": "size",
+            "on": true,
+            "builtin": true,
+            "tokens": {
+              "font-size": "var(--text-l)",
+              "padding-block": "0.9em",
+              "padding-inline": "1.6em"
+            }
+          },
+          {
+            "id": "xl",
+            "label": "Extra large",
+            "kind": "size",
+            "on": true,
+            "builtin": true,
+            "tokens": {
+              "font-size": "var(--text-xl)",
+              "padding-block": "1em",
+              "padding-inline": "2em"
+            }
+          }
+        ]
+      },
+      "bodyBg": "var(--white)",
+      "radius": "12px",
+      "imageRadius": "12px",
+      "shadowStrength": 0.12,
+      "motionDuration": 700,
+      "motionEase": "smooth",
+      "motionDistance": "32px",
+      "motionStagger": 90,
+      "motionPerspective": "900px",
+      "textures": [],
+      "themes": []
+    }
+  },
+  "variables": [],
+  "styles": [
+    {
+      "id": "glob-sheet-muxx1hez-4",
+      "name": "Global",
+      "rules": [
+        {
+          "selector": "#hero-image",
+          "css": "display: block;"
+        },
+        {
+          "selector": "#home-hero",
+          "css": "padding: 0;"
+        },
+        {
+          "selector": "#garden-work",
+          "css": "background: var(--white);\npadding-bottom: var(--space-xxl);\npadding-top: var(--space-xxl);"
+        },
+        {
+          "selector": ".team-card__department-label",
+          "css": "font-weight: 600;"
+        },
+        {
+          "selector": "#garden-services",
+          "css": "background: var(--primary-10);"
+        }
+      ]
+    }
+  ],
+  "fonts": [
+    {
+      "family": "Barlow",
+      "slug": "barlow",
+      "weights": [
+        "400",
+        "700"
+      ],
+      "files": 2
+    }
+  ],
+  "icons": [],
+  "components": [],
+  "templates": [
+    {
+      "id": "tpl-muwmgdfe-1",
+      "name": "Main",
+      "root": [
+        {
+          "id": "site-header",
+          "tag": "header",
+          "name": "Site Header",
+          "classes": [
+            "site-header"
+          ],
+          "attrs": {
+            "builder-data-element": "div"
+          },
+          "children": [
+            {
+              "id": "site-header-inner",
+              "tag": "div",
+              "name": "Header Inner",
+              "classes": [
+                "site-header__inner"
+              ],
+              "attrs": {
+                "builder-data-element": "div"
+              },
+              "children": [
+                {
+                  "id": "site-header-brand",
+                  "tag": "a",
+                  "name": "Brand Link",
+                  "classes": [
+                    "site-header__brand"
+                  ],
+                  "attrs": {
+                    "builder-data-element": "link",
+                    "href": "/",
+                    "aria-label": "Derwen Landscape home"
+                  },
+                  "children": [
+                    {
+                      "tag": "img",
+                      "classes": [
+                        "site-header__logo"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "image",
+                        "src": "/uploads/derwen-logo-source.webp",
+                        "alt": "",
+                        "loading": "eager",
+                        "decoding": "async",
+                        "width": "1774",
+                        "height": "887"
+                      },
+                      "name": "logo",
+                      "id": "img-mvtlc0uk-3312"
+                    }
+                  ]
+                },
+                {
+                  "tag": "nav",
+                  "classes": [
+                    "site-nav"
+                  ],
+                  "attrs": {
+                    "builder-data-element": "nav",
+                    "aria-label": "Main navigation"
+                  },
+                  "children": [
+                    {
+                      "tag": "a",
+                      "classes": [
+                        "site-nav__link"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "link",
+                        "href": "/posts"
+                      },
+                      "text": "Posts",
+                      "name": "link",
+                      "id": "a-mvqvohco-2613"
+                    },
+                    {
+                      "tag": "a",
+                      "classes": [
+                        "site-nav__link"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "link",
+                        "href": "/#garden-services"
+                      },
+                      "text": "Services",
+                      "name": "link",
+                      "id": "a-mvqy1fem-5908"
+                    },
+                    {
+                      "tag": "a",
+                      "classes": [
+                        "site-nav__link",
+                        "btn",
+                        "btn--white"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "link",
+                        "href": "/#garden-work"
+                      },
+                      "text": "Our work",
+                      "name": "link",
+                      "id": "a-mvqvohco-2614"
+                    }
+                  ],
+                  "name": "site nav",
+                  "id": "site-header-explore"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "main-muwmgdfe-1",
+          "tag": "main",
+          "name": "Site Content",
+          "attrs": {
+            "builder-data-element": "site-content",
+            "id": "main"
+          },
+          "children": [
+            {
+              "id": "page-content-muwmgdfe-2",
+              "tag": "page-content",
+              "name": "Page Content",
+              "attrs": {
+                "builder-data-element": "page-content"
+              }
+            }
+          ]
+        },
+        {
+          "tag": "footer",
+          "classes": [
+            "site-footer"
+          ],
+          "attrs": {
+            "builder-data-element": "footer"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "classes": [
+                "site-footer__inner"
+              ],
+              "attrs": {
+                "builder-data-element": "container"
+              },
+              "children": [
+                {
+                  "tag": "a",
+                  "classes": [
+                    "site-footer__brand"
+                  ],
+                  "attrs": {
+                    "builder-data-element": "link",
+                    "href": "/",
+                    "aria-label": "Derwen Landscape home"
+                  },
+                  "children": [
+                    {
+                      "tag": "img",
+                      "classes": [
+                        "site-footer__logo"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "image",
+                        "src": "/uploads/derwen-logo-source.webp",
+                        "alt": "",
+                        "loading": "lazy",
+                        "decoding": "async",
+                        "width": "1774",
+                        "height": "887"
+                      },
+                      "name": "logo",
+                      "id": "img-mvtlc0uk-3313"
+                    }
+                  ],
+                  "name": "brand",
+                  "id": "a-mvqy1fem-5911"
+                },
+                {
+                  "tag": "p",
+                  "classes": [
+                    "site-footer__note"
+                  ],
+                  "attrs": {
+                    "builder-data-element": "text"
+                  },
+                  "text": "Thoughtful gardens, made for living.",
+                  "name": "note",
+                  "id": "p-mvqy1fem-5914"
+                },
+                {
+                  "tag": "nav",
+                  "classes": [
+                    "site-footer__nav"
+                  ],
+                  "attrs": {
+                    "builder-data-element": "nav",
+                    "aria-label": "Footer navigation"
+                  },
+                  "children": [
+                    {
+                      "tag": "a",
+                      "classes": [
+                        "site-footer__link"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "link",
+                        "href": "/"
+                      },
+                      "text": "Home",
+                      "name": "link",
+                      "id": "a-mvqy1fem-5916"
+                    },
+                    {
+                      "tag": "a",
+                      "classes": [
+                        "site-footer__link"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "link",
+                        "href": "/posts"
+                      },
+                      "text": "Garden journal",
+                      "name": "link",
+                      "id": "a-mvqy1fem-5917"
+                    }
+                  ],
+                  "name": "nav",
+                  "id": "nav-mvqy1fem-5915"
+                }
+              ],
+              "name": "inner",
+              "id": "div-mvqy1fem-5910"
+            }
+          ],
+          "name": "site footer",
+          "id": "footer-mvqy1fem-5909"
+        }
+      ],
+      "stylesheets": [
+        {
+          "id": "tpl-main-header",
+          "name": "Main Header",
+          "rules": [
+            {
+              "selector": ".site-header",
+              "css": "padding-inline: var(--site-padding);\npadding-block: var(--space-xs);\nbackground: var(--base);\ncolor: var(--white);"
+            },
+            {
+              "selector": ".site-header__inner",
+              "css": "inline-size: min(100%, var(--content-width));\nmin-block-size: var(--section-space-s);\nmargin-inline: auto;\ndisplay: flex;\nalign-items: center;\njustify-content: space-between;"
+            },
+            {
+              "selector": ".site-header__brand",
+              "css": "display: inline-flex;\nflex-direction: row;\ngap: var(--space-xxs);\ncolor: inherit;\ntext-decoration: none;\nflex-wrap: wrap;\njustify-content: center;\nalign-items: center;\n\n&:focus-visible {\n  outline: var(--focus-width) var(--focus-style) var(--focus-color);\n  outline-offset: var(--focus-offset);\n}"
+            },
+            {
+              "selector": ".site-nav",
+              "css": "display: flex;\nalign-items: center;\ngap: var(--space-xs);\n@media (max-width: 760px) {\n  gap: var(--space-xxs);\n}"
+            },
+            {
+              "selector": ".site-nav__link:not(.btn)",
+              "css": "display: inline-flex;\nmin-block-size: var(--tap-target);\nalign-items: center;\npadding-inline: var(--space-xs);\ncolor: var(--white);\ntext-decoration: none;\ntransition: color var(--motion-duration) var(--motion-ease);\n&:hover { color: var(--base-100); }\n&:focus-visible {\n  outline: var(--focus-width) var(--focus-style) var(--focus-color);\n  outline-offset: var(--focus-offset);\n}"
+            },
+            {
+              "selector": ".site-footer",
+              "css": "padding-inline: var(--site-padding);\npadding-block: var(--section-space-s);\nbackground: var(--base);\ncolor: var(--white);"
+            },
+            {
+              "selector": ".site-footer__inner",
+              "css": "inline-size: min(100%, var(--content-width));\nmargin-inline: auto;\ndisplay: grid;\ngrid-template-columns: auto 1fr auto;\nalign-items: center;\ngap: var(--container-spacing);\n@media (max-width: 48rem) { grid-template-columns: minmax(0, 1fr); }"
+            },
+            {
+              "selector": ".site-footer__brand",
+              "css": "display: grid;\ngap: var(--space-xxs);\ncolor: inherit;\ntext-decoration: none;"
+            },
+            {
+              "selector": ".site-footer__note",
+              "css": "color: var(--white);\nfont-size: var(--text-s);"
+            },
+            {
+              "selector": ".site-footer__nav",
+              "css": "display: flex;\nflex-wrap: wrap;\ngap: var(--space-m);"
+            },
+            {
+              "selector": ".site-footer__link",
+              "css": "color: var(--white);\ntext-decoration: none;\n&:hover { color: var(--base-100); }\n&:focus-visible { outline: var(--focus-width) var(--focus-style) var(--focus-color); outline-offset: var(--focus-offset); }"
+            },
+            {
+              "selector": ".site-header__logo",
+              "css": "display: block;\ninline-size: var(--section-space-l);\nblock-size: var(--section-space-m);\nobject-fit: cover;\nfilter: grayscale(1) invert(1) contrast(3) sepia(.25) brightness(.96);\nmix-blend-mode: screen;"
+            },
+            {
+              "selector": ".site-footer__logo",
+              "css": "display: block;\ninline-size: var(--section-space-l);\nblock-size: var(--section-space-m);\nobject-fit: cover;\nfilter: grayscale(1) invert(1) contrast(3) sepia(.25) brightness(.96);\nmix-blend-mode: screen;"
+            }
+          ]
+        }
+      ],
+      "applyTo": {
+        "all": true
+      }
+    },
+    {
+      "id": "tpl-muwmgdfe-2",
+      "name": "404",
+      "root": [
+        {
+          "id": "main-muwmgdfe-3",
+          "tag": "main",
+          "attrs": {
+            "builder-data-element": "site-content",
+            "id": "main"
+          },
+          "children": [
+            {
+              "id": "page-content-muwmgdfe-4",
+              "tag": "page-content",
+              "attrs": {
+                "builder-data-element": "page-content"
+              }
+            }
+          ]
+        }
+      ],
+      "header": [],
+      "footer": [],
+      "stylesheets": [],
+      "applyTo": {
+        "routes": [
+          "404"
+        ]
+      }
+    }
+  ],
+  "popups": [],
+  "forms": {
+    "enabled": true,
+    "forms": []
+  },
+  "snippets": [],
+  "collections": {
+    "collections": [
+      {
+        "id": "pages",
+        "name": "Pages",
+        "slug": "pages",
+        "fields": [
+          {
+            "id": "title",
+            "name": "Title",
+            "type": "text",
+            "builtin": true
+          },
+          {
+            "id": "route",
+            "name": "Route",
+            "type": "text",
+            "builtin": true
+          }
+        ],
+        "items": [
+          {
+            "id": "index",
+            "status": "live",
+            "created": "2026-10-27T15:51:58.280Z",
+            "values": {
+              "title": "Home",
+              "route": "index"
+            }
+          },
+          {
+            "id": "posts",
+            "status": "live",
+            "created": "2026-10-27T16:56:27.052Z",
+            "values": {
+              "title": "Garden Journal",
+              "route": "posts"
+            }
+          },
+          {
+            "id": "search",
+            "status": "live",
+            "created": "2026-10-27T16:56:27.052Z",
+            "values": {
+              "title": "Search",
+              "route": "search"
+            }
+          }
+        ],
+        "settings": {
+          "public": false,
+          "queryable": false,
+          "archive": false
+        }
+      },
+      {
+        "id": "wxqb34dy",
+        "name": "Team",
+        "slug": "team",
+        "fields": [
+          {
+            "id": "title",
+            "name": "Title",
+            "type": "text",
+            "builtin": true
+          },
+          {
+            "id": "slug",
+            "name": "Slug",
+            "type": "text",
+            "builtin": true
+          },
+          {
+            "id": "f-avz0xrg",
+            "name": "Deaprtment",
+            "key": "deaprtment",
+            "type": "option",
+            "options": [
+              "Sales",
+              "Accounts",
+              "Management"
+            ]
+          },
+          {
+            "id": "f-oxidzry",
+            "name": "Bio",
+            "key": "bio",
+            "type": "richtext"
+          },
+          {
+            "id": "f-6m7ipa3",
+            "name": "Headshot",
+            "key": "headshot",
+            "type": "image"
+          }
+        ],
+        "items": [],
+        "settings": {
+          "public": false,
+          "queryable": true,
+          "archive": true,
+          "routeStyle": "folder",
+          "storage": "db",
+          "archivePage": "team"
+        }
+      }
+    ],
+    "taxonomies": []
+  },
+  "sources": [
+    {
+      "id": "srczgw0t2j",
+      "name": "EmDash posts",
+      "slug": "emdash-posts",
+      "kind": "emdash",
+      "url": "https://emdash-c46x.xc1.app/",
+      "cmsType": "posts",
+      "auth": "bearer",
+      "secretVar": "EMDASH_TOKEN",
+      "offline": "cache",
+      "fields": [
+        {
+          "key": "title",
+          "type": "text"
+        },
+        {
+          "key": "featured_image",
+          "type": "image"
+        },
+        {
+          "key": "featured_image_alt",
+          "type": "text"
+        },
+        {
+          "key": "featured_image_width",
+          "type": "number"
+        },
+        {
+          "key": "featured_image_height",
+          "type": "number"
+        },
+        {
+          "key": "content",
+          "type": "html"
+        },
+        {
+          "key": "excerpt",
+          "type": "text"
+        },
+        {
+          "key": "id",
+          "type": "text"
+        },
+        {
+          "key": "slug",
+          "type": "text"
+        },
+        {
+          "key": "publishedAt",
+          "type": "date"
+        },
+        {
+          "key": "updatedAt",
+          "type": "date"
+        },
+        {
+          "key": "createdAt",
+          "type": "date"
+        },
+        {
+          "key": "author",
+          "type": "text"
+        },
+        {
+          "key": "author_slug",
+          "type": "text"
+        },
+        {
+          "key": "author_bio",
+          "type": "text"
+        },
+        {
+          "key": "authors",
+          "type": "list"
+        },
+        {
+          "key": "category",
+          "type": "list"
+        },
+        {
+          "key": "category_slugs",
+          "type": "list"
+        },
+        {
+          "key": "tag",
+          "type": "list"
+        },
+        {
+          "key": "tag_slugs",
+          "type": "list"
+        },
+        {
+          "key": "locale",
+          "type": "text"
+        },
+        {
+          "key": "seo",
+          "type": "object"
+        },
+        {
+          "key": "seo.title",
+          "type": "text"
+        },
+        {
+          "key": "seo.description",
+          "type": "text"
+        },
+        {
+          "key": "seo.image",
+          "type": "text"
+        },
+        {
+          "key": "seo.canonical",
+          "type": "text"
+        },
+        {
+          "key": "seo.noIndex",
+          "type": "boolean"
+        },
+        {
+          "key": "link",
+          "type": "url"
+        },
+        {
+          "key": "meta_title",
+          "type": "text"
+        },
+        {
+          "key": "meta_description",
+          "type": "text"
+        },
+        {
+          "key": "meta_image",
+          "type": "image"
+        },
+        {
+          "key": "url",
+          "type": "url"
+        },
+        {
+          "key": "publishedAt_text",
+          "type": "text"
+        },
+        {
+          "key": "updatedAt_text",
+          "type": "text"
+        },
+        {
+          "key": "createdAt_text",
+          "type": "text"
+        }
+      ],
+      "cmsSchema": {
+        "pattern": "/posts/{slug}",
+        "fields": {
+          "title": "string",
+          "featured_image": "image",
+          "content": "portableText",
+          "excerpt": "text"
+        },
+        "taxonomies": [
+          {
+            "name": "category",
+            "label": "Categories"
+          },
+          {
+            "name": "tag",
+            "label": "Tags"
+          }
+        ]
+      },
+      "entry": {
+        "on": true,
+        "at": "link"
+      },
+      "cmsTerms": [
+        "category",
+        "tag"
+      ]
+    }
+  ],
+  "media": {
+    "collections": [
+      {
+        "id": "c-d730sa",
+        "name": "Hero Images"
+      }
+    ],
+    "assets": {
+      "uploads/06-team-working.jpg": {
+        "collection": "c-d730sa"
+      },
+      "uploads/04-project-planting.jpg": {
+        "collection": "c-d730sa"
+      },
+      "uploads/hero-modern-home-dusk.jpg": {
+        "collection": "c-d730sa"
+      },
+      "uploads/05-team-portrait.jpg": {
+        "collection": "c-d730sa"
+      },
+      "uploads/garden-path-editorial.png": {
+        "alt": "Illustrative landscaped garden with a stone path and layered planting"
+      },
+      "uploads/derwen-logo.jpg": {
+        "alt": "Derwen Landscape logo"
+      },
+      "uploads/derwen-logo-source.webp": {
+        "alt": "Derwen Landscape logo"
+      }
+    }
+  },
+  "pages": {
+    "_entry-srczgw0t2j": {
+      "route": "_entry-srczgw0t2j",
+      "title": "{entry.meta_title}",
+      "root": [
+        {
+          "tag": "section",
+          "id": "emdash-posts-entry-section",
+          "name": "Post Page",
+          "classes": [
+            "emdash-posts-entry"
+          ],
+          "attrs": {
+            "builder-data-element": "section"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "id": "emdash-posts-entry-container",
+              "name": "Post Container",
+              "classes": [
+                "emdash-posts-entry__container"
+              ],
+              "attrs": {
+                "builder-data-element": "container"
+              },
+              "children": [
+                {
+                  "tag": "figure",
+                  "id": "emdash-posts-entry-hero",
+                  "name": "Featured Image",
+                  "classes": [
+                    "emdash-posts-entry__hero"
+                  ],
+                  "attrs": {
+                    "builder-data-element": "figure"
+                  },
+                  "cond": {
+                    "mode": "custom",
+                    "expr": "entry.featured_image"
+                  },
+                  "children": [
+                    {
+                      "tag": "img",
+                      "id": "emdash-posts-entry-image",
+                      "classes": [
+                        "emdash-posts-entry__image"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "image",
+                        "src": "{entry.featured_image}",
+                        "alt": "{entry.title}",
+                        "data-image-widths": "auto",
+                        "sizes": "100vw",
+                        "loading": "eager",
+                        "fetchpriority": "high",
+                        "decoding": "async"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "id": "emdash-entry-layout",
+                  "name": "Post Layout",
+                  "classes": [
+                    "emdash-posts-entry__layout"
+                  ],
+                  "attrs": {
+                    "builder-data-element": "div"
+                  },
+                  "children": [
+                    {
+                      "tag": "aside",
+                      "id": "emdash-entry-meta",
+                      "name": "Post Metadata",
+                      "classes": [
+                        "emdash-posts-entry__metadata"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "aside",
+                        "aria-label": "Post metadata"
+                      },
+                      "children": [
+                        {
+                          "tag": "div",
+                          "classes": [
+                            "emdash-posts-entry__meta-item"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "div"
+                          },
+                          "children": [
+                            {
+                              "tag": "p",
+                              "classes": [
+                                "emdash-posts-entry__meta-label"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "text"
+                              },
+                              "text": "Published",
+                              "id": "p-mvqw6b6w-3272"
+                            },
+                            {
+                              "tag": "time",
+                              "classes": [
+                                "emdash-posts-entry__meta-value"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "text",
+                                "datetime": "{entry.publishedAt}"
+                              },
+                              "text": "{entry.publishedAt_text}",
+                              "id": "time-mvqw6b6w-3273"
+                            }
+                          ],
+                          "id": "div-mvqw6b6w-3271"
+                        },
+                        {
+                          "tag": "div",
+                          "classes": [
+                            "emdash-posts-entry__meta-item"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "div"
+                          },
+                          "cond": {
+                            "mode": "custom",
+                            "expr": "entry.author"
+                          },
+                          "children": [
+                            {
+                              "tag": "p",
+                              "classes": [
+                                "emdash-posts-entry__meta-label"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "text"
+                              },
+                              "text": "Author",
+                              "id": "p-mvqw6b6w-3275"
+                            },
+                            {
+                              "tag": "p",
+                              "classes": [
+                                "emdash-posts-entry__meta-value"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "text"
+                              },
+                              "text": "{entry.author}",
+                              "id": "p-mvqw6b6w-3276"
+                            }
+                          ],
+                          "id": "div-mvqw6b6w-3274"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "article",
+                      "id": "emdash-entry-article",
+                      "name": "Post Article",
+                      "classes": [
+                        "emdash-posts-entry__article"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "article"
+                      },
+                      "children": [
+                        {
+                          "tag": "header",
+                          "classes": [
+                            "emdash-posts-entry__article-header"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "header"
+                          },
+                          "children": [
+                            {
+                              "tag": "h1",
+                              "id": "emdash-posts-entry-title",
+                              "classes": [
+                                "emdash-posts-entry__title"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "heading"
+                              },
+                              "text": "{entry.title}"
+                            },
+                            {
+                              "tag": "p",
+                              "classes": [
+                                "emdash-posts-entry__excerpt"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "text"
+                              },
+                              "text": "{entry.excerpt}",
+                              "id": "p-mvqw6b6w-3278"
+                            }
+                          ],
+                          "id": "header-mvqw6b6w-3277"
+                        },
+                        {
+                          "tag": "div",
+                          "id": "emdash-posts-entry-content",
+                          "classes": [
+                            "emdash-posts-entry__content"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "rich-text"
+                          },
+                          "html": "{entry.content}"
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "aside",
+                      "id": "emdash-entry-sidebar",
+                      "name": "Post Sidebar",
+                      "classes": [
+                        "emdash-posts-entry__sidebar"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "aside",
+                        "aria-label": "Post sidebar"
+                      },
+                      "children": [
+                        {
+                          "tag": "section",
+                          "id": "post-sidebar-search",
+                          "name": "Search",
+                          "classes": [
+                            "emdash-posts-entry__sidebar-section"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "section",
+                            "aria-labelledby": "post-sidebar-search-title"
+                          },
+                          "children": [
+                            {
+                              "tag": "h2",
+                              "id": "post-sidebar-search-title",
+                              "classes": [
+                                "emdash-posts-entry__sidebar-title"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "heading"
+                              },
+                              "text": "Search"
+                            },
+                            {
+                              "id": "search-mvqw6b6w-3289",
+                              "tag": "search",
+                              "attrs": {
+                                "builder-data-element": "search",
+                                "data-search-style": "icon",
+                                "data-search-part": "search"
+                              },
+                              "children": [
+                                {
+                                  "id": "input-mvqw6b6w-3290",
+                                  "tag": "input",
+                                  "attrs": {
+                                    "builder-data-element": "form-input",
+                                    "type": "search",
+                                    "data-search-part": "input",
+                                    "name": "q",
+                                    "placeholder": "Search…",
+                                    "aria-label": "Search",
+                                    "autocomplete": "off"
+                                  }
+                                },
+                                {
+                                  "id": "div-mvqw6b6w-3291",
+                                  "tag": "div",
+                                  "attrs": {
+                                    "builder-data-element": "search-results",
+                                    "hidden": "",
+                                    "data-search-part": "results"
+                                  },
+                                  "children": [
+                                    {
+                                      "id": "a-mvqw6b6w-3292",
+                                      "tag": "a",
+                                      "attrs": {
+                                        "builder-data-element": "search-hit",
+                                        "href": "{result.url}",
+                                        "data-search-part": "hit"
+                                      },
+                                      "children": [
+                                        {
+                                          "id": "span-mvqw6b6w-3293",
+                                          "tag": "span",
+                                          "attrs": {
+                                            "builder-data-element": "search-hit-title",
+                                            "data-search-part": "hit-title"
+                                          },
+                                          "text": "{result.title}"
+                                        },
+                                        {
+                                          "id": "span-mvqw6b6w-3294",
+                                          "tag": "span",
+                                          "attrs": {
+                                            "builder-data-element": "search-hit-type",
+                                            "data-search-part": "hit-type"
+                                          },
+                                          "text": "{result.type}"
+                                        },
+                                        {
+                                          "id": "span-mvqw6b6w-3295",
+                                          "tag": "span",
+                                          "attrs": {
+                                            "builder-data-element": "search-hit-excerpt",
+                                            "data-search-part": "hit-excerpt"
+                                          },
+                                          "text": "{result.excerpt}"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ],
+                              "classes": [
+                                "emdash-posts-entry__search"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "section",
+                          "id": "post-sidebar-categories",
+                          "name": "Categories",
+                          "classes": [
+                            "emdash-posts-entry__sidebar-section"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "section",
+                            "aria-labelledby": "post-sidebar-categories-title"
+                          },
+                          "children": [
+                            {
+                              "tag": "h2",
+                              "id": "post-sidebar-categories-title",
+                              "classes": [
+                                "emdash-posts-entry__sidebar-title"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "heading"
+                              },
+                              "text": "Categories"
+                            },
+                            {
+                              "tag": "div",
+                              "classes": [
+                                "emdash-posts-entry__term-list"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "div"
+                              },
+                              "loop": {
+                                "source": "custom",
+                                "custom": "entry.category",
+                                "itemName": "term"
+                              },
+                              "children": [
+                                {
+                                  "tag": "span",
+                                  "classes": [
+                                    "emdash-posts-entry__term"
+                                  ],
+                                  "attrs": {
+                                    "builder-data-element": "text"
+                                  },
+                                  "text": "{term}",
+                                  "id": "span-mvqw6b6w-3280"
+                                }
+                              ],
+                              "id": "div-mvqw6b6w-3279"
+                            },
+                            {
+                              "tag": "p",
+                              "classes": [
+                                "emdash-posts-entry__empty"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "text"
+                              },
+                              "text": "No categories yet",
+                              "cond": {
+                                "mode": "custom",
+                                "expr": "!entry.category || entry.category.length === 0"
+                              },
+                              "id": "p-mvqw6b6w-3281"
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "section",
+                          "id": "post-sidebar-tags",
+                          "name": "Tags",
+                          "classes": [
+                            "emdash-posts-entry__sidebar-section"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "section",
+                            "aria-labelledby": "post-sidebar-tags-title"
+                          },
+                          "children": [
+                            {
+                              "tag": "h2",
+                              "id": "post-sidebar-tags-title",
+                              "classes": [
+                                "emdash-posts-entry__sidebar-title"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "heading"
+                              },
+                              "text": "Tags"
+                            },
+                            {
+                              "tag": "div",
+                              "classes": [
+                                "emdash-posts-entry__term-list"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "div"
+                              },
+                              "loop": {
+                                "source": "custom",
+                                "custom": "entry.tag",
+                                "itemName": "term"
+                              },
+                              "children": [
+                                {
+                                  "tag": "span",
+                                  "classes": [
+                                    "emdash-posts-entry__term"
+                                  ],
+                                  "attrs": {
+                                    "builder-data-element": "text"
+                                  },
+                                  "text": "{term}",
+                                  "id": "span-mvqw6b6w-3283"
+                                }
+                              ],
+                              "id": "div-mvqw6b6w-3282"
+                            },
+                            {
+                              "tag": "p",
+                              "classes": [
+                                "emdash-posts-entry__empty"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "text"
+                              },
+                              "text": "No tags yet",
+                              "cond": {
+                                "mode": "custom",
+                                "expr": "!entry.tag || entry.tag.length === 0"
+                              },
+                              "id": "p-mvqw6b6w-3284"
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "section",
+                          "id": "post-sidebar-recent",
+                          "name": "Recent Posts",
+                          "classes": [
+                            "emdash-posts-entry__sidebar-section"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "section",
+                            "aria-labelledby": "post-sidebar-recent-title"
+                          },
+                          "children": [
+                            {
+                              "tag": "h2",
+                              "id": "post-sidebar-recent-title",
+                              "classes": [
+                                "emdash-posts-entry__sidebar-title"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "heading"
+                              },
+                              "text": "Recent posts"
+                            },
+                            {
+                              "tag": "ul",
+                              "classes": [
+                                "emdash-posts-entry__recent-list"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "ul"
+                              },
+                              "loop": {
+                                "source": "api",
+                                "api": "srczgw0t2j",
+                                "apiSlug": "emdash-posts",
+                                "itemName": "item",
+                                "limit": 3
+                              },
+                              "children": [
+                                {
+                                  "tag": "li",
+                                  "classes": [
+                                    "emdash-posts-entry__recent-item"
+                                  ],
+                                  "attrs": {
+                                    "builder-data-element": "li"
+                                  },
+                                  "children": [
+                                    {
+                                      "tag": "a",
+                                      "classes": [
+                                        "emdash-posts-entry__sidebar-link"
+                                      ],
+                                      "attrs": {
+                                        "builder-data-element": "link",
+                                        "href": "{item.url}"
+                                      },
+                                      "text": "{item.title}",
+                                      "id": "a-mvqw6b6w-3287"
+                                    }
+                                  ],
+                                  "id": "li-mvqw6b6w-3286"
+                                }
+                              ],
+                              "id": "ul-mvqw6b6w-3285"
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "section",
+                          "id": "post-sidebar-archives",
+                          "name": "Archives",
+                          "classes": [
+                            "emdash-posts-entry__sidebar-section"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "section",
+                            "aria-labelledby": "post-sidebar-archives-title"
+                          },
+                          "children": [
+                            {
+                              "tag": "h2",
+                              "id": "post-sidebar-archives-title",
+                              "classes": [
+                                "emdash-posts-entry__sidebar-title"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "heading"
+                              },
+                              "text": "Archives"
+                            },
+                            {
+                              "tag": "a",
+                              "classes": [
+                                "emdash-posts-entry__sidebar-link"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "link",
+                                "href": "/posts"
+                              },
+                              "text": "Browse all posts",
+                              "id": "a-mvqw6b6w-3288"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "description": "{entry.meta_description}"
+      },
+      "stylesheets": [
+        {
+          "id": "global",
+          "name": "Global",
+          "rules": [
+            {
+              "selector": ".emdash-posts-entry__content",
+              "css": "color: var(--text-color);\n& :is(h1, h2, h3, h4, h5, h6) { color: var(--heading-color); }\n& a { color: var(--link-color); }\n& a:hover { color: var(--accent); }\n& img, & video { border-radius: var(--image-radius); }"
+            },
+            {
+              "selector": ".emdash-posts-entry",
+              "css": "padding-block: var(--section-space-l);\npadding-inline: var(--site-padding);\nbackground: var(--white);\ncolor: var(--neutral);"
+            },
+            {
+              "selector": ".emdash-posts-entry__container",
+              "css": "inline-size: min(100%, var(--content-width));\nmargin-inline: auto;\ndisplay: grid;\ngap: var(--section-space-l);"
+            },
+            {
+              "selector": ".emdash-posts-entry__title",
+              "css": "color: var(--heading-color);\nfont-size: var(--h1);"
+            },
+            {
+              "selector": ".emdash-posts-entry__meta",
+              "css": "display: flex;\nflex-wrap: wrap;\ngap: var(--space-xs);\ncolor: var(--text-color);\nfont-size: var(--text-s);"
+            },
+            {
+              "selector": ".emdash-posts-entry__author",
+              "css": "&::before { content: \"By \"; }"
+            },
+            {
+              "selector": ".emdash-posts-entry__image",
+              "css": "display: block;\ninline-size: 100%;\naspect-ratio: 2.2 / 1;\nobject-fit: cover;\nborder-radius: var(--image-radius);"
+            },
+            {
+              "selector": ".emdash-posts-entry__hero",
+              "css": "margin: 0;\noverflow: hidden;\nborder-radius: var(--radius-s);\nborder: var(--border-width) solid var(--border-light);"
+            },
+            {
+              "selector": ".emdash-posts-entry__layout",
+              "css": "display: grid;\ngrid-template-columns: minmax(0, 0.8fr) minmax(0, 3fr) minmax(0, 1.1fr);\ngap: var(--section-space-m);\nalign-items: start;\n@media (max-width: 60rem) {\n  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);\n}\n@media (max-width: 40rem) {\n  grid-template-columns: minmax(0, 1fr);\n}"
+            },
+            {
+              "selector": ".emdash-posts-entry__metadata",
+              "css": "display: grid;\nalign-content: start;\ngap: var(--space-l);\n@media (max-width: 40rem) {\n  grid-template-columns: repeat(2, minmax(0, 1fr));\n  gap: var(--space-m);\n}"
+            },
+            {
+              "selector": ".emdash-posts-entry__meta-item",
+              "css": "display: grid;\nalign-content: start;\ngap: var(--space-xxs);\npadding-block-end: var(--space-s);\nborder-block-end: var(--border-width) solid var(--border-light);"
+            },
+            {
+              "selector": ".emdash-posts-entry__meta-label",
+              "css": "color: var(--primary);\nfont-size: var(--text-s);"
+            },
+            {
+              "selector": ".emdash-posts-entry__meta-value",
+              "css": "color: var(--text-color);"
+            },
+            {
+              "selector": ".emdash-posts-entry__article",
+              "css": "min-inline-size: 0;\ndisplay: grid;\ngap: var(--section-space-s);"
+            },
+            {
+              "selector": ".emdash-posts-entry__article-header",
+              "css": "display: grid;\ngap: var(--space-m);\npadding-block-end: var(--section-space-s);\nborder-block-end: var(--border-width) solid var(--border-light);"
+            },
+            {
+              "selector": ".emdash-posts-entry__excerpt",
+              "css": "color: var(--text-color);\nfont-size: var(--text-l);"
+            },
+            {
+              "selector": ".emdash-posts-entry__sidebar",
+              "css": "min-inline-size: 0;\ndisplay: grid;\nalign-content: start;\ngap: var(--space-l);\npadding: var(--space-m);\nborder-radius: var(--radius-s);\nbackground: var(--base-100);\n@media (max-width: 60rem) {\n  grid-column: 1 / -1;\n  grid-template-columns: repeat(2, minmax(0, 1fr));\n}\n@media (max-width: 40rem) { grid-template-columns: minmax(0, 1fr); }"
+            },
+            {
+              "selector": ".emdash-posts-entry__sidebar-section",
+              "css": "min-inline-size: 0;\ndisplay: grid;\nalign-content: start;\ngap: var(--space-s);\npadding-block-start: var(--space-s);\nborder-block-start: var(--border-width) solid var(--border-light);"
+            },
+            {
+              "selector": ".emdash-posts-entry__sidebar-title",
+              "css": "color: var(--primary);\nfont-size: var(--h5);"
+            },
+            {
+              "selector": ".emdash-posts-entry__search",
+              "css": "color-scheme: light;\n& input {\n  inline-size: 100%;\n  min-block-size: var(--tap-target);\n  padding-inline: var(--space-s);\n  border: var(--border-width) solid var(--border-dark);\n  border-radius: var(--radius-s);\n  background: var(--white);\n  color: var(--text-color);\n}\n& input::placeholder { color: var(--neutral-300); }\n& input:focus-visible {\n  outline: var(--focus-width) var(--focus-style) var(--focus-color);\n  outline-offset: var(--focus-offset);\n}"
+            },
+            {
+              "selector": ".emdash-posts-entry__term-list",
+              "css": "display: flex;\nflex-wrap: wrap;\ngap: var(--space-xs);"
+            },
+            {
+              "selector": ".emdash-posts-entry__term",
+              "css": "padding-block: var(--space-xxs);\npadding-inline: var(--space-xs);\nborder: var(--border-width) solid var(--border-light);\nborder-radius: var(--radius-s);\nbackground: var(--white);\ncolor: var(--text-color);"
+            },
+            {
+              "selector": ".emdash-posts-entry__empty",
+              "css": "color: var(--text-color);\nfont-size: var(--text-s);"
+            },
+            {
+              "selector": ".emdash-posts-entry__recent-list",
+              "css": "display: grid;\ngap: var(--space-s);\npadding: 0;\nlist-style: none;"
+            },
+            {
+              "selector": ".emdash-posts-entry__sidebar-link",
+              "css": "color: var(--link-color);\ntext-decoration: none;\n&:hover { color: var(--accent); }\n&:focus-visible {\n  outline: var(--focus-width) var(--focus-style) var(--focus-color);\n  outline-offset: var(--focus-offset);\n}"
+            }
+          ]
+        }
+      ]
+    },
+    "index": {
+      "route": "index",
+      "title": "Home",
+      "seo": {
+        "description": "Thoughtful garden design shaped around your home and the way you love to spend time outside."
+      },
+      "js": "",
+      "root": [
+        {
+          "id": "hero-section",
+          "tag": "section",
+          "name": "Hero",
+          "classes": [
+            "hero"
+          ],
+          "attrs": {
+            "builder-data-element": "section",
+            "id": "home-hero",
+            "aria-labelledby": "hero-title"
+          },
+          "children": [
+            {
+              "id": "hero-content",
+              "tag": "div",
+              "name": "Hero Content",
+              "classes": [
+                "hero__content"
+              ],
+              "attrs": {
+                "builder-data-element": "div"
+              },
+              "children": [
+                {
+                  "id": "hero-headline",
+                  "tag": "div",
+                  "name": "Hero Headline",
+                  "classes": [
+                    "hero__headline"
+                  ],
+                  "attrs": {
+                    "builder-data-element": "div",
+                    "data-motion": "fade",
+                    "data-motion-trigger": "load"
+                  },
+                  "children": [
+                    {
+                      "id": "hero-eyebrow",
+                      "tag": "p",
+                      "name": "Eyebrow",
+                      "classes": [
+                        "hero__eyebrow"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "text"
+                      },
+                      "text": "Landscape design for living"
+                    },
+                    {
+                      "id": "hero-title",
+                      "tag": "h1",
+                      "name": "Hero Title",
+                      "classes": [
+                        "hero__title"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "heading",
+                        "id": "hero-title"
+                      },
+                      "text": "CREATE A GARDEN<br />MADE FOR LIVING"
+                    },
+                    {
+                      "id": "hero-copy",
+                      "tag": "p",
+                      "name": "Hero Copy",
+                      "classes": [
+                        "hero__copy"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "text"
+                      },
+                      "text": "Thoughtful garden design, considered planting and careful landscaping for life outdoors."
+                    },
+                    {
+                      "tag": "div",
+                      "classes": [
+                        "hero__actions"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "div"
+                      },
+                      "children": [
+                        {
+                          "tag": "a",
+                          "classes": [
+                            "hero__action",
+                            "btn",
+                            "btn--white"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "link",
+                            "href": "#garden-work"
+                          },
+                          "text": "Explore our work",
+                          "name": "action",
+                          "id": "a-mvtg8ofe-2628"
+                        },
+                        {
+                          "tag": "a",
+                          "classes": [
+                            "hero__secondary",
+                            "btn",
+                            "btn--white",
+                            "btn--outline"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "link",
+                            "href": "#garden-services"
+                          },
+                          "text": "Our services",
+                          "name": "secondary",
+                          "id": "a-mvtg8ofe-2629"
+                        }
+                      ],
+                      "name": "actions",
+                      "id": "hero-action"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "hero-visual",
+              "tag": "div",
+              "name": "Hero Image Area",
+              "classes": [
+                "hero__visual"
+              ],
+              "attrs": {
+                "builder-data-element": "div",
+                "id": "hero-image"
+              },
+              "children": [
+                {
+                  "id": "hero-figure",
+                  "tag": "figure",
+                  "name": "Garden Photograph",
+                  "classes": [
+                    "hero__figure"
+                  ],
+                  "attrs": {
+                    "builder-data-element": "figure"
+                  },
+                  "children": [
+                    {
+                      "id": "hero-photo",
+                      "tag": "img",
+                      "name": "Garden Image",
+                      "classes": [
+                        "hero__image"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "image",
+                        "src": "/uploads/garden-path-editorial.png",
+                        "alt": "Illustrative garden with a stone path through layered planting",
+                        "fetchpriority": "high",
+                        "loading": "eager",
+                        "decoding": "async",
+                        "data-image-widths": "auto",
+                        "sizes": "100vw"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "section",
+          "classes": [
+            "garden-intro"
+          ],
+          "attrs": {
+            "builder-data-element": "section",
+            "id": "garden-services",
+            "aria-labelledby": "garden-intro-title"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "classes": [
+                "garden-intro__container"
+              ],
+              "children": [
+                {
+                  "tag": "header",
+                  "classes": [
+                    "garden-intro__header"
+                  ],
+                  "children": [
+                    {
+                      "tag": "p",
+                      "classes": [
+                        "garden-intro__eyebrow"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "text"
+                      },
+                      "text": "OUR SERVICES",
+                      "name": "eyebrow",
+                      "id": "p-mvqygz6e-7271"
+                    },
+                    {
+                      "tag": "h2",
+                      "attrs": {
+                        "builder-data-element": "heading",
+                        "id": "garden-intro-title"
+                      },
+                      "text": "WELCOME TO DERWEN LANDSCAPE",
+                      "id": "h2-mvgv9yyn-658"
+                    },
+                    {
+                      "tag": "p",
+                      "classes": [
+                        "garden-intro__lead"
+                      ],
+                      "text": "Thoughtful design, considered planting and careful finishing make the garden feel like a natural extension of home.",
+                      "attrs": {
+                        "builder-data-element": "text"
+                      },
+                      "name": "lead",
+                      "id": "p-mvgv9yyn-659"
+                    }
+                  ],
+                  "attrs": {
+                    "builder-data-element": "header",
+                    "data-motion": "rise"
+                  },
+                  "name": "header",
+                  "id": "header-mvgv9yyn-656"
+                },
+                {
+                  "tag": "div",
+                  "classes": [
+                    "service-showcase"
+                  ],
+                  "attrs": {
+                    "builder-data-element": "div",
+                    "data-motion": "rise",
+                    "data-motion-stagger": "200"
+                  },
+                  "children": [
+                    {
+                      "tag": "article",
+                      "classes": [
+                        "service-showcase__card"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "article"
+                      },
+                      "children": [
+                        {
+                          "tag": "img",
+                          "classes": [
+                            "service-showcase__image"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "image",
+                            "src": "/uploads/04-project-planting.jpg",
+                            "alt": "",
+                            "data-image-widths": "auto",
+                            "sizes": "(max-width: 48rem) 100vw, 50vw",
+                            "loading": "lazy",
+                            "decoding": "async"
+                          },
+                          "name": "image",
+                          "id": "img-mvtg8off-2632"
+                        },
+                        {
+                          "tag": "div",
+                          "classes": [
+                            "service-showcase__content"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "div"
+                          },
+                          "children": [
+                            {
+                              "tag": "p",
+                              "classes": [
+                                "service-showcase__label"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "text"
+                              },
+                              "text": "01 / DESIGN",
+                              "name": "label",
+                              "id": "p-mvtg8off-2634"
+                            },
+                            {
+                              "tag": "h3",
+                              "classes": [
+                                "service-showcase__title"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "heading"
+                              },
+                              "text": "GARDEN DESIGN",
+                              "name": "title",
+                              "id": "h3-mvtg8off-2635"
+                            },
+                            {
+                              "tag": "p",
+                              "classes": [
+                                "service-showcase__copy"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "text"
+                              },
+                              "text": "Spaces shaped around your home and the way you live.",
+                              "name": "copy",
+                              "id": "p-mvtg8off-2636"
+                            }
+                          ],
+                          "name": "content",
+                          "id": "div-mvtg8off-2633"
+                        }
+                      ],
+                      "name": "card",
+                      "id": "article-mvtg8off-2631"
+                    },
+                    {
+                      "tag": "article",
+                      "classes": [
+                        "service-showcase__card"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "article"
+                      },
+                      "children": [
+                        {
+                          "tag": "img",
+                          "classes": [
+                            "service-showcase__image"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "image",
+                            "src": "/uploads/garden-path-editorial.png",
+                            "alt": "",
+                            "data-image-widths": "auto",
+                            "sizes": "(max-width: 40rem) 100vw, 33vw",
+                            "loading": "lazy",
+                            "decoding": "async"
+                          },
+                          "name": "image",
+                          "id": "img-mvtg8off-2638"
+                        },
+                        {
+                          "tag": "div",
+                          "classes": [
+                            "service-showcase__content"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "div"
+                          },
+                          "children": [
+                            {
+                              "tag": "p",
+                              "classes": [
+                                "service-showcase__label"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "text"
+                              },
+                              "text": "02 / PLANTING",
+                              "name": "label",
+                              "id": "p-mvtg8off-2640"
+                            },
+                            {
+                              "tag": "h3",
+                              "classes": [
+                                "service-showcase__title"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "heading"
+                              },
+                              "text": "PLANTING",
+                              "name": "title",
+                              "id": "h3-mvtg8off-2641"
+                            },
+                            {
+                              "tag": "p",
+                              "classes": [
+                                "service-showcase__copy"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "text"
+                              },
+                              "text": "Texture, colour and interest through the seasons.",
+                              "name": "copy",
+                              "id": "p-mvtg8off-2642"
+                            }
+                          ],
+                          "name": "content",
+                          "id": "div-mvtg8off-2639"
+                        }
+                      ],
+                      "name": "card",
+                      "id": "article-mvtg8off-2637"
+                    },
+                    {
+                      "tag": "article",
+                      "classes": [
+                        "service-showcase__card"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "article"
+                      },
+                      "children": [
+                        {
+                          "tag": "img",
+                          "classes": [
+                            "service-showcase__image"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "image",
+                            "src": "/uploads/06-team-working.jpg",
+                            "alt": "",
+                            "data-image-widths": "auto",
+                            "sizes": "(max-width: 40rem) 100vw, 33vw",
+                            "loading": "lazy",
+                            "decoding": "async"
+                          },
+                          "name": "image",
+                          "id": "img-mvtg8off-2644"
+                        },
+                        {
+                          "tag": "div",
+                          "classes": [
+                            "service-showcase__content"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "div"
+                          },
+                          "children": [
+                            {
+                              "tag": "p",
+                              "classes": [
+                                "service-showcase__label"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "text"
+                              },
+                              "text": "03 / CARE",
+                              "name": "label",
+                              "id": "p-mvtg8off-2646"
+                            },
+                            {
+                              "tag": "h3",
+                              "classes": [
+                                "service-showcase__title"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "heading"
+                              },
+                              "text": "GARDEN CARE",
+                              "name": "title",
+                              "id": "h3-mvtg8off-2647"
+                            },
+                            {
+                              "tag": "p",
+                              "classes": [
+                                "service-showcase__copy"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "text"
+                              },
+                              "text": "Considered care to help your garden thrive.",
+                              "name": "copy",
+                              "id": "p-mvtg8off-2648"
+                            }
+                          ],
+                          "name": "content",
+                          "id": "div-mvtg8off-2645"
+                        }
+                      ],
+                      "name": "card",
+                      "id": "article-mvtg8off-2643"
+                    }
+                  ],
+                  "name": "service showcase",
+                  "id": "div-mvtg8off-2630"
+                }
+              ],
+              "attrs": {
+                "builder-data-element": "div"
+              },
+              "name": "container",
+              "id": "div-mvgv9yyn-655"
+            }
+          ],
+          "name": "Garden services",
+          "id": "section-mvgv9yyn-654"
+        },
+        {
+          "tag": "section",
+          "classes": [
+            "garden-approach"
+          ],
+          "attrs": {
+            "builder-data-element": "section",
+            "id": "garden-approach",
+            "aria-labelledby": "garden-approach-title"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "classes": [
+                "garden-approach__container"
+              ],
+              "attrs": {
+                "builder-data-element": "container"
+              },
+              "children": [
+                {
+                  "tag": "header",
+                  "classes": [
+                    "garden-approach__header"
+                  ],
+                  "attrs": {
+                    "builder-data-element": "header"
+                  },
+                  "children": [
+                    {
+                      "tag": "p",
+                      "classes": [
+                        "garden-approach__eyebrow"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "text"
+                      },
+                      "text": "HOW WE WORK",
+                      "name": "eyebrow",
+                      "id": "p-mvqy4k7f-5935"
+                    },
+                    {
+                      "tag": "h2",
+                      "classes": [
+                        "garden-approach__title"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "heading",
+                        "id": "garden-approach-title"
+                      },
+                      "text": "A THOUGHTFUL PROCESS",
+                      "name": "title",
+                      "id": "h2-mvqy4k7f-5936"
+                    },
+                    {
+                      "tag": "p",
+                      "classes": [
+                        "garden-approach__intro"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "text"
+                      },
+                      "text": "From the first conversation to the final planting, every choice should feel considered and clear.",
+                      "name": "intro",
+                      "id": "p-mvqy4k7f-5937"
+                    }
+                  ],
+                  "name": "header",
+                  "id": "header-mvqy4k7f-5934"
+                },
+                {
+                  "tag": "ol",
+                  "classes": [
+                    "garden-approach__list"
+                  ],
+                  "attrs": {
+                    "builder-data-element": "list"
+                  },
+                  "children": [
+                    {
+                      "tag": "li",
+                      "classes": [
+                        "garden-approach__item"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "li"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "classes": [
+                            "garden-approach__number"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "span"
+                          },
+                          "text": "01",
+                          "name": "number",
+                          "id": "span-mvqy4k7f-5940"
+                        },
+                        {
+                          "tag": "h3",
+                          "classes": [
+                            "garden-approach__item-title"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "heading"
+                          },
+                          "text": "Planned around your home",
+                          "name": "item title",
+                          "id": "h3-mvqy4k7f-5941"
+                        },
+                        {
+                          "tag": "p",
+                          "classes": [
+                            "garden-approach__copy"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "text"
+                          },
+                          "text": "We begin with your space, the light it gets and the way you want to spend time outside.",
+                          "name": "copy",
+                          "id": "p-mvqy4k7f-5942"
+                        }
+                      ],
+                      "name": "item",
+                      "id": "li-mvqy4k7f-5939"
+                    },
+                    {
+                      "tag": "li",
+                      "classes": [
+                        "garden-approach__item"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "li"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "classes": [
+                            "garden-approach__number"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "span"
+                          },
+                          "text": "02",
+                          "name": "number",
+                          "id": "span-mvqy4k7f-5944"
+                        },
+                        {
+                          "tag": "h3",
+                          "classes": [
+                            "garden-approach__item-title"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "heading"
+                          },
+                          "text": "Built with care",
+                          "name": "item title",
+                          "id": "h3-mvqy4k7f-5945"
+                        },
+                        {
+                          "tag": "p",
+                          "classes": [
+                            "garden-approach__copy"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "text"
+                          },
+                          "text": "Thoughtful materials and skilled work bring the plan together with care at every stage.",
+                          "name": "copy",
+                          "id": "p-mvqy4k7f-5946"
+                        }
+                      ],
+                      "name": "item",
+                      "id": "li-mvqy4k7f-5943"
+                    },
+                    {
+                      "tag": "li",
+                      "classes": [
+                        "garden-approach__item"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "li"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "classes": [
+                            "garden-approach__number"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "span"
+                          },
+                          "text": "03",
+                          "name": "number",
+                          "id": "span-mvqy4k7f-5948"
+                        },
+                        {
+                          "tag": "h3",
+                          "classes": [
+                            "garden-approach__item-title"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "heading"
+                          },
+                          "text": "Made to grow",
+                          "name": "item title",
+                          "id": "h3-mvqy4k7f-5949"
+                        },
+                        {
+                          "tag": "p",
+                          "classes": [
+                            "garden-approach__copy"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "text"
+                          },
+                          "text": "Planting is chosen to settle in, develop and bring a changing sense of life to the garden.",
+                          "name": "copy",
+                          "id": "p-mvqy4k7f-5950"
+                        }
+                      ],
+                      "name": "item",
+                      "id": "li-mvqy4k7f-5947"
+                    }
+                  ],
+                  "name": "list",
+                  "id": "ol-mvqy4k7f-5938"
+                }
+              ],
+              "name": "container",
+              "id": "div-mvqy4k7f-5933"
+            }
+          ],
+          "name": "garden approach",
+          "id": "section-mvqy4k7f-5932"
+        },
+        {
+          "tag": "section",
+          "classes": [
+            "garden-feature"
+          ],
+          "attrs": {
+            "builder-data-element": "section",
+            "aria-labelledby": "garden-feature-title"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "classes": [
+                "garden-feature__container"
+              ],
+              "attrs": {
+                "builder-data-element": "container"
+              },
+              "children": [
+                {
+                  "tag": "div",
+                  "classes": [
+                    "garden-feature__visual"
+                  ],
+                  "attrs": {
+                    "builder-data-element": "div"
+                  },
+                  "children": [
+                    {
+                      "tag": "img",
+                      "classes": [
+                        "garden-feature__image"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "image",
+                        "src": "/uploads/04-project-planting.jpg",
+                        "alt": "A stone path through layered garden planting",
+                        "data-image-widths": "auto",
+                        "sizes": "(max-width: 48rem) 100vw, 50vw",
+                        "loading": "lazy",
+                        "decoding": "async"
+                      },
+                      "name": "image",
+                      "id": "img-mvtg8off-2652"
+                    },
+                    {
+                      "tag": "img",
+                      "classes": [
+                        "garden-feature__detail"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "image",
+                        "src": "/uploads/06-team-working.jpg",
+                        "alt": "Gardeners tending a planting bed",
+                        "data-image-widths": "auto",
+                        "sizes": "(max-width: 48rem) 45vw, 22vw",
+                        "loading": "lazy",
+                        "decoding": "async"
+                      },
+                      "name": "detail",
+                      "id": "img-mvtg8off-2653"
+                    }
+                  ],
+                  "name": "visual",
+                  "id": "div-mvtg8off-2651"
+                },
+                {
+                  "tag": "div",
+                  "classes": [
+                    "garden-feature__content"
+                  ],
+                  "attrs": {
+                    "builder-data-element": "div"
+                  },
+                  "children": [
+                    {
+                      "tag": "p",
+                      "classes": [
+                        "garden-feature__eyebrow"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "text"
+                      },
+                      "text": "THOUGHTFUL LANDSCAPES",
+                      "name": "eyebrow",
+                      "id": "p-mvtg8off-2655"
+                    },
+                    {
+                      "tag": "h2",
+                      "classes": [
+                        "garden-feature__title"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "heading",
+                        "id": "garden-feature-title"
+                      },
+                      "text": "ELEVATE YOUR OUTDOOR SPACE",
+                      "name": "title",
+                      "id": "h2-mvtg8off-2656"
+                    },
+                    {
+                      "tag": "p",
+                      "classes": [
+                        "garden-feature__copy"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "text"
+                      },
+                      "text": "From the first ideas to the finishing touches, we bring design, planting and care together to create gardens that feel at home.",
+                      "name": "copy",
+                      "id": "p-mvtg8off-2657"
+                    },
+                    {
+                      "tag": "a",
+                      "classes": [
+                        "garden-feature__action",
+                        "btn",
+                        "btn--primary"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "link",
+                        "href": "#garden-work"
+                      },
+                      "text": "Explore our work",
+                      "name": "action",
+                      "id": "a-mvtg8off-2658"
+                    }
+                  ],
+                  "name": "content",
+                  "id": "div-mvtg8off-2654"
+                }
+              ],
+              "name": "container",
+              "id": "div-mvtg8off-2650"
+            }
+          ],
+          "name": "garden feature",
+          "id": "section-mvtg8off-2649"
+        },
+        {
+          "tag": "section",
+          "classes": [
+            "garden-work"
+          ],
+          "attrs": {
+            "builder-data-element": "section",
+            "id": "garden-work",
+            "aria-labelledby": "garden-work-title"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "classes": [
+                "garden-work__container"
+              ],
+              "attrs": {
+                "builder-data-element": "container"
+              },
+              "children": [
+                {
+                  "tag": "header",
+                  "classes": [
+                    "garden-work__header"
+                  ],
+                  "attrs": {
+                    "builder-data-element": "header"
+                  },
+                  "children": [
+                    {
+                      "tag": "p",
+                      "classes": [
+                        "garden-work__eyebrow"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "text"
+                      },
+                      "text": "Selected work",
+                      "name": "eyebrow",
+                      "id": "p-mvqy3xw8-5921"
+                    },
+                    {
+                      "tag": "h2",
+                      "classes": [
+                        "garden-work__title"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "heading",
+                        "id": "garden-work-title"
+                      },
+                      "text": "DISCOVER OUR GARDEN WORK",
+                      "name": "title",
+                      "id": "h2-mvqy3xw8-5922"
+                    },
+                    {
+                      "tag": "p",
+                      "classes": [
+                        "garden-work__intro"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "text"
+                      },
+                      "text": "Careful planting, lasting materials and a clear route through the garden make outdoor spaces easier to enjoy.",
+                      "name": "intro",
+                      "id": "p-mvqy3xw8-5923"
+                    }
+                  ],
+                  "name": "header",
+                  "id": "header-mvqy3xw8-5920"
+                },
+                {
+                  "tag": "article",
+                  "classes": [
+                    "garden-work__feature"
+                  ],
+                  "attrs": {
+                    "builder-data-element": "article"
+                  },
+                  "children": [
+                    {
+                      "tag": "figure",
+                      "classes": [
+                        "garden-work__figure"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "figure"
+                      },
+                      "children": [
+                        {
+                          "tag": "img",
+                          "classes": [
+                            "garden-work__image"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "image",
+                            "src": "/uploads/04-project-planting.jpg",
+                            "alt": "A stone garden path bordered by layered grasses, flowering plants and a contemporary home",
+                            "data-image-widths": "auto",
+                            "sizes": "100vw",
+                            "loading": "lazy",
+                            "decoding": "async"
+                          },
+                          "name": "image",
+                          "id": "img-mvqy3xw8-5926"
+                        }
+                      ],
+                      "name": "figure",
+                      "id": "figure-mvqy3xw8-5925"
+                    },
+                    {
+                      "tag": "div",
+                      "classes": [
+                        "garden-work__story"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "div"
+                      },
+                      "children": [
+                        {
+                          "tag": "p",
+                          "classes": [
+                            "garden-work__story-eyebrow"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "text"
+                          },
+                          "text": "The details matter",
+                          "name": "story eyebrow",
+                          "id": "p-mvqy3xw8-5928"
+                        },
+                        {
+                          "tag": "h3",
+                          "classes": [
+                            "garden-work__story-title"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "heading"
+                          },
+                          "text": "Room to slow down.",
+                          "name": "story title",
+                          "id": "h3-mvqy3xw8-5929"
+                        },
+                        {
+                          "tag": "p",
+                          "classes": [
+                            "garden-work__copy"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "text"
+                          },
+                          "text": "Soft grasses, layered planting and a clear stone path bring structure and a quieter rhythm to the space.",
+                          "name": "copy",
+                          "id": "p-mvqy3xw8-5930"
+                        },
+                        {
+                          "tag": "a",
+                          "classes": [
+                            "garden-work__link"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "link",
+                            "href": "/posts"
+                          },
+                          "text": "Explore the garden journal",
+                          "name": "link",
+                          "id": "a-mvqy3xw8-5931"
+                        }
+                      ],
+                      "name": "story",
+                      "id": "div-mvqy3xw8-5927"
+                    }
+                  ],
+                  "name": "feature",
+                  "id": "article-mvqy3xw8-5924"
+                }
+              ],
+              "name": "container",
+              "id": "div-mvqy3xw8-5919"
+            }
+          ],
+          "name": "garden work",
+          "id": "section-mvqy3xw8-5918"
+        },
+        {
+          "tag": "section",
+          "classes": [
+            "garden-cta"
+          ],
+          "attrs": {
+            "builder-data-element": "section",
+            "aria-labelledby": "garden-cta-title"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "classes": [
+                "garden-cta__container"
+              ],
+              "attrs": {
+                "builder-data-element": "container"
+              },
+              "children": [
+                {
+                  "tag": "div",
+                  "classes": [
+                    "garden-cta__content"
+                  ],
+                  "attrs": {
+                    "builder-data-element": "div"
+                  },
+                  "children": [
+                    {
+                      "tag": "p",
+                      "classes": [
+                        "garden-cta__eyebrow"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "text"
+                      },
+                      "text": "Planning a change?",
+                      "name": "eyebrow",
+                      "id": "p-mvqy4xfm-5954"
+                    },
+                    {
+                      "tag": "h2",
+                      "classes": [
+                        "garden-cta__title"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "heading",
+                        "id": "garden-cta-title"
+                      },
+                      "text": "Let’s make more of your garden.",
+                      "name": "title",
+                      "id": "h2-mvqy4xfm-5955"
+                    },
+                    {
+                      "tag": "p",
+                      "classes": [
+                        "garden-cta__copy"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "text"
+                      },
+                      "text": "Find a little inspiration and practical advice in the garden journal.",
+                      "name": "copy",
+                      "id": "p-mvqy4xfm-5956"
+                    }
+                  ],
+                  "name": "content",
+                  "id": "div-mvqy4xfm-5953"
+                },
+                {
+                  "tag": "a",
+                  "classes": [
+                    "garden-cta__link",
+                    "btn",
+                    "btn--white"
+                  ],
+                  "attrs": {
+                    "builder-data-element": "link",
+                    "href": "/posts"
+                  },
+                  "text": "Explore the garden journal",
+                  "name": "link",
+                  "id": "a-mvqy4xfm-5957"
+                }
+              ],
+              "name": "container",
+              "id": "div-mvqy4xfm-5952"
+            }
+          ],
+          "name": "garden cta",
+          "id": "section-mvqy4xfm-5951"
+        }
+      ],
+      "stylesheets": [
+        {
+          "id": "global",
+          "name": "Global",
+          "rules": [
+            {
+              "selector": ".hero",
+              "css": "position: relative;\ndisplay: grid;\nmin-block-size: var(--section-space-xxl);\noverflow: hidden;\nbackground: var(--base);\ncolor: var(--white);"
+            },
+            {
+              "selector": ".hero__content",
+              "css": "grid-area: 1 / 1;\nz-index: 2;\ninline-size: min(100%, var(--content-width));\nmargin-inline: auto;\npadding-inline: var(--site-padding);\npadding-block: var(--section-space-xl);\ndisplay: grid;\nalign-items: center;\n@media (max-width: 48rem) { padding-block: var(--section-space-l); }"
+            },
+            {
+              "selector": ".hero__headline",
+              "css": "min-inline-size: 0;\ninline-size: min(70%, var(--content-width-inset));\ndisplay: grid;\njustify-items: start;\ngap: var(--space-m);\n@media (max-width: 48rem) { inline-size: 100%; }"
+            },
+            {
+              "selector": ".hero__eyebrow",
+              "css": "display: flex;\nalign-items: center;\ngap: var(--space-s);\ncolor: var(--base-100);\n&::before {\n  inline-size: var(--space-xs);\n  block-size: var(--space-xs);\n  flex: 0 0 auto;\n  border-radius: 50%;\n  background: var(--accent);\n  content: \"\";\n}"
+            },
+            {
+              "selector": ".hero__copy",
+              "css": "color: var(--white);\nfont-size: var(--text-l);"
+            },
+            {
+              "selector": ".hero__visual",
+              "css": "grid-area: 1 / 1;\nposition: relative;\nz-index: 1;\nisolation: isolate;\nmin-block-size: var(--section-space-xxl);\n&::before {\n  position: absolute;\n  z-index: 0;\n  inset: 0;\n  background: linear-gradient(90deg, var(--base-90), var(--base-40));\n  content: \"\";\n}"
+            },
+            {
+              "selector": ".hero__figure",
+              "css": "position: absolute;\nz-index: -1;\ninset: 0;\ninline-size: 100%;\nmargin: 0;"
+            },
+            {
+              "selector": ".hero__image",
+              "css": "display: block;\ninline-size: 100%;\nblock-size: 100%;\nobject-fit: cover;\nobject-position: center 55%;"
+            },
+            {
+              "selector": ".garden-intro",
+              "css": "padding-block: var(--section-space-l);\npadding-inline: var(--site-padding);\nbackground: var(--white);\ncolor: var(--neutral);"
+            },
+            {
+              "selector": ".garden-intro__container",
+              "css": "inline-size: min(100%, var(--content-width));\nmargin-inline: auto;\ndisplay: grid;\ngap: var(--section-space-m);"
+            },
+            {
+              "selector": ".garden-intro__header",
+              "css": "inline-size: min(100%, 75%);\nmargin-inline: auto;\ndisplay: grid;\njustify-items: center;\ngap: var(--space-s);\ntext-align: center;\n@media (max-width: 48rem) { inline-size: 100%; }"
+            },
+            {
+              "selector": ".garden-intro__eyebrow",
+              "css": "font-size: var(--text-s);\ncolor: var(--primary);"
+            },
+            {
+              "selector": ".garden-intro__lead",
+              "css": "font-size: var(--text-l);\ncolor: var(--text-color);"
+            },
+            {
+              "selector": ".garden-intro__panel",
+              "css": "display: grid;\ngrid-template-columns: minmax(0, 1fr);\ninline-size: 100%;"
+            },
+            {
+              "selector": ".garden-intro__cards",
+              "css": "display: grid;\ngrid-template-columns: repeat(3, minmax(0, 1fr));\nalign-items: start;\ngap: var(--grid-gap);\n@media (max-width: 48rem) { grid-template-columns: minmax(0, 1fr); }"
+            },
+            {
+              "selector": ".garden-intro__card",
+              "css": "display: block;\npadding-block: var(--space-s);\nborder: 0;\nborder-block-start: var(--border-width) solid var(--border-light);\nbackground: transparent;\ncolor: var(--neutral);\n&[open] > .garden-intro__card-heading::after { content: \"−\"; }"
+            },
+            {
+              "selector": ".garden-intro__card-heading",
+              "css": "display: grid;\ngrid-template-columns: auto minmax(0, 1fr) auto;\nalign-items: center;\ngap: var(--space-s);\nmin-block-size: var(--tap-target);\ncursor: pointer;\nlist-style: none;\n&::after { content: \"+\"; color: var(--primary); font-size: var(--h3); }\n&::-webkit-details-marker { display: none; }"
+            },
+            {
+              "selector": ".garden-intro__card-copy",
+              "css": "padding-block-start: var(--space-s);"
+            },
+            {
+              "selector": ".garden-intro__card-title",
+              "css": "font-size: var(--h5);"
+            },
+            {
+              "selector": ".garden-work",
+              "css": "padding-block: var(--section-space-l);\npadding-inline: var(--site-padding);\nbackground: var(--base-100);"
+            },
+            {
+              "selector": ".garden-work__container",
+              "css": "inline-size: min(100%, var(--content-width));\nmargin-inline: auto;\ndisplay: grid;\ngap: var(--section-space-m);"
+            },
+            {
+              "selector": ".garden-work__header",
+              "css": "inline-size: min(100%, 75%);\nmargin-inline: auto;\ndisplay: grid;\njustify-items: center;\ngap: var(--space-s);\ntext-align: center;\n@media (max-width: 48rem) { inline-size: 100%; }"
+            },
+            {
+              "selector": ".garden-work__eyebrow",
+              "css": "color: var(--primary);\nfont-size: var(--text-s);"
+            },
+            {
+              "selector": ".garden-work__feature",
+              "css": "display: grid;\ngrid-template-columns: minmax(0, 1fr);\noverflow: hidden;\nbackground: transparent;"
+            },
+            {
+              "selector": ".garden-work__figure",
+              "css": "min-inline-size: 0;\nmargin: 0;"
+            },
+            {
+              "selector": ".garden-work__image",
+              "css": "display: block;\ninline-size: 100%;\naspect-ratio: 2 / 1;\nobject-fit: cover;\nborder-radius: var(--image-radius);\n@media (max-width: 48rem) { aspect-ratio: 4 / 3; }"
+            },
+            {
+              "selector": ".garden-work__story",
+              "css": "display: grid;\ngrid-template-columns: minmax(0, 1fr) minmax(0, 1fr);\ngap: var(--space-m);\npadding-block: var(--space-m);\n@media (max-width: 48rem) { grid-template-columns: minmax(0, 1fr); }"
+            },
+            {
+              "selector": ".garden-work__story-eyebrow",
+              "css": "grid-column: 1 / -1;\ncolor: var(--primary);\nfont-size: var(--text-s);"
+            },
+            {
+              "selector": ".garden-work__story-title",
+              "css": "font-size: var(--h3);"
+            },
+            {
+              "selector": ".garden-work__copy",
+              "css": "color: var(--text-color);"
+            },
+            {
+              "selector": ".garden-work__link",
+              "css": "color: var(--primary);\ntext-decoration: underline;\ntext-underline-offset: var(--space-xxs);\n&:hover { color: var(--accent); }\n&:focus-visible { outline: var(--focus-width) var(--focus-style) var(--focus-color); outline-offset: var(--focus-offset); }"
+            },
+            {
+              "selector": ".garden-approach",
+              "css": "padding-block: var(--section-space-l);\npadding-inline: var(--site-padding);\nbackground: var(--white);"
+            },
+            {
+              "selector": ".garden-approach__container",
+              "css": "inline-size: min(100%, var(--content-width));\nmargin-inline: auto;\ndisplay: grid;\ngap: var(--section-space-m);"
+            },
+            {
+              "selector": ".garden-approach__header",
+              "css": "inline-size: min(100%, 75%);\nmargin-inline: auto;\ndisplay: flex;\njustify-items: center;\ntext-align: center;\ngap: var(--space-s);\nflex-wrap: wrap;\nflex-direction: column;\n\n@media (max-width: 48rem) {\n  inline-size: 100%;\n}"
+            },
+            {
+              "selector": ".garden-approach__eyebrow",
+              "css": "color: var(--primary);\nfont-size: var(--text-s);"
+            },
+            {
+              "selector": ".garden-approach__intro",
+              "css": "color: var(--text-color);"
+            },
+            {
+              "selector": ".garden-approach__list",
+              "css": "display: grid;\ngrid-template-columns: repeat(3, minmax(0, 1fr));\ngap: var(--grid-gap);\nmargin: 0;\npadding: 0;\nlist-style: none;\n@media (max-width: 48rem) { grid-template-columns: minmax(0, 1fr); }"
+            },
+            {
+              "selector": ".garden-approach__item",
+              "css": "display: grid;\njustify-items: center;\nalign-content: start;\ngap: var(--space-s);\npadding: var(--space-m);\nborder: 0;\ntext-align: center;"
+            },
+            {
+              "selector": ".garden-approach__number",
+              "css": "color: var(--accent);\nfont-size: var(--h2);"
+            },
+            {
+              "selector": ".garden-approach__item-title",
+              "css": "font-size: var(--h5);"
+            },
+            {
+              "selector": ".garden-approach__copy",
+              "css": "color: var(--text-color);"
+            },
+            {
+              "selector": ".garden-cta",
+              "css": "--heading-color: var(--white);\npadding-block: var(--section-space-l);\npadding-inline: var(--site-padding);\nbackground: linear-gradient(var(--base-80), var(--base-80)), url(\"/uploads/04-project-planting.jpg\") center / cover no-repeat;\ncolor: var(--white);"
+            },
+            {
+              "selector": ".garden-cta__container",
+              "css": "inline-size: min(100%, var(--content-width));\nmargin-inline: auto;\ndisplay: grid;\ngrid-template-columns: minmax(0, 1fr);\njustify-items: center;\ngap: var(--space-l);\ntext-align: center;"
+            },
+            {
+              "selector": ".garden-cta__content",
+              "css": "display: grid;\njustify-items: center;\ngap: var(--space-s);"
+            },
+            {
+              "selector": ".garden-cta__eyebrow",
+              "css": "color: var(--base-100);\nfont-size: var(--text-s);"
+            },
+            {
+              "selector": ".garden-cta__copy",
+              "css": "color: var(--base-100);"
+            },
+            {
+              "selector": ".hero__title",
+              "css": "color: var(--white);"
+            },
+            {
+              "selector": ".garden-intro__card-number",
+              "css": "color: var(--accent);\nfont-size: var(--text-s);"
+            },
+            {
+              "selector": ".team-section",
+              "css": "padding-block: var(--section-space-l);\npadding-inline: var(--site-padding);\nbackground: var(--white);\ncolor: var(--neutral);"
+            },
+            {
+              "selector": ".team-section__container",
+              "css": "inline-size: min(100%, var(--content-width));\nmargin-inline: auto;\ndisplay: grid;\ngap: var(--section-space-m);"
+            },
+            {
+              "selector": ".team-section__header",
+              "css": "inline-size: min(100%, 75%);\nmargin-inline: auto;\ndisplay: grid;\njustify-items: center;\ngap: var(--space-s);\ntext-align: center;\n@media (max-width: 48rem) { inline-size: 100%; }"
+            },
+            {
+              "selector": ".team-section__eyebrow",
+              "css": "color: var(--primary);\nfont-size: var(--text-s);"
+            },
+            {
+              "selector": ".team-section__intro",
+              "css": "color: var(--text-color);\nfont-size: var(--text-l);"
+            },
+            {
+              "selector": ".team-section__grid",
+              "css": "display: grid;\ngrid-template-columns: repeat(3, minmax(0, 1fr));\ngrid-auto-flow: row;\ngap: var(--grid-gap);\n@media (max-width: 48rem) { grid-template-columns: repeat(2, minmax(0, 1fr)); }\n@media (max-width: 40rem) { grid-template-columns: minmax(0, 1fr); }"
+            },
+            {
+              "selector": ".team-card",
+              "css": "display: grid;\nalign-content: start;\noverflow: hidden;\nborder: var(--border-width) solid var(--border-light);\nborder-radius: var(--radius-s);\nbackground: var(--white);\ncolor: var(--neutral);"
+            },
+            {
+              "selector": ".team-card__figure",
+              "css": "margin: 0;\naspect-ratio: 1 / 2;\noverflow: hidden;\nbackground: var(--base-100);"
+            },
+            {
+              "selector": ".team-card__image",
+              "css": "display: block;\ninline-size: 100%;\nblock-size: 100%;\nobject-fit: cover;"
+            },
+            {
+              "selector": ".team-card__body",
+              "css": "display: grid;\ngap: var(--space-xs);\npadding: var(--space-m);"
+            },
+            {
+              "selector": ".team-card__name",
+              "css": "font-size: var(--h4);"
+            },
+            {
+              "selector": ".team-card__department",
+              "css": "display: flex;\nflex-wrap: wrap;\ngap: var(--space-xxs) var(--space-xs);\ncolor: var(--primary);\nfont-size: var(--text-s);"
+            },
+            {
+              "selector": ".hero__actions",
+              "css": "display: flex;\nflex-wrap: wrap;\nalign-items: center;\ngap: var(--space-s);"
+            },
+            {
+              "selector": ".service-showcase",
+              "css": "display: grid;\ngrid-template-columns: 2fr 1fr 1fr;\ngap: var(--grid-gap);\n@media (max-width: 48rem) { grid-template-columns: repeat(2, minmax(0, 1fr)); }\n@media (max-width: 40rem) { grid-template-columns: minmax(0, 1fr); }"
+            },
+            {
+              "selector": ".service-showcase__card",
+              "css": "--heading-color: var(--white);\nposition: relative;\ndisplay: grid;\nmin-inline-size: 0;\nmin-block-size: var(--section-space-xxl);\noverflow: hidden;\nborder-radius: var(--image-radius);\nbackground: var(--base);\ncolor: var(--white);\n&:first-child { aspect-ratio: 4 / 3; }\n&::before { position: absolute; z-index: 1; inset: 0; background: linear-gradient(0deg, var(--black-80), var(--black-10)); content: \"\"; }\n@media (max-width: 48rem) { aspect-ratio: 3 / 4; &:first-child { grid-column: 1 / -1; aspect-ratio: 16 / 9; } }\n@media (max-width: 40rem) { aspect-ratio: 4 / 3; &:first-child { grid-column: auto; aspect-ratio: 4 / 3; } }"
+            },
+            {
+              "selector": ".service-showcase__image",
+              "css": "position: absolute;\ninset: 0;\ndisplay: block;\ninline-size: 100%;\nblock-size: 100%;\nobject-fit: cover;"
+            },
+            {
+              "selector": ".service-showcase__content",
+              "css": "position: relative;\nz-index: 2;\ndisplay: grid;\nalign-self: end;\ngap: var(--space-xs);\npadding: var(--space-m);"
+            },
+            {
+              "selector": ".service-showcase__label",
+              "css": "font-size: var(--text-s);\ncolor: var(--white);"
+            },
+            {
+              "selector": ".service-showcase__title",
+              "css": "color: var(--white);\nfont-size: var(--h4);"
+            },
+            {
+              "selector": ".service-showcase__copy",
+              "css": "color: var(--white);\nfont-size: var(--text-s);"
+            },
+            {
+              "selector": ".garden-feature",
+              "css": "padding-block: var(--section-space-l);\npadding-inline: var(--site-padding);\nbackground: var(--primary-10);"
+            },
+            {
+              "selector": ".garden-feature__container",
+              "css": "inline-size: min(100%, var(--content-width));\nmargin-inline: auto;\ndisplay: grid;\ngrid-template-columns: minmax(0, 1fr) minmax(0, 1fr);\nalign-items: center;\ngap: var(--section-space-l);\n@media (max-width: 48rem) { grid-template-columns: minmax(0, 1fr); gap: var(--section-space-s); }"
+            },
+            {
+              "selector": ".garden-feature__visual",
+              "css": "position: relative;\nmin-inline-size: 0;"
+            },
+            {
+              "selector": ".garden-feature__image",
+              "css": "display: block;\ninline-size: 80%;\naspect-ratio: 4 / 5;\nobject-fit: cover;\nborder-radius: var(--image-radius);"
+            },
+            {
+              "selector": ".garden-feature__detail",
+              "css": "position: absolute;\ninset-inline-end: 0;\ninset-block-end: var(--space-l);\ndisplay: block;\ninline-size: 45%;\naspect-ratio: 1 / 1;\nobject-fit: cover;\nborder: var(--space-xxs) solid var(--white);\nborder-radius: var(--image-radius);"
+            },
+            {
+              "selector": ".garden-feature__content",
+              "css": "display: grid;\njustify-items: start;\nalign-content: center;\ngap: var(--space-m);"
+            },
+            {
+              "selector": ".garden-feature__eyebrow",
+              "css": "color: var(--primary);\nfont-size: var(--text-s);"
+            },
+            {
+              "selector": ".garden-feature__copy",
+              "css": "color: var(--text-color);\nfont-size: var(--text-l);"
+            }
+          ]
+        }
+      ]
+    },
+    "posts": {
+      "route": "posts",
+      "title": "Garden Journal",
+      "seo": {
+        "description": "Ideas, observations and stories for a life lived outdoors."
+      },
+      "root": [
+        {
+          "tag": "section",
+          "name": "Garden Journal",
+          "classes": [
+            "garden-journal"
+          ],
+          "attrs": {
+            "builder-data-element": "section",
+            "aria-labelledby": "garden-journal-title"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "name": "Journal Container",
+              "classes": [
+                "garden-journal__container"
+              ],
+              "attrs": {
+                "builder-data-element": "container"
+              },
+              "children": [
+                {
+                  "tag": "header",
+                  "name": "Journal Header",
+                  "classes": [
+                    "garden-journal__header"
+                  ],
+                  "attrs": {
+                    "builder-data-element": "header"
+                  },
+                  "children": [
+                    {
+                      "tag": "p",
+                      "name": "Eyebrow",
+                      "classes": [
+                        "garden-journal__eyebrow"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "text"
+                      },
+                      "text": "From the garden",
+                      "id": "p-mvqvua2i-69"
+                    },
+                    {
+                      "tag": "h1",
+                      "name": "Page Title",
+                      "classes": [
+                        "garden-journal__title"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "heading",
+                        "id": "garden-journal-title"
+                      },
+                      "text": "Garden journal",
+                      "id": "h1-mvqvua2i-70"
+                    },
+                    {
+                      "tag": "p",
+                      "name": "Introduction",
+                      "classes": [
+                        "garden-journal__intro"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "text"
+                      },
+                      "text": "Ideas, observations and stories for a life lived outdoors.",
+                      "id": "p-mvqvua2i-71"
+                    }
+                  ],
+                  "id": "header-mvqvua2i-68"
+                },
+                {
+                  "tag": "div",
+                  "name": "Post Grid",
+                  "classes": [
+                    "garden-journal__grid"
+                  ],
+                  "attrs": {
+                    "builder-data-element": "div"
+                  },
+                  "loop": {
+                    "source": "custom",
+                    "custom": "posts",
+                    "itemName": "item"
+                  },
+                  "children": [
+                    {
+                      "tag": "article",
+                      "name": "Post Card",
+                      "classes": [
+                        "garden-journal__card"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "article"
+                      },
+                      "children": [
+                        {
+                          "tag": "a",
+                          "name": "Post Link",
+                          "classes": [
+                            "garden-journal__link"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "link",
+                            "href": "{item.url}"
+                          },
+                          "children": [
+                            {
+                              "tag": "img",
+                              "name": "Featured Image",
+                              "classes": [
+                                "garden-journal__image"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "image",
+                                "src": "{item.featured_image}",
+                                "alt": "{item.title}",
+                                "loading": "lazy",
+                                "decoding": "async",
+                                "data-image-widths": "auto",
+                                "sizes": "(max-width: 40rem) 100vw, (max-width: 60rem) 50vw, 33vw"
+                              },
+                              "id": "img-mvqvua2i-75"
+                            },
+                            {
+                              "tag": "div",
+                              "name": "Card Content",
+                              "classes": [
+                                "garden-journal__body"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "div"
+                              },
+                              "children": [
+                                {
+                                  "tag": "div",
+                                  "name": "Post Metadata",
+                                  "classes": [
+                                    "garden-journal__meta"
+                                  ],
+                                  "attrs": {
+                                    "builder-data-element": "div"
+                                  },
+                                  "children": [
+                                    {
+                                      "tag": "time",
+                                      "name": "Published Date",
+                                      "classes": [
+                                        "garden-journal__date"
+                                      ],
+                                      "attrs": {
+                                        "builder-data-element": "text",
+                                        "datetime": "{item.publishedAt}"
+                                      },
+                                      "text": "{item.publishedAt_text}",
+                                      "id": "time-mvqvua2i-78"
+                                    },
+                                    {
+                                      "tag": "span",
+                                      "name": "Author",
+                                      "classes": [
+                                        "garden-journal__author"
+                                      ],
+                                      "attrs": {
+                                        "builder-data-element": "text"
+                                      },
+                                      "text": "{item.author}",
+                                      "cond": {
+                                        "mode": "custom",
+                                        "expr": "item.author"
+                                      },
+                                      "id": "span-mvqvua2i-79"
+                                    }
+                                  ],
+                                  "id": "div-mvqvua2i-77"
+                                },
+                                {
+                                  "tag": "h2",
+                                  "name": "Post Title",
+                                  "classes": [
+                                    "garden-journal__post-title"
+                                  ],
+                                  "attrs": {
+                                    "builder-data-element": "heading"
+                                  },
+                                  "text": "{item.title}",
+                                  "id": "h2-mvqvua2i-80"
+                                },
+                                {
+                                  "tag": "p",
+                                  "name": "Post Excerpt",
+                                  "classes": [
+                                    "garden-journal__excerpt"
+                                  ],
+                                  "attrs": {
+                                    "builder-data-element": "text"
+                                  },
+                                  "text": "{item.excerpt}",
+                                  "id": "p-mvqvua2i-81"
+                                }
+                              ],
+                              "id": "div-mvqvua2i-76"
+                            }
+                          ],
+                          "id": "a-mvqvua2i-74"
+                        }
+                      ],
+                      "id": "article-mvqvua2i-73"
+                    }
+                  ],
+                  "id": "div-mvqvua2i-72"
+                }
+              ],
+              "id": "div-mvqvua2i-67"
+            }
+          ],
+          "id": "section-mvqvua2i-66"
+        }
+      ],
+      "stylesheets": [
+        {
+          "id": "global",
+          "name": "Garden Journal",
+          "rules": [
+            {
+              "selector": ".garden-journal",
+              "css": "padding-block: var(--section-space-l);\npadding-inline: var(--site-padding);\nbackground: var(--base-100);\ncolor: var(--neutral);"
+            },
+            {
+              "selector": ".garden-journal__container",
+              "css": "inline-size: min(100%, var(--content-width));\nmargin-inline: auto;\ndisplay: grid;\ngap: var(--section-space-s);"
+            },
+            {
+              "selector": ".garden-journal__header",
+              "css": "display: grid;\ngap: var(--space-s);\nmax-inline-size: var(--content-width-inset);"
+            },
+            {
+              "selector": ".garden-journal__eyebrow",
+              "css": "color: var(--primary);"
+            },
+            {
+              "selector": ".garden-journal__intro",
+              "css": "font-size: var(--text-l);\ncolor: var(--text-color);"
+            },
+            {
+              "selector": ".garden-journal__grid",
+              "css": "display: grid;\ngrid-template-columns: repeat(3, minmax(0, 1fr));\ngap: var(--grid-gap);\n@media (max-width: 60rem) { grid-template-columns: repeat(2, minmax(0, 1fr)); }\n@media (max-width: 40rem) { grid-template-columns: minmax(0, 1fr); }"
+            },
+            {
+              "selector": ".garden-journal__card",
+              "css": "min-inline-size: 0;"
+            },
+            {
+              "selector": ".garden-journal__link",
+              "css": "display: flex;\nblock-size: 100%;\nflex-direction: column;\noverflow: hidden;\nborder: var(--border-width) solid var(--border-light);\nborder-radius: var(--radius-s);\nbackground: var(--white);\nbox-shadow: var(--shadow-s);\ncolor: var(--text-color);\ntext-decoration: none;\ntransition: border-color var(--motion-duration) var(--motion-ease), box-shadow var(--motion-duration) var(--motion-ease);\n&:hover { border-color: var(--primary); box-shadow: var(--shadow-m); }\n&:focus-visible { outline: var(--focus-width) var(--focus-style) var(--focus-color); outline-offset: var(--focus-offset); }"
+            },
+            {
+              "selector": ".garden-journal__image",
+              "css": "display: block;\ninline-size: 100%;\naspect-ratio: 16 / 10;\nobject-fit: cover;\nborder-radius: var(--image-radius);"
+            },
+            {
+              "selector": ".garden-journal__body",
+              "css": "display: grid;\nflex: 1;\nalign-content: start;\ngap: var(--space-s);\npadding: var(--space-m);"
+            },
+            {
+              "selector": ".garden-journal__meta",
+              "css": "display: flex;\nflex-wrap: wrap;\ngap: var(--space-xs);\ncolor: var(--text-color);\nfont-size: var(--text-s);"
+            },
+            {
+              "selector": ".garden-journal__author",
+              "css": "&::before { content: \"By \"; }"
+            },
+            {
+              "selector": ".garden-journal__post-title",
+              "css": "font-size: var(--h4);\ncolor: var(--heading-color);"
+            },
+            {
+              "selector": ".garden-journal__excerpt",
+              "css": "color: var(--text-color);"
+            }
+          ]
+        }
+      ],
+      "frontmatterMode": "manual",
+      "frontmatter": "import Base from '../layouts/PlainBase.astro';\nimport MainLayout from '../layouts/MainLayout.astro';\nimport SiterealImage from '../components/sitereal/Image.astro';\nimport '../styles/generated/framework.css';\nimport '../styles/generated/global.css';\nimport '../styles/generated/templates/tpl-muwmgdfe-1.css';\nimport '../styles/generated/pages/posts.css';\nimport { emdashPosts } from '../data/sources/emdash-posts.js';\n\nconst posts = (await emdashPosts()).map((item: Record<string, any>) => {\n  const words = String(item.excerpt ?? '').trim().split(/\\s+/).filter(Boolean);\n  const excerpt = words.length > 35 ? words.slice(0, 35).join(' ') + '…' : words.join(' ');\n  return { ...item, excerpt };\n});"
+    },
+    "search": {
+      "route": "search",
+      "title": "Search",
+      "root": [
+        {
+          "id": "section-mvqw3j5x-116",
+          "tag": "section",
+          "attrs": {
+            "builder-data-element": "section"
+          },
+          "children": [
+            {
+              "id": "div-mvqw3j5w-108",
+              "tag": "div",
+              "attrs": {
+                "builder-data-element": "container"
+              },
+              "children": [
+                {
+                  "id": "h2-mvqw3j5w-107",
+                  "tag": "h1",
+                  "attrs": {
+                    "builder-data-element": "heading"
+                  },
+                  "text": "Search"
+                },
+                {
+                  "id": "search-mvqw3j5w-109",
+                  "tag": "search",
+                  "attrs": {
+                    "builder-data-element": "search",
+                    "data-search-style": "icon",
+                    "data-search-part": "search"
+                  },
+                  "children": [
+                    {
+                      "id": "input-mvqw3j5x-110",
+                      "tag": "input",
+                      "attrs": {
+                        "builder-data-element": "form-input",
+                        "type": "search",
+                        "data-search-part": "input",
+                        "name": "q",
+                        "placeholder": "Search…",
+                        "aria-label": "Search",
+                        "autocomplete": "off"
+                      },
+                      "classes": [
+                        "garden-search__input"
+                      ]
+                    },
+                    {
+                      "id": "div-mvqw3j5x-111",
+                      "tag": "div",
+                      "attrs": {
+                        "builder-data-element": "search-results",
+                        "hidden": "",
+                        "data-search-part": "results",
+                        "data-search-display": "page"
+                      },
+                      "children": [
+                        {
+                          "id": "a-mvqw3j5x-112",
+                          "tag": "a",
+                          "attrs": {
+                            "builder-data-element": "search-hit",
+                            "href": "{result.url}",
+                            "data-search-part": "hit"
+                          },
+                          "children": [
+                            {
+                              "id": "span-mvqw3j5x-113",
+                              "tag": "span",
+                              "attrs": {
+                                "builder-data-element": "search-hit-title",
+                                "data-search-part": "hit-title"
+                              },
+                              "text": "{result.title}",
+                              "classes": [
+                                "garden-search__hit-title"
+                              ]
+                            },
+                            {
+                              "id": "span-mvqw3j5x-114",
+                              "tag": "span",
+                              "attrs": {
+                                "builder-data-element": "search-hit-type",
+                                "data-search-part": "hit-type"
+                              },
+                              "text": "{result.type}",
+                              "classes": [
+                                "garden-search__hit-type"
+                              ]
+                            },
+                            {
+                              "id": "span-mvqw3j5x-115",
+                              "tag": "span",
+                              "attrs": {
+                                "builder-data-element": "search-hit-excerpt",
+                                "data-search-part": "hit-excerpt"
+                              },
+                              "text": "{result.excerpt}",
+                              "classes": [
+                                "garden-search__hit-excerpt"
+                              ]
+                            }
+                          ],
+                          "classes": [
+                            "garden-search__hit"
+                          ]
+                        }
+                      ],
+                      "classes": [
+                        "garden-search__results"
+                      ]
+                    }
+                  ],
+                  "classes": [
+                    "garden-search__form"
+                  ]
+                }
+              ],
+              "classes": [
+                "garden-search__container"
+              ]
+            }
+          ],
+          "classes": [
+            "garden-search"
+          ]
+        }
+      ],
+      "stylesheets": [
+        {
+          "id": "global",
+          "name": "Global",
+          "rules": [
+            {
+              "selector": ".garden-search",
+              "css": "padding-block: var(--section-space-l);\npadding-inline: var(--site-padding);\nbackground: var(--base-100);\ncolor: var(--neutral);"
+            },
+            {
+              "selector": ".garden-search__container",
+              "css": "inline-size: min(100%, var(--content-width));\nmargin-inline: auto;\ndisplay: grid;\ngap: var(--section-space-s);"
+            },
+            {
+              "selector": ".garden-search__form",
+              "css": "max-inline-size: var(--content-width-inset);\ndisplay: grid;\ngap: var(--space-m);"
+            },
+            {
+              "selector": ".garden-search__input",
+              "css": "inline-size: 100%;\nmin-block-size: var(--tap-target);\npadding-inline: var(--space-m);\nborder: var(--border-width) solid var(--border-dark);\nborder-radius: var(--radius-s);\nbackground: var(--white);\ncolor: var(--text-color);\n&:focus-visible { outline: var(--focus-width) var(--focus-style) var(--focus-color); outline-offset: var(--focus-offset); }"
+            },
+            {
+              "selector": ".garden-search__results",
+              "css": "display: grid;\ngap: var(--space-s);\n&[hidden] { display: none; }"
+            },
+            {
+              "selector": ".garden-search__hit",
+              "css": "display: grid;\ngap: var(--space-xs);\npadding: var(--space-m);\nborder: var(--border-width) solid var(--border-light);\nborder-radius: var(--radius-s);\nbackground: var(--white);\ncolor: var(--text-color);\ntext-decoration: none;\n&:hover { border-color: var(--primary); }\n&:focus-visible { outline: var(--focus-width) var(--focus-style) var(--focus-color); outline-offset: var(--focus-offset); }"
+            },
+            {
+              "selector": ".garden-search__hit-title",
+              "css": "color: var(--heading-color);\nfont-size: var(--text-l);"
+            },
+            {
+              "selector": ".garden-search__hit-type",
+              "css": "color: var(--primary);\nfont-size: var(--text-s);"
+            },
+            {
+              "selector": ".garden-search__hit-excerpt",
+              "css": "color: var(--text-color);"
+            }
+          ]
+        }
+      ]
+    },
+    "team": {
+      "route": "team",
+      "title": "Team",
+      "root": [
+        {
+          "id": "section-mvtf7dpf-8",
+          "tag": "section",
+          "attrs": {
+            "builder-data-element": "section"
+          },
+          "children": [
+            {
+              "id": "div-mvtf7dpf-7",
+              "tag": "div",
+              "attrs": {
+                "builder-data-element": "container"
+              },
+              "children": [
+                {
+                  "id": "h2-mvtf7dpf-6",
+                  "tag": "h1",
+                  "attrs": {
+                    "builder-data-element": "heading"
+                  },
+                  "text": "Team",
+                  "classes": [
+                    "team-archive__heading"
+                  ]
+                },
+                {
+                  "id": "div-mvtf7dpf-5",
+                  "tag": "div",
+                  "attrs": {
+                    "builder-data-element": "div"
+                  },
+                  "children": [
+                    {
+                      "id": "loop-mvtf7dpf-4",
+                      "tag": "loop",
+                      "attrs": {
+                        "builder-data-element": "loop"
+                      },
+                      "children": [
+                        {
+                          "id": "div-mvtf7dpf-3",
+                          "tag": "article",
+                          "attrs": {
+                            "builder-data-element": "div"
+                          },
+                          "children": [
+                            {
+                              "id": "h2-mvtf7dpf-2",
+                              "tag": "h2",
+                              "attrs": {
+                                "builder-data-element": "heading"
+                              },
+                              "classes": [
+                                "team-archive__title"
+                              ],
+                              "children": [
+                                {
+                                  "id": "a-mvtf7dpf-1",
+                                  "tag": "a",
+                                  "attrs": {
+                                    "builder-data-element": "link",
+                                    "href": "{item.url}"
+                                  },
+                                  "text": "{item.title}",
+                                  "classes": [
+                                    "team-archive__link"
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "classes": [
+                            "team-archive__card"
+                          ]
+                        }
+                      ],
+                      "loop": {
+                        "source": "collection",
+                        "collection": "wxqb34dy",
+                        "collectionSlug": "team",
+                        "itemName": "item",
+                        "sortBy": "created",
+                        "sortDir": "desc"
+                      }
+                    }
+                  ],
+                  "classes": [
+                    "team-archive__grid"
+                  ]
+                }
+              ]
+            }
+          ],
+          "classes": [
+            "team-archive"
+          ]
+        }
+      ],
+      "stylesheets": [
+        {
+          "id": "global",
+          "name": "Global",
+          "rules": [
+            {
+              "selector": ".team-archive__grid",
+              "css": "display: grid;\ngrid-template-columns: repeat(auto-fill, minmax(min(18rem, 100%), 1fr));\ngap: var(--content-spacing);"
+            },
+            {
+              "selector": ".team-archive__card",
+              "css": "display: flex;\nflex-direction: column;\ngap: var(--space-xs, 0.75rem);"
+            },
+            {
+              "selector": ".team-archive__image",
+              "css": "aspect-ratio: 4 / 3;\nobject-fit: cover;\ninline-size: 100%;"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "emitted": {
+    "public/scripts/motion.js": "3a05f83b46bf6b6d",
+    "public/scripts/nav.js": "a72c00765ce02ef4",
+    "public/scripts/popup.js": "2379da48cc60077d",
+    "public/scripts/search.js": "05c613215741ca2b",
+    "src/components/sitereal/Image.astro": "ae0fdd096a0df7bf",
+    "src/components/sitereal/RichText.astro": "46ebcf88d868c151",
+    "src/data/sources/emdash-posts.js": "2428bc8a374345d6",
+    "src/layouts/MainLayout.astro": "a4bfccebc98a006f",
+    "src/layouts/Template404Layout.astro": "ae088b9e70092dc2",
+    "src/pages/[...emdashPosts].astro": "9df6f0592673f861",
+    "src/pages/index.astro": "b42d6005a1c67162",
+    "src/pages/posts.astro": "aace424f1ddc3045",
+    "src/pages/search.astro": "158ccf6f37fbfbfd",
+    "src/pages/team.astro": "7adf61eca3600ef0",
+    "src/styles/generated/framework.css": "af7fdcd6ba4a6cf8",
+    "src/styles/generated/global.css": "16034d60ca677fba",
+    "src/styles/generated/pages/_entry-srczgw0t2j.css": "338a17ff5894f4d9",
+    "src/styles/generated/pages/index.css": "1de62d0621f47976",
+    "src/styles/generated/pages/posts.css": "91a07bcee96e051b",
+    "src/styles/generated/pages/search.css": "42d91936b902c139",
+    "src/styles/generated/pages/team.css": "816eb121aa10c11d",
+    "src/styles/generated/templates/tpl-muwmgdfe-1.css": "46cede259777f20e"
+  }
+}

@@ -866,8 +866,8 @@
             "values": {
               "title": "Paul Charlton",
               "slug": "paul-charlton",
-              "f-04hfpnw": "/uploads/profile-pic.png",
-              "f-04hfpnw:focus": "50% 16%",
+              "f-04hfpnw": "/uploads/pexels-tiger-lily-7109090.jpg",
+              "f-04hfpnw:focus": "57% 16%",
               "f-raf7zgk": "Management",
               "f-wrgts8c": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>"
             }
@@ -879,8 +879,8 @@
             "values": {
               "title": "Jeffrey D",
               "slug": "jeffrey-d",
-              "f-04hfpnw": "/uploads/PHOTO-2026-01-19-13-01-18.jpg",
-              "f-04hfpnw:focus": "41% 19%",
+              "f-04hfpnw": "/uploads/pexels-kooldark-33100431.jpg",
+              "f-04hfpnw:focus": "51% 27%",
               "f-raf7zgk": "Finance",
               "f-wrgts8c": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>"
             }
@@ -3720,7 +3720,7 @@
     "public/scripts/search.js": "05c613215741ca2b",
     "src/components/sitereal/Image.astro": "ae0fdd096a0df7bf",
     "src/components/sitereal/RichText.astro": "46ebcf88d868c151",
-    "src/data/team.json": "ed3581a5a2babddf",
+    "src/data/team.json": "60265b4cdec8895f",
     "src/layouts/MainLayout.astro": "a4bfccebc98a006f",
     "src/layouts/Template404Layout.astro": "ae088b9e70092dc2",
     "src/pages/index.astro": "e3832fededf8353e",

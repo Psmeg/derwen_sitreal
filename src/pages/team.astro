@@ -15,10 +15,11 @@ teamEntries = teamEntries.slice().sort((a, b) => -1 * ((x, y) => typeof x === 'n
     <link rel="icon" href="/favicon.svg?v=71b5bc0159" type="image/svg+xml" />
     <meta property="og:locale" content="en" />
     <meta name="author" content="Derwen Landscape" />
+    <script is:inline>(function(){var d=document.documentElement;if(!window.matchMedia||matchMedia('(prefers-reduced-motion: reduce)').matches)return;d.setAttribute('data-motion-armed','');var s=document.createElement('style');s.textContent='[data-motion-armed] [data-motion],[data-motion-armed] [data-motion-stagger] *{opacity:0}';document.head.appendChild(s);setTimeout(function(){d.removeAttribute('data-motion-armed')},2500)})();</script>
   </Fragment>
   <MainLayout>
     <section class="team-archive" builder-data-element="section">
-      <div class="team-archive__container" builder-data-element="container">
+      <div class="team-archive__container" builder-data-element="container" data-motion="rise" data-motion-trigger="load" data-motion-stagger="200">
         <p class="team-archive__eyebrow" builder-data-element="text">OUR TEAM</p>
         <h1 class="team-archive__heading" builder-data-element="heading">Meet the people behind Derwen.</h1>
         <p class="team-archive__intro" builder-data-element="text">A considered garden comes together through good ideas, skilled hands and a shared respect for the landscape. Meet the people who bring that work to life.</p>
@@ -37,4 +38,5 @@ teamEntries = teamEntries.slice().sort((a, b) => -1 * ((x, y) => typeof x === 'n
     </section>
   </MainLayout>
   <script is:inline src="/scripts/nav.js" defer></script>
+  <script is:inline src="/scripts/motion.js" defer></script>
 </Base>

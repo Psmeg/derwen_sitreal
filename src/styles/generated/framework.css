@@ -145,7 +145,7 @@
   --content-gap: var(--content-spacing);
   --grid-gap: var(--space-m);
   --site-padding: clamp(1rem, 0.472rem + 2.254vw, 2.5rem);
-  --container-spacing: var(--space-l);
+  --container-spacing: var(--space-m);
   --content-spacing: var(--space-m);
   --content-gap: var(--content-spacing);
   --content-width: clamp(40rem, 24.023rem + 68.169vw, 85.375rem);

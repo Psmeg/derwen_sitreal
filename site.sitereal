@@ -7,6 +7,9 @@
     "favicon": "/favicon.svg",
     "search": {
       "resultsPage": "search"
+    },
+    "hosting": {
+      "target": "node"
     }
   },
   "addons": {
@@ -845,7 +848,20 @@
             ]
           }
         ],
-        "items": [],
+        "items": [
+          {
+            "id": "y3h4x3v7",
+            "status": "live",
+            "created": "2026-10-29T16:45:41.354Z",
+            "values": {
+              "title": "Paul Charlton",
+              "slug": "paul-charlton",
+              "f-04hfpnw": "/uploads/profile-pic.png",
+              "f-04hfpnw:focus": "50% 16%",
+              "f-raf7zgk": "Management"
+            }
+          }
+        ],
         "settings": {
           "public": true,
           "queryable": true,
@@ -3506,7 +3522,7 @@
     "public/scripts/search.js": "05c613215741ca2b",
     "src/components/sitereal/Image.astro": "ae0fdd096a0df7bf",
     "src/components/sitereal/RichText.astro": "46ebcf88d868c151",
-    "src/data/team.json": "37517e5f3dc66819",
+    "src/data/team.json": "9d653d08d96aa3a1",
     "src/layouts/MainLayout.astro": "a4bfccebc98a006f",
     "src/layouts/Template404Layout.astro": "ae088b9e70092dc2",
     "src/pages/index.astro": "e3832fededf8353e",

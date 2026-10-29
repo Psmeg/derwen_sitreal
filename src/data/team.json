@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "id": "y3h4x3v7",
+    "created": "2026-10-29T16:45:41.354Z",
+    "title": "Paul Charlton",
+    "slug": "paul-charlton",
+    "headshot": "/uploads/profile-pic.png",
+    "headshot_alt": "",
+    "headshot_focus": "50% 16%",
+    "headshot_resolution": "auto",
+    "department": "Management",
+    "url": "/team/paul-charlton",
+    "created_text": "October 29, 2026"
+  }
+]

@@ -11,5 +11,18 @@
     "department": "Management",
     "url": "/team/paul-charlton",
     "created_text": "October 29, 2026"
+  },
+  {
+    "id": "v8z8ppyo",
+    "created": "2026-10-29T16:53:48.325Z",
+    "title": "Jeffrey D",
+    "slug": "jeffrey-d",
+    "headshot": "/uploads/PHOTO-2026-01-19-13-01-18.jpg",
+    "headshot_alt": "",
+    "headshot_focus": "41% 19%",
+    "headshot_resolution": "auto",
+    "department": "Finance",
+    "url": "/team/jeffrey-d",
+    "created_text": "October 29, 2026"
   }
 ]

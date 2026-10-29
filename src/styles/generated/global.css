@@ -22,3 +22,11 @@
 #garden-services {
   background: var(--primary-10);
 }
+
+.team-archive__title {
+  font-size: var(--text-xl);
+  font-weight: var(--text-weight);
+  font-family: var(--font-primary);
+  line-height: var(--text-line-height);
+  letter-spacing: var(--text-letter-spacing);
+}

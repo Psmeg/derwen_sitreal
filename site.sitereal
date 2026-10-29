@@ -391,6 +391,10 @@
         {
           "selector": "#garden-services",
           "css": "background: var(--primary-10);"
+        },
+        {
+          "selector": ".team-archive__title",
+          "css": "font-size: var(--text-xl);\nfont-weight: var(--text-weight);\nfont-family: var(--font-primary);\nline-height: var(--text-line-height);\nletter-spacing: var(--text-letter-spacing);"
         }
       ]
     }
@@ -859,6 +863,18 @@
               "f-04hfpnw": "/uploads/profile-pic.png",
               "f-04hfpnw:focus": "50% 16%",
               "f-raf7zgk": "Management"
+            }
+          },
+          {
+            "id": "v8z8ppyo",
+            "status": "live",
+            "created": "2026-10-29T16:53:48.325Z",
+            "values": {
+              "title": "Jeffrey D",
+              "slug": "jeffrey-d",
+              "f-04hfpnw": "/uploads/PHOTO-2026-01-19-13-01-18.jpg",
+              "f-04hfpnw:focus": "41% 19%",
+              "f-raf7zgk": "Finance"
             }
           }
         ],
@@ -3258,6 +3274,8 @@
     "team": {
       "route": "team",
       "title": "Team",
+      "seo": {},
+      "js": "",
       "root": [
         {
           "id": "section-mvtf7dpf-8",
@@ -3306,6 +3324,25 @@
                           },
                           "children": [
                             {
+                              "id": "figure-mvts7yx6-953",
+                              "tag": "figure",
+                              "attrs": {
+                                "builder-data-element": "figure"
+                              },
+                              "children": [
+                                {
+                                  "id": "img-mvts7yx6-952",
+                                  "tag": "img",
+                                  "attrs": {
+                                    "builder-data-element": "image",
+                                    "src": "{Team Member.headshot}",
+                                    "alt": "{Team Member.headshot_alt}",
+                                    "data-image-widths": "480"
+                                  }
+                                }
+                              ]
+                            },
+                            {
                               "id": "h2-mvtf7dpf-2",
                               "tag": "h2",
                               "attrs": {
@@ -3322,7 +3359,7 @@
                                     "builder-data-element": "link",
                                     "href": "{item.url}"
                                   },
-                                  "text": "{item.title}",
+                                  "text": "{Team Member.title}",
                                   "classes": [
                                     "team-archive__link"
                                   ]
@@ -3337,10 +3374,11 @@
                       ],
                       "loop": {
                         "source": "collection",
-                        "collection": "wxqb34dy",
-                        "itemName": "item",
+                        "collection": "4lvda5xw",
+                        "itemName": "Team Member",
                         "sortBy": "created",
-                        "sortDir": "desc"
+                        "sortDir": "desc",
+                        "collectionSlug": "team"
                       }
                     }
                   ],
@@ -3367,7 +3405,7 @@
             },
             {
               "selector": ".team-archive__card",
-              "css": "display: flex;\nflex-direction: column;\ngap: var(--space-xs, 0.75rem);"
+              "css": "display: flex;\nflex-direction: column;\ngap: var(--space-m);"
             },
             {
               "selector": ".team-archive__image",
@@ -3522,21 +3560,21 @@
     "public/scripts/search.js": "05c613215741ca2b",
     "src/components/sitereal/Image.astro": "ae0fdd096a0df7bf",
     "src/components/sitereal/RichText.astro": "46ebcf88d868c151",
-    "src/data/team.json": "9d653d08d96aa3a1",
+    "src/data/team.json": "226bf7382bb9d2f8",
     "src/layouts/MainLayout.astro": "a4bfccebc98a006f",
     "src/layouts/Template404Layout.astro": "ae088b9e70092dc2",
     "src/pages/index.astro": "e3832fededf8353e",
     "src/pages/search.astro": "158ccf6f37fbfbfd",
     "src/pages/team-2.astro": "5ab0ff1c70dc0a39",
-    "src/pages/team.astro": "503f128ddc614825",
+    "src/pages/team.astro": "4ee93ee41735dc2c",
     "src/pages/team/[...teamEntry].astro": "b2d28d5a6885ba17",
     "src/styles/generated/framework.css": "63b5d6533ec63748",
-    "src/styles/generated/global.css": "16034d60ca677fba",
+    "src/styles/generated/global.css": "72f1eae6011cb286",
     "src/styles/generated/pages/_entry-srczgw0t2j.css": "338a17ff5894f4d9",
     "src/styles/generated/pages/index.css": "4102b560f26008a4",
     "src/styles/generated/pages/search.css": "42d91936b902c139",
     "src/styles/generated/pages/team-2.css": "ab8ebb0281af1f7b",
-    "src/styles/generated/pages/team.css": "816eb121aa10c11d",
+    "src/styles/generated/pages/team.css": "c2a1c5612167d643",
     "src/styles/generated/templates/tpl-muwmgdfe-1.css": "46cede259777f20e"
   }
 }

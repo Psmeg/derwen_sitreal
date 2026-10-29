@@ -10,7 +10,7 @@
 .team-archive__card {
   display: flex;
   flex-direction: column;
-  gap: var(--space-xs, 0.75rem);
+  gap: var(--space-m);
 }
 
 .team-archive__image {

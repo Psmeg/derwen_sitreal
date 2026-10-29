@@ -17,20 +17,3 @@ export const client = createClient({
 
 export const db = drizzle(client);
 export * from './schema';
-
-import { services as servicesTable } from './schema';
-
-const entrySlugify = (s: unknown) => String(s).toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
-/** The row's slug as the site spells it: the one it was given, else its title, else its id. */
-const entrySlugOf = (r: { slug?: unknown; title?: unknown }, id: unknown) => String(r.slug ?? '').split('/').map(entrySlugify).filter(Boolean).join('/')
-  || entrySlugify(String(r.title ?? '')) || String(id);
-
-/** Every live Services row, oldest first — what a Loop over it repeats. */
-export async function servicesRows() {
-  const rows = (await db.select().from(servicesTable).orderBy(servicesTable.createdAt, servicesTable.id)).filter((r) => r.status !== 'draft');
-  return rows.map((r) => ({
-    ...r,
-    slug: entrySlugOf(r, r.id),
-    url: "/services/" + entrySlugOf(r, r.id),
-  }));
-}

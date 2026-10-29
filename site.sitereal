@@ -820,46 +820,21 @@
               "title": "Services",
               "route": "services"
             }
+          },
+          {
+            "id": "services-2",
+            "status": "live",
+            "created": "2026-10-29T16:15:57.974Z",
+            "values": {
+              "title": "Services",
+              "route": "services-2"
+            }
           }
         ],
         "settings": {
           "public": false,
           "queryable": false,
           "archive": false
-        }
-      },
-      {
-        "id": "wr4q8ewa",
-        "name": "Services",
-        "slug": "services",
-        "fields": [
-          {
-            "id": "title",
-            "name": "Title",
-            "type": "text",
-            "builtin": true
-          },
-          {
-            "id": "slug",
-            "name": "Slug",
-            "type": "text",
-            "builtin": true
-          },
-          {
-            "id": "f-5pgfyrm",
-            "name": "Service Description",
-            "key": "service_description",
-            "type": "richtext"
-          }
-        ],
-        "items": [],
-        "settings": {
-          "public": true,
-          "queryable": true,
-          "archive": true,
-          "routeStyle": "folder",
-          "storage": "db",
-          "archivePage": "services-2"
         }
       }
     ],
@@ -3744,7 +3719,6 @@
                       "loop": {
                         "source": "collection",
                         "collection": "wr4q8ewa",
-                        "collectionSlug": "services",
                         "itemName": "item",
                         "sortBy": "created",
                         "sortDir": "desc"
@@ -3919,9 +3893,8 @@
     "src/pages/index.astro": "e3832fededf8353e",
     "src/pages/posts.astro": "aace424f1ddc3045",
     "src/pages/search.astro": "158ccf6f37fbfbfd",
-    "src/pages/services-2.astro": "480cf7f2da42c664",
+    "src/pages/services-2.astro": "798ed088cc9928bb",
     "src/pages/services.astro": "7341e0fb36d01b2c",
-    "src/pages/services/[...servicesEntry].astro": "0128c18a21e71e8c",
     "src/pages/team.astro": "503f128ddc614825",
     "src/styles/generated/framework.css": "63b5d6533ec63748",
     "src/styles/generated/global.css": "16034d60ca677fba",

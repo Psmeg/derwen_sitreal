@@ -5,14 +5,16 @@
 import { sqliteTable, text, integer, real } from 'drizzle-orm/sqlite-core';
 import { sql } from 'drizzle-orm';
 
+/* Kept: no content type uses this table any more. Remove it under
+   the collection's settings or Settings → Database when it can go. */
 export const services = sqliteTable('services', {
   id: text('id').primaryKey(),
   title: text('title'),
   slug: text('slug'),
   service_description: text('service_description'),
-  status: text('status').notNull().default('live'),
-  createdAt: text('created_at').notNull().$defaultFn(() => new Date().toISOString()),
-  updatedAt: text('updated_at').notNull().$defaultFn(() => new Date().toISOString()),
+  status: text('status').notNull().default(sql`'live'`),
+  created_at: text('created_at').notNull(),
+  updated_at: text('updated_at').notNull(),
 });
 
 /* Kept: no content type uses this table any more. Remove it under

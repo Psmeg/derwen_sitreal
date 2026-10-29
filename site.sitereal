@@ -3324,23 +3324,15 @@
                           },
                           "children": [
                             {
-                              "id": "figure-mvts7yx6-953",
-                              "tag": "figure",
+                              "id": "img-mvtshx9v-1454",
+                              "tag": "img",
                               "attrs": {
-                                "builder-data-element": "figure"
-                              },
-                              "children": [
-                                {
-                                  "id": "img-mvts7yx6-952",
-                                  "tag": "img",
-                                  "attrs": {
-                                    "builder-data-element": "image",
-                                    "src": "{Team Member.headshot}",
-                                    "alt": "{Team Member.headshot_alt}",
-                                    "data-image-widths": "480"
-                                  }
-                                }
-                              ]
+                                "builder-data-element": "image",
+                                "src": "{team_member.headshot}",
+                                "alt": "",
+                                "data-image-widths": "auto",
+                                "sizes": "100vw"
+                              }
                             },
                             {
                               "id": "h2-mvtf7dpf-2",
@@ -3359,7 +3351,7 @@
                                     "builder-data-element": "link",
                                     "href": "{item.url}"
                                   },
-                                  "text": "{Team Member.title}",
+                                  "text": "{team_member.title}",
                                   "classes": [
                                     "team-archive__link"
                                   ]
@@ -3375,7 +3367,7 @@
                       "loop": {
                         "source": "collection",
                         "collection": "4lvda5xw",
-                        "itemName": "Team Member",
+                        "itemName": "team_member",
                         "sortBy": "created",
                         "sortDir": "desc",
                         "collectionSlug": "team"
@@ -3566,7 +3558,7 @@
     "src/pages/index.astro": "e3832fededf8353e",
     "src/pages/search.astro": "158ccf6f37fbfbfd",
     "src/pages/team-2.astro": "5ab0ff1c70dc0a39",
-    "src/pages/team.astro": "4ee93ee41735dc2c",
+    "src/pages/team.astro": "10dfa1623c15a05f",
     "src/pages/team/[...teamEntry].astro": "b2d28d5a6885ba17",
     "src/styles/generated/framework.css": "63b5d6533ec63748",
     "src/styles/generated/global.css": "72f1eae6011cb286",

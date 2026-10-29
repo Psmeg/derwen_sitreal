@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/PlainBase.astro';
 import MainLayout from '../layouts/MainLayout.astro';
+import SiterealImage from '../components/sitereal/Image.astro';
 import '../styles/generated/framework.css';
 import '../styles/generated/global.css';
 import '../styles/generated/templates/tpl-muwmgdfe-1.css';
@@ -20,13 +21,11 @@ teamEntries = teamEntries.slice().sort((a, b) => -1 * ((x, y) => typeof x === 'n
       <div builder-data-element="container">
         <h1 class="team-archive__heading" builder-data-element="heading">Team</h1>
         <div class="team-archive__grid" builder-data-element="div">
-          {teamEntries.map((Team Member) => (
+          {teamEntries.map((team_member) => (
             <article class="team-archive__card" builder-data-element="div">
-              <figure builder-data-element="figure">
-                <img builder-data-element="image" src="{Team Member.headshot}" alt="{Team Member.headshot_alt}" />
-              </figure>
+              <SiterealImage src={team_member.headshot} sizing={{ widths: [480, 768, 1200, 1600, 2000] }} resolution={team_member?.headshot_resolution} remoteSrcset={team_member?.headshot_srcset || undefined} remoteWidth={team_member?.headshot_width || undefined} remoteHeight={team_member?.headshot_height || undefined} builder-data-element="image" sizes="100vw" alt={team_member?.headshot_alt ?? ''} style={team_member?.headshot_focus ? `object-position: ${team_member?.headshot_focus}` : undefined} />
               <h2 class="team-archive__title" builder-data-element="heading">
-                <a class="team-archive__link" builder-data-element="link" href="{item.url}">&#123;Team Member.title&#125;</a>
+                <a class="team-archive__link" builder-data-element="link" href="{item.url}">{team_member.title}</a>
               </h2>
             </article>
           ))}

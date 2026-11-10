@@ -33,7 +33,7 @@
 }
 
 .team-archive {
-  padding-block: var(--section-space-xl);
+  padding-block: var(--section-space-s);
   padding-inline: var(--site-padding);
   background: var(--surface);
 }

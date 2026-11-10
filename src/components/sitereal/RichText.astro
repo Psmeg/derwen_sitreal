@@ -56,13 +56,16 @@ function scanTag(s = '', i = 0) {
 }
 /** Where something at s[i] (a '<') that is not a tag ends: a comment where a
     browser ends it, a doctype, a processing instruction or a stray end tag
-    at its '>'. -1 when the '<' is only a character. */
+    at its '>'. -1 when the '<' is only a character. A comment's end is found
+    by one search forward, whichever of '-->' and '--!>' comes first: two
+    searches each to the first of its own ran to the end of the text for
+    every comment that ended the other way, once per comment. */
 function scanSkip(s = '', i = 0) {
   if (s.startsWith('<!--', i)) {
-    const a = s.indexOf('-->', i + 2);
-    const b = s.indexOf('--!>', i + 2);
-    if (a < 0 && b < 0) return s.length;
-    return a >= 0 && (b < 0 || a < b) ? a + 3 : b + 4;
+    const end = /--!?>/g;
+    end.lastIndex = i + 2;
+    const m = end.exec(s);
+    return m ? m.index + m[0].length : s.length;
   }
   if (/^<[!?\/]/.test(s.slice(i, i + 2))) {
     const e = s.indexOf('>', i + 1);
@@ -78,9 +81,12 @@ function scanRawEnd(s = '', i = 0, name = '') {
   const m = end.exec(s);
   return m ? m.index : -1;
 }
-const SCAN_REFS = new Map([['amp', '&'], ['lt', '<'], ['gt', '>'], ['quot', '"'], ['apos', "'"], ['nbsp', ' '], ['colon', ':'], ['Tab', '\t'], ['NewLine', '\n']]);
+const SCAN_REFS = new Map([['amp', '&'], ['lt', '<'], ['gt', '>'], ['quot', '"'], ['apos', "'"], ['nbsp', ' '], ['colon', ':'], ['Tab', '\t'], ['NewLine', '\n'],
+  ['quest', '?'], ['num', '#'], ['sol', '/'], ['bsol', '\\'], ['commat', '@'], ['period', '.']]);
 /** A value with its character references read: the numeric ones and the
-    names above. A value that had any is written anew from what this reads,
+    names above — every one that spells a character an address is cut at
+    (':', '/', '?', '#', '\\', '@', '.'), so a host is read where a browser
+    reads it. A value that had any is written anew from what this reads,
     so what a browser reads is exactly what was checked. */
 function scanDecode(v = '') {
   return v.replace(/&(#[xX][0-9a-fA-F]+|#[0-9]+|[a-zA-Z][a-zA-Z0-9]*);?/g, (all, ref) => {
@@ -110,6 +116,19 @@ const scrubBad = (v = '') => {
   return scheme === 'javascript' || scheme === 'vbscript'
     || (scheme === 'data' && !/^data:image\/(png|jpe?g|gif|webp|avif)[;,]/i.test(v.replace(/[\u0000-\u0020\u007f]+/g, '')));
 };
+/** A style that runs or loads something it should not: an IE expression or
+    behavior, an import, a script address, a url() that is not http(s), a path
+    or a picture's data: — or a CSS escape, which could spell any of them. */
+const scrubStyleBad = (v = '') => {
+  const css = v.replace(/\/\*[\s\S]*?(\*\/|$)/g, '').replace(/[\s\u0000-\u001f\u007f]+/g, '');
+  if (/\\|expression\(|behavior:|-moz-binding|@import|javascript:|vbscript:/i.test(css)) return true;
+  for (const m of css.matchAll(/url\((?:"([^"]*)"|'([^']*)'|([^)]*))/gi)) {
+    const u = m[1] ?? m[2] ?? m[3] ?? '';
+    const scheme = scanScheme(u);
+    if (scrubBad(u) || (scheme !== '' && scheme !== 'http' && scheme !== 'https' && scheme !== 'data')) return true;
+  }
+  return false;
+};
 function scrub(s = '') {
   let out = '';
   let i = 0;
@@ -137,6 +156,10 @@ function scrub(s = '') {
     for (const a of t.attrs) {
       let put = a.whole;
       if (/^on/.test(a.key) || a.key === 'srcdoc' || a.key === 'formaction') put = '';
+      else if (a.key === 'style' && !a.bare && scrubStyleBad(scanDecode(a.value))) put = '';
+      /* an embed is somebody else's page, so only an https one, as the editor
+         lets it be written: "#" would load this page inside itself */
+      else if (t.name === 'iframe' && a.key === 'src' && !a.bare && scanScheme(scanDecode(a.value)) !== 'https') put = '';
       else if (!a.bare && (SCRUB_URL.has(a.key) || SCRUB_ANIMATE.has(a.key))) {
         const v = scanDecode(a.value);
         const bad = SCRUB_URL.has(a.key) ? scrubBad(v) : /(javascript|vbscript|data):/i.test(v.replace(/[\u0000-\u0020\u007f]+/g, ''));
@@ -173,8 +196,13 @@ const tagsNamed = (s: string, name: string) => {
 const decode = (s: string) => s.replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
 const esc = (s: unknown) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;');
 
+/** What a resized picture writes anew; every other attribute it had is kept. */
+const RESIZED = new Set(['src', 'srcset', 'sizes', 'width', 'height', 'alt', 'data-resolution']);
+
 /* A picture under public/ that the image service can resize: resized, with
-   its intrinsic size written so the page does not jump while it loads. */
+   its intrinsic size written so the page does not jump while it loads. Its
+   class, style, id and the rest stay as they were: a cover's picture is
+   placed behind the text by its class (wp-block-cover__image-background). */
 async function picture(tag: string): Promise<string> {
   const src = attr(tag, 'src');
   if (!src || !src.startsWith('/') || src.startsWith('//')) return tag;
@@ -190,7 +218,9 @@ async function picture(tag: string): Promise<string> {
   const h = Math.round(w * meta.height / meta.width);
   const sizes = shown ? `(min-width: ${shown}px) ${shown}px, 100vw` : '100vw';
   const srcset = img.srcSet?.attribute ? ` srcset="${esc(img.srcSet.attribute)}" sizes="${sizes}"` : '';
-  return `<img src="${esc(img.src)}"${srcset} alt="${attr(tag, 'alt') ?? ''}" width="${w}" height="${h}" loading="lazy" decoding="async">`;
+  const rest = (scanTag(tag, 0)?.attrs ?? []).filter((a) => !RESIZED.has(a.key));
+  const has = (key: string) => rest.some((a) => a.key === key);
+  return `<img src="${esc(img.src)}"${srcset} alt="${attr(tag, 'alt') ?? ''}" width="${w}" height="${h}"${rest.map((a) => ' ' + a.whole).join('')}${has('loading') ? '' : ' loading="lazy"'}${has('decoding') ? '' : ' decoding="async"'}>`;
 }
 
 /* An embed waits for its category, like any iframe the consent layer gates. */

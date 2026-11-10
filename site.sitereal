@@ -9,7 +9,12 @@
       "resultsPage": "search"
     },
     "hosting": {
-      "target": "node"
+      "target": "node",
+      "actions": {
+        "github": true,
+        "host": false
+      },
+      "how": "git"
     }
   },
   "addons": {
@@ -3528,7 +3533,7 @@
             },
             {
               "selector": ".team-archive",
-              "css": "padding-block: var(--section-space-xl);\npadding-inline: var(--site-padding);\nbackground: var(--surface);"
+              "css": "padding-block: var(--section-space-s);\npadding-inline: var(--site-padding);\nbackground: var(--surface);"
             },
             {
               "selector": ".team-archive__container",
@@ -3782,9 +3787,9 @@
     "public/scripts/motion.js": "3a05f83b46bf6b6d",
     "public/scripts/nav.js": "a72c00765ce02ef4",
     "public/scripts/popup.js": "2379da48cc60077d",
-    "public/scripts/search.js": "05c613215741ca2b",
+    "public/scripts/search.js": "3c49283192d0ee30",
     "src/components/sitereal/Image.astro": "ae0fdd096a0df7bf",
-    "src/components/sitereal/RichText.astro": "46ebcf88d868c151",
+    "src/components/sitereal/RichText.astro": "bbda75e58291c7d0",
     "src/data/team.json": "249743531822fbba",
     "src/layouts/MainLayout.astro": "3183983749a1c534",
     "src/layouts/Template404Layout.astro": "ae088b9e70092dc2",
@@ -3799,7 +3804,7 @@
     "src/styles/generated/pages/index.css": "4102b560f26008a4",
     "src/styles/generated/pages/search.css": "42d91936b902c139",
     "src/styles/generated/pages/team-2.css": "3c15a81a6c7c7ac2",
-    "src/styles/generated/pages/team.css": "ef7a309b95e69109",
+    "src/styles/generated/pages/team.css": "dae17ff04e386163",
     "src/styles/generated/templates/tpl-muwmgdfe-1.css": "46cede259777f20e"
   }
 }

@@ -35,6 +35,11 @@ export async function GET() {
     let rows = [];
     try { rows = (await type.rows()) ?? []; }
     catch (e) { console.warn('[search] ' + type.k + ' left out of the index: ' + (e?.message ?? e)); continue; }
+    /* a relation's ids, named by the titles of the entries they link to */
+    const names = {};
+    for (const [k, linked] of Object.entries(type.links ?? {})) {
+      try { names[k] = new Map(((await linked()) ?? []).map((r) => [r?.id, r?.title])); } catch { /* the ids stay */ }
+    }
     for (const row of rows) {
       if (!row || row.status === 'draft' || typeof row.url !== 'string' || !row.url.startsWith('/') || seen.has(row.url)) continue;
       seen.add(row.url);
@@ -43,7 +48,7 @@ export async function GET() {
       if (d) doc.d = d;
       const b = BODY > 0 ? clip(type.body.map((k) => textOf(pick(row, k))).filter(Boolean).join(' '), BODY) : '';
       if (b) doc.b = b;
-      const g = type.tags.flatMap((k) => [pick(row, k)].flat()).map(textOf).filter(Boolean);
+      const g = type.tags.flatMap((k) => [pick(row, k)].flat().map((v) => names[k]?.get(v) ?? v)).map(textOf).filter(Boolean);
       if (g.length) doc.g = [...new Set(g)];
       /* a picture is its address — a gallery's or a record's first */
       const im = type.image ? [pick(row, type.image)].flat()[0] : null;

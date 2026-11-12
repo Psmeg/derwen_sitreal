@@ -9,6 +9,10 @@ import '../styles/generated/framework.css';
 import '../styles/generated/global.css';
 import '../styles/generated/templates/tpl-muwmgdfe-1.css';
 import '../styles/generated/pages/index.css';
+import { emdashPosts } from "../data/sources/emdash-posts.js";
+let emdashpostsEntries: Record<string, any>[] = [...(await emdashPosts())];
+emdashpostsEntries = emdashpostsEntries.slice().sort((a, b) => -1 * ((x, y) => typeof x === 'number' && typeof y === 'number' ? x - y : ((x) => x instanceof Date ? x.toISOString() : String(x ?? ''))(x).localeCompare(((x) => x instanceof Date ? x.toISOString() : String(x ?? ''))(y)))((a.data?.publishedAt ?? a.publishedAt), (b.data?.publishedAt ?? b.publishedAt)));
+emdashpostsEntries = emdashpostsEntries.slice(0, 2);
 ---
 <Base title="Home" description="Thoughtful garden design shaped around your home and the way you love to spend time outside." siteName="Derwen Landscape" lang="en">
   <Fragment slot="head">
@@ -129,6 +133,26 @@ import '../styles/generated/pages/index.css';
             <a class="garden-work__link" builder-data-element="link" href="/posts">Explore the garden journal</a>
           </div>
         </article>
+      </div>
+    </section>
+    <section class="latest-posts" builder-data-element="section" aria-labelledby="latest-posts-title">
+      <div class="latest-posts__container" builder-data-element="container">
+        <header class="latest-posts__header" builder-data-element="layout">
+          <p class="latest-posts__eyebrow" builder-data-element="text">FROM THE GARDEN JOURNAL</p>
+          <h2 class="latest-posts__title" builder-data-element="heading" id="latest-posts-title">LATEST GARDEN NOTES</h2>
+        </header>
+        <div class="latest-posts__grid" builder-data-element="layout">
+          {emdashpostsEntries.map((item) => (
+            <article class="latest-posts__card" builder-data-element="layout">
+              <img class="latest-posts__image" builder-data-element="image" src={item.featured_image} alt={item.featured_image_alt || item.title} loading="lazy" decoding="async" />
+              <div class="latest-posts__content" builder-data-element="layout">
+                <h3 class="latest-posts__post-title" builder-data-element="heading">{item.title}</h3>
+                <p class="latest-posts__excerpt" builder-data-element="text">{item.excerpt}</p>
+                <a class="latest-posts__link btn btn--primary btn--outline" builder-data-element="link" href={item.link}>Read the post</a>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
     <section class="garden-cta" builder-data-element="section" aria-labelledby="garden-cta-title" data-motion="rise" data-motion-stagger="auto">

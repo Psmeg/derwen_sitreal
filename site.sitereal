@@ -1242,7 +1242,11 @@
                       "id": "time-mwdn738x-2741"
                     }
                   ],
-                  "id": "div-mwdn738x-2739"
+                  "id": "div-mwdn738x-2739",
+                  "cond": {
+                    "mode": "custom",
+                    "expr": "Boolean(entry.publishedAt_text)"
+                  }
                 },
                 {
                   "id": "emdash-posts-entry-title",
@@ -1266,7 +1270,11 @@
                     "builder-data-element": "text"
                   },
                   "text": "{entry.excerpt}",
-                  "id": "p-mwdn738x-2742"
+                  "id": "p-mwdn738x-2742",
+                  "cond": {
+                    "mode": "custom",
+                    "expr": "Boolean(entry.excerpt?.trim())"
+                  }
                 }
               ]
             },
@@ -1298,7 +1306,11 @@
                     "decoding": "async"
                   }
                 }
-              ]
+              ],
+              "cond": {
+                "mode": "custom",
+                "expr": "Boolean(entry.featured_image)"
+              }
             },
             {
               "id": "emdash-posts-entry-container",
@@ -1345,7 +1357,7 @@
                           },
                           "cond": {
                             "mode": "custom",
-                            "expr": "entry.author"
+                            "expr": "Boolean(entry.author)"
                           },
                           "children": [
                             {
@@ -1410,7 +1422,11 @@
                               "id": "p-mwdn738x-2748"
                             }
                           ],
-                          "id": "div-mwdn738x-2746"
+                          "id": "div-mwdn738x-2746",
+                          "cond": {
+                            "mode": "custom",
+                            "expr": "Boolean(entry.updatedAt_text)"
+                          }
                         },
                         {
                           "tag": "div",
@@ -1423,7 +1439,7 @@
                           },
                           "cond": {
                             "mode": "custom",
-                            "expr": "entry.category && entry.category.length"
+                            "expr": "(entry.category?.length ?? 0) > 0"
                           },
                           "children": [
                             {
@@ -1482,7 +1498,7 @@
                           },
                           "cond": {
                             "mode": "custom",
-                            "expr": "entry.tag && entry.tag.length"
+                            "expr": "(entry.tag?.length ?? 0) > 0"
                           },
                           "children": [
                             {
@@ -1530,7 +1546,11 @@
                           ],
                           "id": "div-mwdn738x-2753"
                         }
-                      ]
+                      ],
+                      "cond": {
+                        "mode": "custom",
+                        "expr": "Boolean(entry.author || entry.updatedAt_text || entry.category?.length || entry.tag?.length)"
+                      }
                     },
                     {
                       "id": "emdash-posts-entry-article",
@@ -1553,7 +1573,11 @@
                           "attrs": {
                             "builder-data-element": "rich-text"
                           },
-                          "html": "{entry.content}"
+                          "html": "{entry.content}",
+                          "cond": {
+                            "mode": "custom",
+                            "expr": "Boolean(entry.content?.trim())"
+                          }
                         }
                       ]
                     }
@@ -3439,7 +3463,9 @@
           ],
           "attrs": {
             "builder-data-element": "section",
-            "aria-labelledby": "latest-posts-title"
+            "aria-labelledby": "latest-posts-title",
+            "data-motion": "rise",
+            "data-motion-stagger": "auto"
           },
           "children": [
             {
@@ -4730,8 +4756,8 @@
     "src/data/team.json": "249743531822fbba",
     "src/layouts/MainLayout.astro": "3183983749a1c534",
     "src/layouts/Template404Layout.astro": "ae088b9e70092dc2",
-    "src/pages/[...emdashPosts].astro": "92b3a128434d8fa7",
-    "src/pages/index.astro": "5eb428463dcd8a5e",
+    "src/pages/[...emdashPosts].astro": "b1c4d8ee60d783bc",
+    "src/pages/index.astro": "17d80b2eee9b7873",
     "src/pages/search.astro": "158ccf6f37fbfbfd",
     "src/pages/team-2.astro": "fc61a01bcba37399",
     "src/pages/team.astro": "130f6099ed635fbf",

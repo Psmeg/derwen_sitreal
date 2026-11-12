@@ -3486,6 +3486,18 @@
                       },
                       "text": "LATEST GARDEN NOTES",
                       "id": "h2-mwdl41er-1359"
+                    },
+                    {
+                      "tag": "p",
+                      "classes": [
+                        "latest-posts__intro"
+                      ],
+                      "text": "Ideas, inspiration and practical advice for a garden that grows with you.",
+                      "attrs": {
+                        "builder-data-element": "text"
+                      },
+                      "name": "intro",
+                      "id": "p-mwdqkqyx-3388"
                     }
                   ],
                   "id": "header-mwdl41er-1357"
@@ -3545,6 +3557,35 @@
                           },
                           "children": [
                             {
+                              "tag": "div",
+                              "name": "Post Categories",
+                              "classes": [
+                                "latest-posts__categories"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "layout"
+                              },
+                              "loop": {
+                                "source": "custom",
+                                "custom": "item.category",
+                                "itemName": "category"
+                              },
+                              "children": [
+                                {
+                                  "tag": "span",
+                                  "classes": [
+                                    "latest-posts__category"
+                                  ],
+                                  "attrs": {
+                                    "builder-data-element": "text"
+                                  },
+                                  "text": "{category}",
+                                  "id": "span-mwdqjv8j-3387"
+                                }
+                              ],
+                              "id": "p-mwdl41er-1365"
+                            },
+                            {
                               "tag": "h3",
                               "name": "Post Title",
                               "classes": [
@@ -3557,25 +3598,14 @@
                               "id": "h3-mwdl41er-1364"
                             },
                             {
-                              "tag": "p",
-                              "name": "Post Excerpt",
-                              "classes": [
-                                "latest-posts__excerpt"
-                              ],
-                              "attrs": {
-                                "builder-data-element": "text"
-                              },
-                              "text": "{item.excerpt}",
-                              "id": "p-mwdl41er-1365"
-                            },
-                            {
                               "tag": "a",
                               "classes": [
                                 "latest-posts__link"
                               ],
                               "attrs": {
                                 "builder-data-element": "link",
-                                "href": "{item.url}"
+                                "href": "{item.url}",
+                                "aria-label": "Read {item.title}"
                               },
                               "text": "Read the post ",
                               "children": [
@@ -4029,35 +4059,47 @@
             },
             {
               "selector": ".latest-posts__header",
-              "css": "display: grid; gap: var(--space-s);"
+              "css": "display: grid; justify-items: center; text-align: center; gap: var(--space-s);"
             },
             {
               "selector": ".latest-posts__grid",
-              "css": "display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--grid-gap);\n@media (max-width: 48rem) { grid-template-columns: 1fr; }"
+              "css": "display: grid; grid-template-columns: minmax(0, 2fr) repeat(2, minmax(0, 1fr)); gap: var(--grid-gap); @media (max-width: 48rem) { grid-template-columns: 1fr; }"
             },
             {
               "selector": ".latest-posts__card",
-              "css": "display: flex; flex-direction: column; overflow: hidden; border: var(--border); border-radius: var(--radius-m); background: var(--white);"
+              "css": "position: relative; isolation: isolate; display: flex; flex-direction: column; justify-content: end; min-block-size: calc(var(--section-space-xxl) * 2); overflow: hidden; border-radius: var(--radius-m); background: var(--base); &:hover .latest-posts__image, &:focus-within .latest-posts__image { scale: 1.04; } @media (prefers-reduced-motion: reduce) { &:hover .latest-posts__image, &:focus-within .latest-posts__image { scale: 1; } }"
             },
             {
               "selector": ".latest-posts__image",
-              "css": "display: block; inline-size: 100%; aspect-ratio: 16 / 10; object-fit: cover;"
+              "css": "position: absolute; z-index: -1; inset: 0; inline-size: 100%; block-size: 100%; object-fit: cover; transition: scale var(--motion-duration) var(--motion-ease); @media (prefers-reduced-motion: reduce) { transition: none; }"
             },
             {
               "selector": ".latest-posts__content",
-              "css": "display: flex; flex-direction: column; flex: 1; gap: var(--content-spacing); padding: var(--space-l);"
+              "css": "display: flex; flex-direction: column; gap: var(--space-s); padding: var(--space-l); padding-block-start: var(--section-space-l); color: var(--white); background: linear-gradient(to top, var(--black-90), var(--black-70), transparent);"
             },
             {
               "selector": ".latest-posts__post-title",
-              "css": "font-size: var(--h4);"
+              "css": "font-size: var(--h4); color: var(--white);"
             },
             {
               "selector": ".latest-posts__link",
-              "css": "display: inline-flex; align-items: center; align-self: flex-start; gap: var(--space-xs); margin-block-start: auto; color: var(--link-color); & :hover { color: var(--link-color-hover); }"
+              "css": "display: inline-flex; align-items: center; align-self: flex-start; gap: var(--space-xs); color: var(--white); &::after { content: ''; position: absolute; inset: 0; } &:focus-visible { outline: var(--focus-width) var(--focus-style) var(--focus-color); outline-offset: var(--focus-offset); }"
             },
             {
               "selector": ".latest-posts__arrow",
               "css": "inline-size: 1em; block-size: 1em; flex: none;"
+            },
+            {
+              "selector": ".latest-posts__categories",
+              "css": "display: flex; flex-wrap: wrap; gap: var(--space-xs); color: var(--white);"
+            },
+            {
+              "selector": ".latest-posts__category",
+              "css": "font-size: var(--text-s);"
+            },
+            {
+              "selector": ".latest-posts__intro",
+              "css": "max-inline-size: var(--content-width-inset);"
             }
           ]
         }
@@ -4689,7 +4731,7 @@
     "src/layouts/MainLayout.astro": "3183983749a1c534",
     "src/layouts/Template404Layout.astro": "ae088b9e70092dc2",
     "src/pages/[...emdashPosts].astro": "92b3a128434d8fa7",
-    "src/pages/index.astro": "808cffd1d1a69894",
+    "src/pages/index.astro": "5eb428463dcd8a5e",
     "src/pages/search.astro": "158ccf6f37fbfbfd",
     "src/pages/team-2.astro": "fc61a01bcba37399",
     "src/pages/team.astro": "130f6099ed635fbf",
@@ -4698,7 +4740,7 @@
     "src/styles/generated/global.css": "72f1eae6011cb286",
     "src/styles/generated/pages/_entry-srcdjot5sn.css": "abaf9dfc20fd93fa",
     "src/styles/generated/pages/_entry-srczgw0t2j.css": "338a17ff5894f4d9",
-    "src/styles/generated/pages/index.css": "fd4975184e5a60ad",
+    "src/styles/generated/pages/index.css": "b8b5fe2b8578a049",
     "src/styles/generated/pages/search.css": "42d91936b902c139",
     "src/styles/generated/pages/team-2.css": "3c15a81a6c7c7ac2",
     "src/styles/generated/pages/team.css": "dae17ff04e386163",

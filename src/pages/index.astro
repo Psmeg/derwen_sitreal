@@ -140,15 +140,20 @@ emdashpostsEntries = emdashpostsEntries.slice(0, 3);
         <header class="latest-posts__header" builder-data-element="layout">
           <p class="latest-posts__eyebrow" builder-data-element="text">FROM THE GARDEN JOURNAL</p>
           <h2 class="latest-posts__title" builder-data-element="heading" id="latest-posts-title">LATEST GARDEN NOTES</h2>
+          <p class="latest-posts__intro" builder-data-element="text">Ideas, inspiration and practical advice for a garden that grows with you.</p>
         </header>
         <div class="latest-posts__grid" builder-data-element="layout">
           {emdashpostsEntries.map((item) => (
             <article class="latest-posts__card" builder-data-element="layout">
               <img class="latest-posts__image" builder-data-element="image" src={item.featured_image} alt={item.featured_image_alt || item.title} loading="lazy" decoding="async" />
               <div class="latest-posts__content" builder-data-element="layout">
+                <div class="latest-posts__categories" builder-data-element="layout">
+                  {((item.category ?? []) as any[]).map((category) => (
+                    <span class="latest-posts__category" builder-data-element="text">{category}</span>
+                  ))}
+                </div>
                 <h3 class="latest-posts__post-title" builder-data-element="heading">{item.title}</h3>
-                <p class="latest-posts__excerpt" builder-data-element="text">{item.excerpt}</p>
-                <a class="latest-posts__link" builder-data-element="link" href={item.url}>
+                <a class="latest-posts__link" builder-data-element="link" href={item.url} aria-label={`Read ${item.title}`}>
                   Read the post{' '}
                   <svg class="latest-posts__arrow" builder-data-element="svg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
                 </a>

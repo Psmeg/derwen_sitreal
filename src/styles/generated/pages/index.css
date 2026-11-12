@@ -573,12 +573,12 @@
 }
 
 .latest-posts__grid {
-  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--grid-gap);
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--grid-gap);
   @media (max-width: 48rem) { grid-template-columns: 1fr; }
 }
 
 .latest-posts__card {
-  display: grid; grid-template-rows: auto 1fr; overflow: hidden; border: var(--border); border-radius: var(--radius-m); background: var(--white);
+  display: flex; flex-direction: column; overflow: hidden; border: var(--border); border-radius: var(--radius-m); background: var(--white);
 }
 
 .latest-posts__image {
@@ -586,13 +586,17 @@
 }
 
 .latest-posts__content {
-  display: grid; align-content: start; gap: var(--content-spacing); padding: var(--space-l);
+  display: flex; flex-direction: column; flex: 1; gap: var(--content-spacing); padding: var(--space-l);
 }
 
 .latest-posts__post-title {
-  font-size: var(--h3);
+  font-size: var(--h4);
 }
 
 .latest-posts__link {
-  justify-self: start;
+  display: inline-flex; align-items: center; align-self: flex-start; gap: var(--space-xs); margin-block-start: auto; color: var(--link-color); & :hover { color: var(--link-color-hover); }
+}
+
+.latest-posts__arrow {
+  inline-size: 1em; block-size: 1em; flex: none;
 }

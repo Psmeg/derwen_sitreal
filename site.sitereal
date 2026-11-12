@@ -3504,7 +3504,7 @@
                     "api": "srcdjot5sn",
                     "apiSlug": "emdash-posts",
                     "itemName": "item",
-                    "limit": 2,
+                    "limit": 3,
                     "sortBy": "publishedAt",
                     "sortDir": "desc"
                   },
@@ -3570,18 +3570,34 @@
                             },
                             {
                               "tag": "a",
-                              "name": "Read Post Link",
                               "classes": [
-                                "latest-posts__link",
-                                "btn",
-                                "btn--primary",
-                                "btn--outline"
+                                "latest-posts__link"
                               ],
                               "attrs": {
                                 "builder-data-element": "link",
                                 "href": "{item.url}"
                               },
-                              "text": "Read the post",
+                              "text": "Read the post ",
+                              "children": [
+                                {
+                                  "tag": "svg",
+                                  "classes": [
+                                    "latest-posts__arrow"
+                                  ],
+                                  "attrs": {
+                                    "builder-data-element": "svg",
+                                    "aria-hidden": "true",
+                                    "viewBox": "0 0 24 24",
+                                    "fill": "none",
+                                    "stroke": "currentColor",
+                                    "stroke-width": "2"
+                                  },
+                                  "html": "<path d=\"M5 12h14M13 6l6 6-6 6\"></path>",
+                                  "name": "arrow",
+                                  "id": "svg-mwdq310h-2032"
+                                }
+                              ],
+                              "name": "link",
                               "id": "a-mwdl41er-1366"
                             }
                           ],
@@ -4017,11 +4033,11 @@
             },
             {
               "selector": ".latest-posts__grid",
-              "css": "display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--grid-gap);\n@media (max-width: 48rem) { grid-template-columns: 1fr; }"
+              "css": "display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--grid-gap);\n@media (max-width: 48rem) { grid-template-columns: 1fr; }"
             },
             {
               "selector": ".latest-posts__card",
-              "css": "display: grid; grid-template-rows: auto 1fr; overflow: hidden; border: var(--border); border-radius: var(--radius-m); background: var(--white);"
+              "css": "display: flex; flex-direction: column; overflow: hidden; border: var(--border); border-radius: var(--radius-m); background: var(--white);"
             },
             {
               "selector": ".latest-posts__image",
@@ -4029,15 +4045,19 @@
             },
             {
               "selector": ".latest-posts__content",
-              "css": "display: grid; align-content: start; gap: var(--content-spacing); padding: var(--space-l);"
+              "css": "display: flex; flex-direction: column; flex: 1; gap: var(--content-spacing); padding: var(--space-l);"
             },
             {
               "selector": ".latest-posts__post-title",
-              "css": "font-size: var(--h3);"
+              "css": "font-size: var(--h4);"
             },
             {
               "selector": ".latest-posts__link",
-              "css": "justify-self: start;"
+              "css": "display: inline-flex; align-items: center; align-self: flex-start; gap: var(--space-xs); margin-block-start: auto; color: var(--link-color); & :hover { color: var(--link-color-hover); }"
+            },
+            {
+              "selector": ".latest-posts__arrow",
+              "css": "inline-size: 1em; block-size: 1em; flex: none;"
             }
           ]
         }
@@ -4669,7 +4689,7 @@
     "src/layouts/MainLayout.astro": "3183983749a1c534",
     "src/layouts/Template404Layout.astro": "ae088b9e70092dc2",
     "src/pages/[...emdashPosts].astro": "92b3a128434d8fa7",
-    "src/pages/index.astro": "9c6346372f46c419",
+    "src/pages/index.astro": "808cffd1d1a69894",
     "src/pages/search.astro": "158ccf6f37fbfbfd",
     "src/pages/team-2.astro": "fc61a01bcba37399",
     "src/pages/team.astro": "130f6099ed635fbf",
@@ -4678,7 +4698,7 @@
     "src/styles/generated/global.css": "72f1eae6011cb286",
     "src/styles/generated/pages/_entry-srcdjot5sn.css": "abaf9dfc20fd93fa",
     "src/styles/generated/pages/_entry-srczgw0t2j.css": "338a17ff5894f4d9",
-    "src/styles/generated/pages/index.css": "999d13b69977258a",
+    "src/styles/generated/pages/index.css": "fd4975184e5a60ad",
     "src/styles/generated/pages/search.css": "42d91936b902c139",
     "src/styles/generated/pages/team-2.css": "3c15a81a6c7c7ac2",
     "src/styles/generated/pages/team.css": "dae17ff04e386163",

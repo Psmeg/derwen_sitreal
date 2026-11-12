@@ -12,7 +12,7 @@ import '../styles/generated/pages/index.css';
 import { emdashPosts } from "../data/sources/emdash-posts.js";
 let emdashpostsEntries: Record<string, any>[] = [...(await emdashPosts())];
 emdashpostsEntries = emdashpostsEntries.slice().sort((a, b) => -1 * ((x, y) => typeof x === 'number' && typeof y === 'number' ? x - y : ((x) => x instanceof Date ? x.toISOString() : String(x ?? ''))(x).localeCompare(((x) => x instanceof Date ? x.toISOString() : String(x ?? ''))(y)))((a.data?.publishedAt ?? a.publishedAt), (b.data?.publishedAt ?? b.publishedAt)));
-emdashpostsEntries = emdashpostsEntries.slice(0, 2);
+emdashpostsEntries = emdashpostsEntries.slice(0, 3);
 ---
 <Base title="Home" description="Thoughtful garden design shaped around your home and the way you love to spend time outside." siteName="Derwen Landscape" lang="en">
   <Fragment slot="head">
@@ -148,7 +148,10 @@ emdashpostsEntries = emdashpostsEntries.slice(0, 2);
               <div class="latest-posts__content" builder-data-element="layout">
                 <h3 class="latest-posts__post-title" builder-data-element="heading">{item.title}</h3>
                 <p class="latest-posts__excerpt" builder-data-element="text">{item.excerpt}</p>
-                <a class="latest-posts__link btn btn--primary btn--outline" builder-data-element="link" href={item.url}>Read the post</a>
+                <a class="latest-posts__link" builder-data-element="link" href={item.url}>
+                  Read the post{' '}
+                  <svg class="latest-posts__arrow" builder-data-element="svg" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                </a>
               </div>
             </article>
           ))}

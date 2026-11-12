@@ -1140,7 +1140,12 @@
       "cmsTerms": [
         "category",
         "tag"
-      ]
+      ],
+      "entry": {
+        "on": true,
+        "at": "link",
+        "slugField": "slug"
+      }
     }
   ],
   "media": {
@@ -1175,6 +1180,494 @@
     }
   },
   "pages": {
+    "_entry-srcdjot5sn": {
+      "route": "_entry-srcdjot5sn",
+      "title": "{entry.meta_title}",
+      "root": [
+        {
+          "id": "emdash-posts-entry-section",
+          "tag": "section",
+          "name": "Garden Journal Post",
+          "classes": [
+            "emdash-posts-entry"
+          ],
+          "attrs": {
+            "builder-data-element": "section"
+          },
+          "children": [
+            {
+              "id": "emdash-posts-entry-header",
+              "tag": "header",
+              "name": "Post Header",
+              "classes": [
+                "emdash-posts-entry__header"
+              ],
+              "attrs": {
+                "builder-data-element": "layout"
+              },
+              "children": [
+                {
+                  "tag": "div",
+                  "name": "Publication Line",
+                  "classes": [
+                    "emdash-posts-entry__publication"
+                  ],
+                  "attrs": {
+                    "builder-data-element": "layout"
+                  },
+                  "children": [
+                    {
+                      "tag": "span",
+                      "name": "Published Label",
+                      "classes": [
+                        "emdash-posts-entry__publication-label"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "text"
+                      },
+                      "text": "Published",
+                      "id": "span-mwdn738x-2740"
+                    },
+                    {
+                      "tag": "time",
+                      "name": "Published Date",
+                      "classes": [
+                        "emdash-posts-entry__publication-date"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "text",
+                        "datetime": "{entry.publishedAt}"
+                      },
+                      "text": "{entry.publishedAt_text}",
+                      "id": "time-mwdn738x-2741"
+                    }
+                  ],
+                  "id": "div-mwdn738x-2739"
+                },
+                {
+                  "id": "emdash-posts-entry-title",
+                  "tag": "h1",
+                  "name": "Post Title",
+                  "classes": [
+                    "emdash-posts-entry__title"
+                  ],
+                  "attrs": {
+                    "builder-data-element": "heading"
+                  },
+                  "text": "{entry.title}"
+                },
+                {
+                  "tag": "p",
+                  "name": "Post Excerpt",
+                  "classes": [
+                    "emdash-posts-entry__excerpt"
+                  ],
+                  "attrs": {
+                    "builder-data-element": "text"
+                  },
+                  "text": "{entry.excerpt}",
+                  "id": "p-mwdn738x-2742"
+                }
+              ]
+            },
+            {
+              "id": "emdash-posts-entry-image-wrap",
+              "tag": "figure",
+              "name": "Post Hero",
+              "classes": [
+                "emdash-posts-entry__hero"
+              ],
+              "attrs": {
+                "builder-data-element": "figure"
+              },
+              "children": [
+                {
+                  "id": "emdash-posts-entry-image",
+                  "tag": "img",
+                  "name": "Featured Image",
+                  "classes": [
+                    "emdash-posts-entry__image"
+                  ],
+                  "attrs": {
+                    "builder-data-element": "image",
+                    "src": "{entry.featured_image}",
+                    "alt": "{entry.featured_image_alt || entry.title}",
+                    "data-image-widths": "auto",
+                    "sizes": "100vw",
+                    "loading": "eager",
+                    "decoding": "async"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "emdash-posts-entry-container",
+              "tag": "div",
+              "name": "Post Container",
+              "classes": [
+                "emdash-posts-entry__container"
+              ],
+              "attrs": {
+                "builder-data-element": "container"
+              },
+              "children": [
+                {
+                  "id": "emdash-posts-entry-layout",
+                  "tag": "div",
+                  "name": "Article and Post Details",
+                  "classes": [
+                    "emdash-posts-entry__layout"
+                  ],
+                  "attrs": {
+                    "builder-data-element": "layout"
+                  },
+                  "children": [
+                    {
+                      "id": "emdash-posts-entry-sidebar",
+                      "tag": "aside",
+                      "name": "Post Information",
+                      "classes": [
+                        "emdash-posts-entry__sidebar"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "layout",
+                        "aria-label": "Post information"
+                      },
+                      "children": [
+                        {
+                          "tag": "div",
+                          "name": "Post Author",
+                          "classes": [
+                            "emdash-posts-entry__meta-item"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "layout"
+                          },
+                          "cond": {
+                            "mode": "custom",
+                            "expr": "entry.author"
+                          },
+                          "children": [
+                            {
+                              "tag": "p",
+                              "name": "Author Label",
+                              "classes": [
+                                "emdash-posts-entry__meta-label"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "text"
+                              },
+                              "text": "Written by",
+                              "id": "p-mwdn738x-2744"
+                            },
+                            {
+                              "tag": "p",
+                              "name": "Author Value",
+                              "classes": [
+                                "emdash-posts-entry__meta-value"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "text"
+                              },
+                              "text": "{entry.author}",
+                              "id": "p-mwdn738x-2745"
+                            }
+                          ],
+                          "id": "div-mwdn738x-2743"
+                        },
+                        {
+                          "tag": "div",
+                          "name": "Updated Date",
+                          "classes": [
+                            "emdash-posts-entry__meta-item"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "layout"
+                          },
+                          "children": [
+                            {
+                              "tag": "p",
+                              "name": "Updated Label",
+                              "classes": [
+                                "emdash-posts-entry__meta-label"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "text"
+                              },
+                              "text": "Updated on",
+                              "id": "p-mwdn738x-2747"
+                            },
+                            {
+                              "tag": "p",
+                              "name": "Updated Value",
+                              "classes": [
+                                "emdash-posts-entry__meta-value"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "text"
+                              },
+                              "text": "{entry.updatedAt_text}",
+                              "id": "p-mwdn738x-2748"
+                            }
+                          ],
+                          "id": "div-mwdn738x-2746"
+                        },
+                        {
+                          "tag": "div",
+                          "name": "Post Categories",
+                          "classes": [
+                            "emdash-posts-entry__taxonomy"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "layout"
+                          },
+                          "cond": {
+                            "mode": "custom",
+                            "expr": "entry.category && entry.category.length"
+                          },
+                          "children": [
+                            {
+                              "tag": "h2",
+                              "name": "Category Heading",
+                              "classes": [
+                                "emdash-posts-entry__taxonomy-title"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "heading"
+                              },
+                              "text": "Categories",
+                              "id": "h2-mwdn738x-2750"
+                            },
+                            {
+                              "tag": "ul",
+                              "name": "Category List",
+                              "classes": [
+                                "emdash-posts-entry__term-list"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "list"
+                              },
+                              "loop": {
+                                "source": "custom",
+                                "custom": "entry.category",
+                                "itemName": "category"
+                              },
+                              "children": [
+                                {
+                                  "tag": "li",
+                                  "name": "Category Term",
+                                  "classes": [
+                                    "emdash-posts-entry__term"
+                                  ],
+                                  "attrs": {
+                                    "builder-data-element": "text"
+                                  },
+                                  "text": "{category}",
+                                  "id": "li-mwdn738x-2752"
+                                }
+                              ],
+                              "id": "ul-mwdn738x-2751"
+                            }
+                          ],
+                          "id": "div-mwdn738x-2749"
+                        },
+                        {
+                          "tag": "div",
+                          "name": "Post Tags",
+                          "classes": [
+                            "emdash-posts-entry__taxonomy"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "layout"
+                          },
+                          "cond": {
+                            "mode": "custom",
+                            "expr": "entry.tag && entry.tag.length"
+                          },
+                          "children": [
+                            {
+                              "tag": "h2",
+                              "name": "Tag Heading",
+                              "classes": [
+                                "emdash-posts-entry__taxonomy-title"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "heading"
+                              },
+                              "text": "Tags",
+                              "id": "h2-mwdn738x-2754"
+                            },
+                            {
+                              "tag": "ul",
+                              "name": "Tag List",
+                              "classes": [
+                                "emdash-posts-entry__term-list"
+                              ],
+                              "attrs": {
+                                "builder-data-element": "list"
+                              },
+                              "loop": {
+                                "source": "custom",
+                                "custom": "entry.tag",
+                                "itemName": "tag"
+                              },
+                              "children": [
+                                {
+                                  "tag": "li",
+                                  "name": "Tag Term",
+                                  "classes": [
+                                    "emdash-posts-entry__term"
+                                  ],
+                                  "attrs": {
+                                    "builder-data-element": "text"
+                                  },
+                                  "text": "{tag}",
+                                  "id": "li-mwdn738x-2756"
+                                }
+                              ],
+                              "id": "ul-mwdn738x-2755"
+                            }
+                          ],
+                          "id": "div-mwdn738x-2753"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "emdash-posts-entry-article",
+                      "tag": "article",
+                      "name": "Post Article",
+                      "classes": [
+                        "emdash-posts-entry__article"
+                      ],
+                      "attrs": {
+                        "builder-data-element": "layout"
+                      },
+                      "children": [
+                        {
+                          "id": "emdash-posts-entry-content",
+                          "tag": "div",
+                          "name": "Post Content",
+                          "classes": [
+                            "emdash-posts-entry__content"
+                          ],
+                          "attrs": {
+                            "builder-data-element": "rich-text"
+                          },
+                          "html": "{entry.content}"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "description": "{entry.meta_description}"
+      },
+      "stylesheets": [
+        {
+          "id": "global",
+          "name": "Global",
+          "rules": [
+            {
+              "selector": ".emdash-posts-entry__content",
+              "css": "min-inline-size: 0;"
+            },
+            {
+              "selector": ".emdash-posts-entry",
+              "css": "padding-inline: var(--site-padding); background: var(--white);"
+            },
+            {
+              "selector": ".emdash-posts-entry__hero",
+              "css": "inline-size: min(100%, var(--content-width)); margin: 0 auto; aspect-ratio: 16 / 9; overflow: hidden; border-radius: var(--image-radius); background: var(--base-100);\n@media (max-width: 48rem) { aspect-ratio: 4 / 3; }"
+            },
+            {
+              "selector": ".emdash-posts-entry__image",
+              "css": "display: block; inline-size: 100%; block-size: 100%; object-fit: cover;"
+            },
+            {
+              "selector": ".emdash-posts-entry__container",
+              "css": "max-inline-size: var(--content-width); margin-inline: auto; padding-block: var(--section-space-m) var(--section-space-l);"
+            },
+            {
+              "selector": ".emdash-posts-entry__header",
+              "css": "max-inline-size: var(--content-width); margin-inline: auto; padding-block: var(--section-space-m) var(--space-l); display: grid; gap: var(--space-m);"
+            },
+            {
+              "selector": ".emdash-posts-entry__eyebrow",
+              "css": "color: var(--accent);"
+            },
+            {
+              "selector": ".emdash-posts-entry__excerpt",
+              "css": "font-size: var(--text-l);"
+            },
+            {
+              "selector": ".emdash-posts-entry__layout",
+              "css": "display: grid; grid-template-columns: minmax(13rem, 0.8fr) minmax(0, 2fr); align-items: start; gap: var(--grid-gap);\n@media (max-width: 48rem) { grid-template-columns: minmax(0, 1fr); }"
+            },
+            {
+              "selector": ".emdash-posts-entry__article",
+              "css": "min-inline-size: 0;"
+            },
+            {
+              "selector": ".emdash-posts-entry__sidebar",
+              "css": "display: grid; align-content: start; gap: var(--container-spacing); padding-inline-end: var(--space-l); border-inline-end: var(--border);\n@media (max-width: 48rem) { padding-inline-end: 0; padding-block-end: var(--space-l); border-inline-end: 0; border-block-end: var(--border); }"
+            },
+            {
+              "selector": ".emdash-posts-entry__sidebar-title",
+              "css": "font-size: var(--h4);"
+            },
+            {
+              "selector": ".emdash-posts-entry__meta-list",
+              "css": "display: grid; gap: var(--space-s); margin: 0;"
+            },
+            {
+              "selector": ".emdash-posts-entry__meta-item",
+              "css": "display: grid; gap: var(--space-xxs);"
+            },
+            {
+              "selector": ".emdash-posts-entry__meta-label",
+              "css": "color: var(--neutral-300); font-size: var(--text-s);"
+            },
+            {
+              "selector": ".emdash-posts-entry__meta-value",
+              "css": "margin: 0;"
+            },
+            {
+              "selector": ".emdash-posts-entry__taxonomy",
+              "css": "display: grid; gap: var(--space-xs);"
+            },
+            {
+              "selector": ".emdash-posts-entry__taxonomy-title",
+              "css": "font-size: var(--h5);"
+            },
+            {
+              "selector": ".emdash-posts-entry__term-list",
+              "css": "display: flex; flex-wrap: wrap; gap: var(--space-xs); padding: 0; margin: 0; list-style: none;"
+            },
+            {
+              "selector": ".emdash-posts-entry__term",
+              "css": "padding-block: var(--space-xxs); padding-inline: var(--space-xs); border-radius: var(--radius-s); background: var(--primary-10); color: var(--base);"
+            },
+            {
+              "selector": ".emdash-posts-entry__publication",
+              "css": "display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--space-xs); color: var(--neutral-300); font-size: var(--text-s);"
+            },
+            {
+              "selector": ".emdash-posts-entry__publication-date",
+              "css": "color: var(--text-color);"
+            },
+            {
+              "selector": ".emdash-posts-entry__title",
+              "css": "font-size: var(--h1);"
+            }
+          ]
+        }
+      ]
+    },
     "_entry-srczgw0t2j": {
       "route": "_entry-srczgw0t2j",
       "title": "{entry.meta_title}",
@@ -3086,7 +3579,7 @@
                               ],
                               "attrs": {
                                 "builder-data-element": "link",
-                                "href": "{item.link}"
+                                "href": "{item.url}"
                               },
                               "text": "Read the post",
                               "id": "a-mwdl41er-1366"
@@ -4171,17 +4664,19 @@
     "public/scripts/search.js": "3c49283192d0ee30",
     "src/components/sitereal/Image.astro": "ae0fdd096a0df7bf",
     "src/components/sitereal/RichText.astro": "bbda75e58291c7d0",
-    "src/data/sources/emdash-posts.js": "af409ca82c07c6c6",
+    "src/data/sources/emdash-posts.js": "c76e21896385cb89",
     "src/data/team.json": "249743531822fbba",
     "src/layouts/MainLayout.astro": "3183983749a1c534",
     "src/layouts/Template404Layout.astro": "ae088b9e70092dc2",
-    "src/pages/index.astro": "f0d111e06b44d751",
+    "src/pages/[...emdashPosts].astro": "92b3a128434d8fa7",
+    "src/pages/index.astro": "9c6346372f46c419",
     "src/pages/search.astro": "158ccf6f37fbfbfd",
     "src/pages/team-2.astro": "fc61a01bcba37399",
     "src/pages/team.astro": "130f6099ed635fbf",
     "src/pages/team/[...teamEntry].astro": "865786f482eb00b0",
     "src/styles/generated/framework.css": "7b70540a4ad6d184",
     "src/styles/generated/global.css": "72f1eae6011cb286",
+    "src/styles/generated/pages/_entry-srcdjot5sn.css": "abaf9dfc20fd93fa",
     "src/styles/generated/pages/_entry-srczgw0t2j.css": "338a17ff5894f4d9",
     "src/styles/generated/pages/index.css": "999d13b69977258a",
     "src/styles/generated/pages/search.css": "42d91936b902c139",

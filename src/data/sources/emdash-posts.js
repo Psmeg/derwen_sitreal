@@ -18,6 +18,10 @@ const SECRET = import.meta.env.EMDASH_TOKEN ?? process.env.EMDASH_TOKEN;
 /** How long a request may take before it counts as unanswered. */
 const TIMEOUT = 30_000;
 
+/** The value at a dotted path — "data.items" — or the answer itself. */
+const pick = (data, path) => String(path || '').split('.').filter(Boolean)
+  .reduce((v, k) => (v == null ? undefined : v[k]), data);
+
 const SCAN_HEAD = /<(\/?)([a-zA-Z][^\t\n\f\r \/>]*)/y;
 const SCAN_GAP = /[\t\n\f\r \/]*/y;
 const SCAN_NAME = /[^\t\n\f\r \/>][^\t\n\f\r \/>=]*/y;
@@ -857,6 +861,32 @@ const emdashNotes = (items) => {
     .concat(cmsFramesSaid());
 };
 
+const slugOf = (v) => String(v ?? '').split('/')
+  .map((s) => s.toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, ''))
+  .filter(Boolean).join('/');
+/** Every row with the address of its page on this site. With a base, the
+    field holds an address on the site the rows come from, and its path under
+    that base is the address here. */
+const withUrl = (rows, prefix, field, base) => rows.map((row) => {
+  let value = pick(row, field);
+  if (base !== undefined) {
+    try { value = new URL(String(value)).pathname; } catch { value = ''; }
+    if (base && value.startsWith(base)) value = value.slice(base.length);
+  }
+  const slug = slugOf(value);
+  return slug && row && typeof row === 'object' ? { ...row, url: '/' + (prefix ? prefix + '/' : '') + slug } : row;
+});
+
+const withLocalLinksEvery = (rows) => {
+  const key = (href) => String(href).replace(/[?#].*$/, '').replace(/\/+$/, '');
+  const local = new Map(rows.filter((r) => r?.link && r?.url).map((r) => [key(r.link), r.url]));
+  if (!local.size) return rows;
+  const point = (html) => html.replace(/(<a\b[^>]*?\shref=)(["'])(.*?)\2/gi,
+    (m, head, q, href) => (local.has(key(href)) ? head + q + local.get(key(href)) + q : m));
+  return rows.map((r) => (!r || typeof r !== 'object' ? r
+    : Object.fromEntries(Object.entries(r).map(([k, v]) => [k, typeof v === 'string' && v.includes('<a') ? point(v) : v]))));
+};
+
 const withDates = (rows, keys, locale, style) => {
   let format;
   try { format = new Intl.DateTimeFormat(locale || 'en', { dateStyle: style, timeZone: 'UTC' }); }
@@ -907,7 +937,7 @@ async function load() {
   const entries = all;
   await emdashTerms(entries, TERMS, emdashAsk);
   for (const note of emdashNotes(entries)) console.warn("EmDash CMS: " + note);
-  return withDates(emdashRefs(entries.map((row) => emdashRow(row, EMDASH)), EMDASH), ["publishedAt","updatedAt","createdAt"], "en", "long");
+  return withDates(emdashRefs(withLocalLinksEvery(withUrl(entries.map((row) => emdashRow(row, EMDASH)), "", "link", "")), EMDASH), ["publishedAt","updatedAt","createdAt"], "en", "long");
 }
 
 /** A certificate Node does not trust — a site on this computer signed by a
